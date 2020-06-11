@@ -14,14 +14,14 @@
   <div class="metadata">
     <% if library.issuu_link.present? and library.category.name === 'Publications' %>
       <a href="<%= library.issuu_link %>" target="_blank" rel="noopener" data-name="<%= library.title %>">
-        <h4 class="title -dark -regular"><%= library.title %></h4>
+        <h4 class="title -blue -medium"><%= library.title %></h4>
       </a>
     <% elsif library.video_url.present?%>
       <a href="<%= library.video_url %>" target="_blank" rel="noopener">
-        <h4 class="title -dark -regular"><%= library.title %></h4>
+        <h4 class="title -blue -medium"><%= library.title %></h4>
       </a>
     <% else %>
-      <h4 class="title -dark -regular"><%= library.title %></h4>
+      <h4 class="title -blue -medium"><%= library.title %></h4>
     <% end %>
 
     <p><%= library.summary %></p>
@@ -53,16 +53,16 @@
     <div class="card-options -link">
       <% if (library.document.present? && library.document.file.present?) || library.url_resource.present? %>
         <% if library.document.present? && library.document.file.present? %>
-          <a href="<%= library.document.file.url %>" target="_blank" rel="noopener" class="title -small js-download" data-name="<%= library.title %>">Download <%= "(#{readable_file_size(library.document.file_file_size)})" %></a>
+          <a href="<%= library.document.file.url %>" target="_blank" rel="noopener" class="title -xxm js-download" data-name="<%= library.title %>">Download <%= "(#{readable_file_size(library.document.file_file_size)})" %></a>
         <% else %>
-          <a href="<%= library.url_resource %>" target="_blank" rel="noopener" class="title -small js-download" data-name="<%= library.title %>">Download</a>
+          <a href="<%= library.url_resource %>" target="_blank" rel="noopener" class="title -xxm js-download" data-name="<%= library.title %>">Download</a>
         <% end %>
       <% end %>
       <% if library.issuu_link.present? and library.category.name === 'Publications' %>
-        <a href="<%= library.issuu_link %>" target="_blank" rel="noopener" class="title -small js-download" data-name="<%= library.title %>">View</a>
+        <a href="<%= library.issuu_link %>" target="_blank" rel="noopener" class="title -xxm js-download" data-name="<%= library.title %>">View</a>
       <% end %>
       <% if library.video_url.present?%>
-        <a href="<%= library.video_url %>" class="title -small js-video" target="_blank" rel="noopener">Watch video</a>
+        <a href="<%= library.video_url %>" class="title -xxm js-video" target="_blank" rel="noopener">Watch video</a>
       <% end %>
     </div>
   </footer>

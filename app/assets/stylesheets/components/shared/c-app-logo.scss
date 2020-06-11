@@ -4,31 +4,83 @@
 
   a {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 16px;
+    margin-bottom: 14px;
+    
+    @media #{$mq-tablet} {
+      margin-top: 14px;
+      margin-bottom: 10px;
+    }
+
+    @media #{$mq-desktop} {
+      margin-top: 24px;
+      margin-bottom: 18px;
+    }
+
+    @media #{$mq-desktop-large} {
+      margin-top: 27px;
+      margin-bottom: 20px;
+    }
 
     > img {
       width: 90px;
-      height: auto;
+      height: 47px;
+      
+      @media #{$mq-tablet} {
+        width: 136px;
+        height: 71px;
+      }
+
+      @media #{$mq-desktop} {
+        width: 191px;
+        height: 100px;
+      }
+
+      @media #{$mq-desktop-large} {
+        width: 218px;
+        height: 114px;
+      }
     }
   }
 
-  @media #{$mq-tablet} {
-    a {
-      > img {
-        width: auto;
-      }
+  img.finmark-tag {
+    @media #{$mq-tablet} {
+      width: 350px;
+      height: 17px;
+      margin-left: 30px;
+    }
+
+    @media #{$mq-desktop} {
+      width: 425px;
+      height: 21px;
+      margin-left: 89px;
+    }
+
+    @media #{$mq-desktop-large} {
+      width: 486px;
+      height: 24px;
+      margin-left: 100px;
+    }
+
+    .fixed-nav & {
+      display: none !important;
     }
   }
 
   &.-fixed {
     a {
       margin-top: 0;
+      margin-bottom: 0;
 
       > img {
-        width: 96px;
-        height: 38px;
+        width: 66px;
+        height: 35px;
         margin: 0;
+      }
     }
+    
+    > img {
+      display: none;
     }
   }
 }

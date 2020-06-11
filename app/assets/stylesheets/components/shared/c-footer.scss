@@ -1,11 +1,32 @@
 .c-footer {
 
   .footer-header {
-    padding: 40px 0;
-    background-image: asset-url('footer-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: $color-5;
+    padding: 80px 0;
+    background-color: $color-2;
+    color: $color-white;
+
+    &-col-1 {
+      position: relative;
+
+      &:after {
+        display: inline-block;
+        position: absolute;
+        bottom: -3px;
+        left: 1%;
+        width: 98%;
+        height: 5px;
+        background: $color-white;
+        content: '';
+
+        @media #{$mq-tablet} {
+          bottom: 0;
+          left: auto;
+          right: -3px;
+          width: 5px;
+          height: 100%;
+        }
+      }
+    }
 
     .header-item {
       display: flex;
@@ -14,62 +35,56 @@
       justify-content: center;
       min-height: 150px;
 
+      @media #{$mq-tablet} {
+        min-height: 250px;
+      }
+
       @media #{$mq-laptop} {
         justify-content: flex-start;
-        padding: 40px 0 0;
+        padding: 15px 0;
       }
 
       &.-contact-us {
-        &::before {
-          display: inline-block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 1px;
-          background: rgba($color-5, .2);
-          content: '';
+        @media #{$mq-tablet} {
+          padding-left: 50px;
         }
       }
 
       &.-newsletter {
         margin-bottom: 40px;
-      }
 
-      @media #{$mq-tablet} {
-        min-height: 250px;
-
-        &.-contact-us {
-          padding-left: 50px;
-
-          &::before {
-            bottom: 0;
-            left: -1%;
-            width: 1px;
-            height: 100%;
-          }
-        }
-
-        &.-newsletter {
+        @media #{$mq-tablet} {
           margin-bottom: 0;
           padding-right: 50px;
         }
       }
     }
 
+    p, a, button {
+      color: inherit;
+    }
+
+    .title.-big {
+      @media #{$mq-tablet} {
+        font-size: 50px;
+      }
+    }
+
     .text {
       display: inline-block;
-      font-weight: $font-weight-semi-bold;
-      line-height: 22px;
+      font-weight: $font-weight-medium;
+      line-height: 1.375;
+
+      @media #{$mq-tablet} {
+        font-size: 24px;
+      }
 
       &.-leading {
         margin-top: 20px;
-      }
 
-      &.-highlight {
-        color: $color-1;
-        font-weight: $font-weight-bold;
-        letter-spacing: 1.5px;
+        @media #{$mq-tablet} {
+          margin-top: 45px;
+        }
       }
 
       &.-button {
@@ -84,195 +99,127 @@
   }
 
   .footer-content {
-    padding: 32px 0 0;
-    background: $color-5;
+    padding: 42px 0 50px;
+    background: $color-black;
+    border-top: $color-gray-light;
+    color: $color-white;
+    text-align: center;
 
     .pre-footer {
       position: relative;
+    }
 
-      @media #{$mq-laptop} {
-        margin: 0 0 45px;
-      }
+    .title {
+      margin-bottom: 16px;
     }
 
     .social {
+      margin: 0 0 45px;
 
-      .title {
-        color: rgba($color-4, .5);
-        font-size: $font-size-small;
+      @media #{$mq-laptop} {
+        margin-bottom: 0;
       }
 
-      .social-list {
+      &-list {
         display: flex;
-        margin: 7px 0 0;
+        justify-content: center;
+      }
 
-        > .social-item {
+      &-item {
 
-          &:not(:first-child) {
-            margin: 0 0 0 20px;
-          }
-
-          @media #{$mq-desktop} {
-            &:not(:first-child) {
-              margin: 0 0 0 10px;
-            }
-          }
-
-          svg {
-            fill: rgba($color-4, .5);
-
-            &:hover {
-              fill: $color-4;
-            }
-          }
+        &:not(:last-child) {
+          margin: 0 20px 0 0;
         }
 
-        .social-link {
-          display: inline-block;
-          padding: 5px;
+        svg {
+          transition: fill .4s ease;
+          fill: $color-white;
 
-          @media #{$mq-desktop} {
-            &:not(:first-child) {
-              margin: 0 0 0 15px;
-            }
+          &:hover {
+            fill: $color-gray-lighter;
           }
+        }
+      }
+
+      &-link {
+        display: block;
+      }
+    }
+
+    .programmes {
+      display: inline-block;
+      line-height: 1.375;
+      margin: 0 0 45px;
+      text-align: left;
+
+      @media #{$mq-laptop} {
+        display: block;
+        margin-bottom: 0;
+      }
+
+      &-row {
+        @media #{$mq-tablet} {
+          display: flex;
+          margin: 0 -25px;
+        }
+        @media #{$mq-desktop} {
+          margin: 0 -10px;
+        }
+      }
+
+      &-col {
+        @media #{$mq-tablet} {
+          width: 50%;
+          padding: 0 25px;
+        }
+        @media #{$mq-desktop} {
+          padding: 0 10px;
+        }
+      }
+
+      ul > li {
+        display: list-item;
+        padding-left: 9px;
+        text-indent: -9px;
+
+        &:before {
+          content: "- ";
+          text-indent: -9px;
         }
       }
     }
 
     .partners {
-      margin: 0 0 45px;
 
-      .title {
-        color: rgba($color-4, .5);
-        font-size: $font-size-small;
+      &-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 10px 0 0;
       }
 
-      @media #{$mq-laptop} {
-        margin-bottom: 0;
-      }
+      &-item {
 
-      @media #{$mq-desktop} {
-        margin-top: 0;
-      }
-
-      .partner-group {
-        margin: 45px 0 0;
-
-        @media #{$mq-desktop} {
-          margin: 0;
+        a  {
+          display: block;
         }
-      }
-    }
-  }
 
-
-  .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 35px 0 15px;
-    border-top: 1px solid rgba($color-4, .2);
-
-    @media #{$mq-tablet} {
-      padding: 25px 0;
-      justify-content: flex-start;
-    }
-
-    @media #{$mq-body-width} {
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-    }
-
-    > .nav-item {
-      flex-shrink: 0;
-      margin-bottom: 20px;
-      margin-right: 0;
-      text-align: center;
-      flex-basis: 50%;
-
-      @media #{$mq-body-width} {
-        flex-basis: auto;
-        margin-right: 20px;
-        margin-bottom: 0px;
-      }
-      @media #{$mq-tablet} {
-        margin-right: 20px;
-        flex-basis: auto;
-      }
-
-      a {
-        font-weight: $font-weight-bold;
-        font-size: $font-size-small;
-        color: $color-4;
-      }
-    }
-  }
-
-  .partner-list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 10px 0 0;
-
-    .partner-item {
-
-      &:not(:first-child) {
-        margin: 0 0 0 30px;
-      }
-
-      a  {
-        display: inline-block;
-        color: rgba($color-4, .5);
-
-        &:hover {
-          color: $color-4;
+        img {
+          display: block;
+          max-width: 100%;
+          height: auto;
         }
       }
 
-      &:first-of-type {
-        @media #{$mq-tablet} {
-          text-align: left;
-        }
+      .uk-aid-item {
+        margin-right: 9px;
+        margin-top: 8px;
       }
 
-      &:last-of-type {
-        margin-bottom: 0;
-
-        @media #{$mq-tablet} {
-          text-align: right;
-        }
-      }
-
-      img {
-        max-width: 100%;
-        filter: opacity(.5);
-
-        &:hover {
-          filter: opacity(1);
-        }
-
-        @media #{$mq-tablet} {
-          width: auto;
-        }
-      }
-
-      > .mastercard-logo > img {
-        max-height: 68px;
-      }
-
-      > .finmark-logo > img {
-        max-height: 50px;
-      }
-
-      > .cenfri-logo > img {
-        max-height: 34px;
-        opacity: .8;
-      }
-
-      > .bill-mellinda-logo > img {
-        max-height: 34px;
+      .un-cdf-item {
+        margin-right: 28px;
+        margin-top: 3px;
       }
     }
   }

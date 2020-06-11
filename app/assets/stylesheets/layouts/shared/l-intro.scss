@@ -4,13 +4,13 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  > .nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index:  4;
-  }
+  //> .nav {
+  //  position: absolute;
+  //  top: 0;
+  //  right: 0;
+  //  left: 0;
+  //  z-index:  4;
+  //}
 
   > .fixed-nav {
     position: fixed;
@@ -28,11 +28,15 @@
       position: absolute;
       top: auto;
     }
+
+    .hamburguer > .ingredient {
+      background-color: $color-white;
+    }
   }
 
   .content {
     position: relative;
-    background-color: $color-1;
+    background-color: $color-white;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

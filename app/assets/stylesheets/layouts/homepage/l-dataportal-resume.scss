@@ -1,20 +1,18 @@
 .l-dataportal-resume {
-  padding: 25px 0 25px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background: asset-url('homepage/data_portal_resume_bg.jpg');
-  background-size: cover;
+  padding: 40px 0;
+  background-color: $color-1;
+  color: $color-white;
 
   @media#{$mq-tablet} {
-    padding: 25px 0 25px;
+    padding: 44px 0;
   }
 
   .title {
-    display: none;
+    display: block;
+    margin: 0 0 40px;
 
     @media #{$mq-tablet} {
-      display: block;
-      margin: 0 0 40px;
+      margin-bottom: 48px;
     }
   }
 
@@ -23,13 +21,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    .column {
-      &:not(:first-child) {
-        .stats-item {
-          @media#{$mq-tablet} {
-            border-left: 1px solid rgba($color-4  , .5);
-          }
-        }
+    .column:not(:first-child):before {
+      @media#{$mq-tablet} {
+        position: absolute;
+        top: 80px;
+        bottom: 10px;
+        height: auto;
+        width: 1px;
+        left: 0;
+        background-color: $color-white;
+        content: "";
       }
     }
 
@@ -37,6 +38,7 @@
       display: flex;
       flex-direction: column;
       margin: 0 0 35px;
+      position: relative;
 
       @media#{$mq-tablet} {
         align-items: center;
@@ -48,64 +50,36 @@
         padding: 0 0 0 15px;
       }
 
-      > .data {
-        display: flex;
-        align-items: center;
-        margin: 0 0 15px;
+      > img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 35px;
+      }
+
+      p, a {
+        color: inherit;
+      }
+
+      p {
+        line-height: 1.35;
 
         @media #{$mq-laptop} {
-          flex-direction: row-reverse;
-        }
-
-        > .quantity {
-          font-size: $font-size-big;
-          font-weight: $font-weight-bold;
-          color: $color-4;
-
-          & + .icon {
-            margin: 0 0 0 5px;
-          }
-
-          @media #{$mq-laptop} {
-            margin: 0 0 0 10px;
-
-            & + .icon {
-              margin: 0;
-            }
-          }
-        }
-
-        > .icon {
-          fill: $color-4;
+          font-size: 20px;
         }
       }
 
-      > .legend {
-        display: flex;
-        flex-direction: column;
-
-        @media#{$mq-tablet} {
-          align-items: center;
-        }
+      > a {
+        display: block;
+        font-weight: $font-weight-extra-bold;
+        margin-top: 35px;
+        text-align: left;
 
         @media #{$mq-laptop} {
-          align-items: flex-start;
-          padding: 0 0 0 40px;
-        }
-
-        > .legend-title {
-          font-size: $font-size-regular;
-          font-weight: $font-weight-bold;
-          color: $color-2;
-        }
-
-        > .legend-description {
-          margin: 5px 0 0;
-          font-weight: $font-weight-light;
-          color: $color-4;
-          line-height: 1.2;
+          font-size: 25px;
         }
       }
+
     }
   }
 
@@ -126,4 +100,4 @@
       }
     }
   }
-};
+}

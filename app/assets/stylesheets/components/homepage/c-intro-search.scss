@@ -1,0 +1,89 @@
+.c-home-intro-search {
+	position: absolute;
+	top: -30px;
+	right: 0;
+	left: 0;
+
+	@media #{$mq-desktop} {
+    	top: 50px;
+  	}
+
+  	&-field {
+  		border-radius: 8px;
+  		padding-top: 30px;
+  		width: 100%;
+  		max-width: 448px;
+  		margin-left: auto;
+  		display: flex;
+  		background-color: $color-white;
+  		box-shadow: 0px 3px 6px rgba($color-black, 0.16);
+  		overflow: hidden;
+
+  		@media #{$mq-desktop-large} {
+	    	max-width: 648px;
+	  	}
+
+  		input {
+  			flex: 2;
+  			height: 60px;
+  			border: none;
+  			background: none;
+  			padding: 25px 40px;
+  			line-height: 1;
+  			font-size: $font-size-regular;
+
+  			@media #{$mq-tablet} {
+  				height: 70px;
+		    	font-size: $font-size-medium - 4;
+		  	}
+
+  			@media #{$mq-desktop-large} {
+  				height: 80px;
+		    	font-size: $font-size-medium + 1;
+		  	}
+
+		  	&:focus {
+		  		outline: none;
+		  	}
+  		}
+
+  		button {
+  			transition: background-color .4s ease;
+  			width: 60px;
+  			height: 60px;
+  			padding: 0;
+  			border: 0;
+  			cursor: pointer;
+
+  			@media #{$mq-tablet} {
+  				width: 70px;
+  				height: 70px;
+		  	}
+
+  			@media #{$mq-desktop-large} {
+  				width: 80px;
+  				height: 80px;
+		  	}
+
+		  	&:hover {
+		  		background-color: #ddd;
+		  	}
+
+		  	.icon {
+		  		width: 20px;
+	  			height: 20px;
+
+		  		@media #{$mq-tablet} {
+	  				width: 26px;
+	  				height: 26px;
+			  	}
+
+	  			@media #{$mq-desktop-large} {
+	  				width: 33px;
+	  				height: 33px;
+			  	}
+		  	}
+  		}
+  	}
+
+}

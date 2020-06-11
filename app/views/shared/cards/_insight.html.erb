@@ -4,7 +4,7 @@
   </a>
   <div class="metadata">
     <a href="<%= insights_show_path(insight.category.slug, insight.slug, { entity: insight.record_type }) %>">
-      <h4 class="title -dark -regular"><%= insight.title %></h4>
+      <h4 class="title -blue -medium"><%= insight.title %></h4>
     </a>
     <p><%= insight.summary %></p>
     <% if insight.tags.length > 0 %>
@@ -41,7 +41,7 @@
       <span class="card-category"><%= insight.category.name %></span>
     </div>
     <div class="card-options -link">
-      <a href="<%= insights_show_path(insight.category.slug, insight.slug, { entity: insight.record_type }) %>" rel="noopener" class="title -small js-download" data-name="<%= insight.title %>">
+      <a href="<%= insights_show_path(insight.category.slug, insight.slug, { entity: insight.record_type }) %>" rel="noopener" class="title -xxm js-download" data-name="<%= insight.title %>">
       Read more</a>
     </div>
   </footer>

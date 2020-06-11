@@ -7,24 +7,33 @@
   }
 
   @media #{$mq-tablet} {
-    padding: 170px 0 75px;
+    padding: 60px 0 75px;
+  }
+
+  &-max-width {
+    max-width: 960px;
+  }
+
+  .title.-huge {
+    line-height: 1;
+
+    @media #{$mq-laptop} {
+      font-size: 80px;
+    }
   }
 
   .subtitle {
     margin: 20px 0 0;
+    color: $color-gray-light;
+    line-height: 1.36;
 
-    color: $color-4;
-    font-family: $font-family-2;
-    font-weight: $font-weight-bold;
-
-    p {
-      color: $color-4;
-      font-family: $font-family-2;
-      font-weight: $font-weight-bold;
+    @media #{$mq-tablet} {
+      margin-top: 35px;
+      font-size: 22px;
     }
 
     a {
-      color: $color-2;
+      color: $color-1;
       font-weight: $font-weight-bold;
     }
 

@@ -20,13 +20,13 @@
   }
 }
 
-._no-desktop {
+._no-laptop {
   @media #{$mq-laptop} {
     display: none !important;
   }
 }
 
-._only-desktop {
+._only-laptop {
   display: none !important;
 
   @media #{$mq-laptop} {
@@ -34,7 +34,33 @@
   }
 }
 
+._no-desktop {
+  @media #{$mq-desktop} {
+    display: none !important;
+  }
+}
 
+._only-desktop {
+  display: none !important;
+
+  @media #{$mq-desktop} {
+    display: block !important;
+  }
+}
+
+._no-desktop-medium {
+  @media #{$mq-desktop-medium} {
+    display: none !important;
+  }
+}
+
+._only-desktop-medium {
+  display: none !important;
+
+  @media #{$mq-desktop-medium} {
+    display: block !important;
+  }
+}
 
 %clearfix {
   &::before,

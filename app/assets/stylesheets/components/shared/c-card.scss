@@ -24,12 +24,26 @@
     width: 100%;
     padding: 25px;
     background-color: $color-4;
+    text-align: center;
 
     > .title {
       line-height: 28px;
 
       > a {
         color: $color-5;
+      }
+    }
+
+    .title {
+      line-height: 1.2;
+      margin-bottom: 0.6em;
+    }
+
+    > p {
+      line-height: 1.4;
+      
+      @media #{$mq-tablet} {
+        font-size: 20px;
       }
     }
 
@@ -67,11 +81,23 @@
   }
 
   .footer {
+    position: relative;
+
+    &:before {
+      top: 0;
+      left: 35px;
+      right: 35px;
+      height: 1px;
+      width: auto;
+      content: "";
+      position: absolute;
+      background-color: $color-gray-light;
+    }
+
     > .card-options {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-top: 2px solid $border-color;
       padding: 15px 25px;
 
       &.-link {
@@ -79,16 +105,21 @@
         padding: 0;
 
         a {
+          transition: background-color .3s ease;
           display: block;
-          color: $color-1;
+          background-color: $color-2;
+          color: $color-white;
           cursor: pointer;
-          padding: 15px 25px;
+          padding: 15px;
           white-space: nowrap;
           text-align: center;
           width: 100%;
 
+          @media #{$mq-tablet} {
+            padding: 27px 25px;
+          }
+
           &:hover {
-            color: $color-4;
             background-color: $color-1;
           }
         }
@@ -96,20 +127,23 @@
     }
 
     .date {
-      font-size: $font-size-small;
-      font-weight: $font-weight-bold;
-      color: rgba($color-5, .3);
+      font-size: $font-size-regular;
+      font-weight: $font-weight-medium;
+      color: $color-gray-medium;
     }
 
     .card-category {
       display: block;
-      background: rgba($color-1, 0.2);
-      padding: 3px 12px;
-      border-radius: 10px;
-
-      font-size: $font-size-small;
+      background: $color-gray-lighter;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: $font-size-regular;
       font-weight: $font-weight-bold;
-      color: $color-1;
+      color: $color-white;
+
+      @media #{$mq-tablet} {
+        font-size: $font-size-regular + 2;
+      }
     }
   }
 

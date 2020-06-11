@@ -3,25 +3,24 @@
     <% @tweets.each do |tweet| %>
       <li class="slide">
         <div class="row tweet-row">
-          <div class="grid-s-12 <% if tweet.media? %>grid-m-7<% end %>">
-            <div class="tweet">
-              <div class="grid-s-12 <% unless tweet.media? %>grid-m-8<% end %>">
-                <div class="tweet-header">
-                  <a class="user" href="https://twitter.com/<%= tweet.user.name %>">@<%= tweet.user.name %></a>
-                  <time class="date" datetime="<%= tweet.created_at.strftime("%F") %>">
-                    <%= tweet.created_at.strftime("%d %b %Y") %>
-                  </time>
-                </div>
-                <div class="tweet-content">
-                  <svg class="icon icon-open-quote tweet-quote-mark -open"><use xlink:href="#icon-open-quote"></use></svg>
-                  <p class="text"><%= tweet.attrs[:full_text] %></p>
-                  <svg class="icon icon-close-quote tweet-quote-mark -close"><use xlink:href="#icon-close-quote"></use></svg>
-                </div>
+          <div class="grid-s-12 <% if tweet.media? %>grid-m-6<% end %> tweet-container">
+            <div class="tweet <% if tweet.media? %>tweet-with-image<% end %>">
+              <div class="tweet-header">
+                <a class="user" target="_blank" href="https://twitter.com/<%= tweet.user.screen_name %>">@<%= tweet.user.screen_name %></a>
+                <time class="date" datetime="<%= tweet.created_at.strftime("%F") %>">
+                  <%= tweet.created_at.strftime("%d %b %Y") %>
+                </time>
               </div>
+              <div class="tweet-content">
+                <p><%= raw(tweet.attrs[:full_text]) %></p>
+              </div>
+            </div>
+            <div class="tweet-link">
+              <a target="_blank" href="<%= tweet.uri %>">Read more</a>
             </div>
           </div>
           <% if tweet.media? %>
-            <div class="grid-s-12 grid-m-5">
+            <div class="grid-s-12 grid-m-6 tweet-image-container">
               <div class="tweet-image" style="background-image: url(<%= tweet.media[0].media_url.to_s %>)"></div>
             </div>
           <% end %>

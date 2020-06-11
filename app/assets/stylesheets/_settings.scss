@@ -1,5 +1,5 @@
 // layout
-$body-max-width: 1280px;
+$body-max-width: 1650px;
 $content-max-width: 1060px;
 
 // Breakpoints
@@ -7,12 +7,16 @@ $breakpoint-mobile:  320px;
 $breakpoint-tablet:  768px;
 $breakpoint-laptop: 1024px;
 $breakpoint-desktop: 1200px;
+$breakpoint-desktop-medium: 1400px;
+$breakpoint-desktop-large: 1600px;
 
 // Media queries
 $mq-mobile: 'screen and (min-width: #{$breakpoint-mobile})';
 $mq-tablet: 'screen and (min-width: #{$breakpoint-tablet})';
 $mq-laptop: 'screen and (min-width: #{$breakpoint-laptop})';
 $mq-desktop: 'screen and (min-width: #{$breakpoint-desktop})';
+$mq-desktop-medium: 'screen and (min-width: #{$breakpoint-desktop-medium})';
+$mq-desktop-large: 'screen and (min-width: #{$breakpoint-desktop-large})';
 
 $mq-body-width: 'screen and (min-width: #{$body-max-width})';
 $mq-content-width: 'screen and (min-width: #{$content-max-width})';
@@ -47,10 +51,13 @@ $font-weight-light: 300;
 $font-weight-medium: 400;
 $font-weight-semi-bold: 600;
 $font-weight-bold: 700;
+$font-weight-extra-bold: 800;
 
 // colors
-$color-1: #2f939c;
-$color-2: #f9d031;
+//$color-1: #2f939c;
+//$color-2: #f9d031;
+$color-1: #203366;
+$color-2: #0097AE;
 $color-3: #f5f8f8;
 $color-4: #fff;
 $color-5: #001d22;
@@ -61,6 +68,13 @@ $color-9: #d8d8d8;
 $color-10: #dd3636;
 $color-11: #d5e6e8;
 $color-12: #737780;
+
+$color-white: #fff;
+$color-black: #000;
+$color-gray: #5a5a5a;
+$color-gray-medium: #818181;
+$color-gray-light: #707070;
+$color-gray-lighter: #B5B5B5;
 
 $border-color: rgba($color-5, .1);
 
@@ -76,4 +90,4 @@ $grid-gutter-width: 1%;
 $grid-padding: 20px;
 $wrapper-padding-mobile: 18px;
 $wrapper-padding-tablet: 30px;
-$wrapper-padding-desktop: 110px;
+$wrapper-padding-desktop: 50px;

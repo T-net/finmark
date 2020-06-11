@@ -18,29 +18,16 @@
   }
 
   .l-library-content-selector {
-    $selector-spacing: 6px;
+    background-color: $color-1;
     display: flex;
     position: relative;
     align-items: center;
-    transform: translateY($selector-spacing);
-
-    &::before {
-      position: absolute;
-      top: $selector-spacing;
-      right: 0;
-      bottom: $selector-spacing;
-      left: 0;
-      background: rgba($color-6, .5);
-      content: '';
-    }
 
     > .wrapper {
-      padding: 0;
       overflow: auto;
 
       .row {
         width: 100%;
-        margin: 0;
         -webkit-overflow-scrolling: touch;
       }
 
@@ -48,49 +35,58 @@
         display: flex;
         align-items: stretch;
         width: auto;
-        margin: 0 $wrapper-padding-mobile 3px $wrapper-padding-mobile; // 3px for te button's shadow
         overflow: auto;
+      }
+
+    }
+
+    .content-selector {
+      @extend .c-button;
+      display: flex;
+      align-items: center;
+      border: 0;
+      background: transparent;
+      color: $color-white;
+      font-weight: $font-weight-extra-bold;
+      cursor: pointer;
+      font-size: $font-size-medium;
+      line-height: 1.36;
+      padding: 12px 0px;
+      white-space: nowrap;
+
+      @media #{$mq-laptop} {
+        font-size: $font-size-medium + 6;
+      }
+
+      &:hover {
+        background-color: transparent;
+        color: $color-white;
+        opacity: 1;
+      }
+
+      &:not(:last-child) {
+        margin: 0 25px 0 0;
 
         @media #{$mq-tablet} {
-          padding: 0 0 3px;
+          margin-right: 35px;
+        }
+
+        @media #{$mq-desktop} {
+          margin-right: 50px;
         }
       }
 
-      @media #{$mq-tablet} {
-        padding: 0 $wrapper-padding-tablet;
+      &.-current {
+        background: $color-2;
+        color: $color-white;
+        box-shadow: 0 3px 6px rgba($color-black, .16);
+        padding-left: 30px;
+        padding-right: 30px;
       }
 
-      @media #{$mq-laptop} {
-        padding: 0 $wrapper-padding-desktop;
+      svg.icon.tab-icon {
+        display: none;
       }
-
-    }
-  }
-
-  .l-library-content-selector .content-selector {
-    @extend .c-button;
-    display: flex;
-    align-items: center;
-    border: 0;
-    background: transparent;
-    color: $color-2;
-    font-weight: $font-weight-bold;
-    cursor: pointer;
-
-    &:hover {
-      background-color: transparent;
-      color: $color-2;
-      opacity: 1;
-    }
-
-    &:not(:last-child) {
-      margin: 0 25px 0 0;
-    }
-
-    &.-current {
-      background: $color-4;
-      color: $color-1;
-      box-shadow: 0 2px 3px 0 rgba($color-6, .15);
     }
   }
 

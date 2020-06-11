@@ -67,7 +67,7 @@ It will fails because database has not been creted. So you have to run:
 docker-compose -f docker-compose-dev.yml run --rm web rake db:create db:migrate
 ```
 
-After that enter in the website container (i2i_web) and access to bash: 
+After that enter in the website container (finmark_web_1) and access to bash: 
 
 ```
 docker exec -it [container-id] bash

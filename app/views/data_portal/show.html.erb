@@ -17,7 +17,7 @@
 <% end %>
 
 <div class="l-data-portal-country">
-  <div class="l-mobile-header _no-desktop js-mobile-header">
+  <div class="l-mobile-header _no-laptop js-mobile-header">
     <div class="wrapper">
       <header>
         <span class="country-name js-country">–</span>
@@ -42,7 +42,7 @@
         <%= render partial: 'shared/header', locals: { isFixed: true } %>
       </div>
     </div>
-    <div class="content">
+    <div class="content" style="background-image: url(<%= asset_path('headers/header-bg-gradient@2x.png') %>)">
       <div class="l-title">
         <div class="wrapper">
           <div class="row">
@@ -52,7 +52,7 @@
                 <div class="row js-header">
               </div>
             </div>
-            <div class="_only-desktop">
+            <div class="_only-laptop">
               <div class="row">
                 <div class="grid-l-3 offset-l-9">
                   <div class="c-switcher js-tabs" role="tablist">
@@ -65,7 +65,7 @@
           </div>
         </div>
       </div>
-      <div class="l-switcher _no-desktop">
+      <div class="l-switcher _no-laptop">
         <div class="grid-s-8 grid-m-4 grid-l-3">
           <div class="c-switcher js-tabs" role="tablist">
             <button id="graphics-tab" class="switcher-option -current" name="graphics" role="tab" aria-controls="widgets-list" aria-selected="true">Graphics</button>

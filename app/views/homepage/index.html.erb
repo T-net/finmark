@@ -1,4 +1,4 @@
-<% title 'Welcome to Insight to Impact' %>
+<% title 'Welcome to FinMark Trust' %>
 <% - description = content_for?(:description) ? yield(:description) : 'i2i is a facility established by FinMark Trust and Cenfri to respond to the growing divide between the data available for policy and product design and the ability of financial services providers, policy makers and financial intermediaries to collect, make sense of and embed this data in their decision making.' %>
 
 <% content_for :media_metas do %>
@@ -27,78 +27,54 @@
       </div>
     </div>
     <div class="content">
-      <%= render partial: 'homepage/cover_slider' %>
+      <%= render partial: 'homepage/intro_hero' %>
+      <%-# render partial: 'homepage/cover_slider' -%>
     </div>
   </div>
   <div class="l-content">
     <div class="l-featured-insights">
       <div class="wrapper">
-        <h2 class="title heading -big -center -dark">News and insights</h2>
+        <h2 class="title heading -big -center -blue -divider">News and insights</h2>
         <div class="row">
           <%= render partial: 'shared/cards', locals: { insights: @insights }%>
         </div>
-        <div class="btn-container">
-          <%= link_to 'See more', insights_path, class: 'c-button -sea -big' %>
-        </div>
+        <%-#<div class="btn-container"><%= link_to 'See more', insights_path, class: 'c-button -sea -big' % ></div>-%>
       </div>
     </div>
     <div class="l-dataportal-resume">
       <div class="wrapper">
         <div class="row">
-          <h2 class="title -big -center -light">Data portal</h2>
+          <h2 class="title -big -center -light -divider">Data for the Financial Markets</h2>
           <div class="stats-list">
               <div class="column grid-s-5 grid-m-3">
                 <div class="stats-item">
-                  <div class="data">
-                    <span class="quantity">37</span>
-                    <svg class="icon icon-countries"><use xlink:href="#icon-countries"></use></svg>
-                  </div>
-                  <div class="legend">
-                    <span class="legend-title">Countries</span>
-                    <span class="legend-description">Across Africa and Asia</span>
-                  </div>
+                  <%= image_tag '/images/logos/fmt-finscope@2x.png', :width => '278', :alt => 'FMT FinScope' %>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique id justo eget rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                  <a href="#" class="stats-link">Read more</a>
                 </div>
               </div>
               <div class="column grid-s-5 grid-m-3">
                 <div class="stats-item">
-                  <div class="data">
-                    <span class="quantity">61</span>
-                    <svg class="icon icon-finscope"><use xlink:href="#icon-finscope"></use></svg>
-                  </div>
-                  <div class="legend">
-                    <span class="legend-title">National Surveys</span>
-                    <span class="legend-description">Datasets</span>
-                  </div>
+                  <%= image_tag '/images/logos/fmt-analytics@2x.png', :width => '271', :alt => 'FMT FinScope' %>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique id justo eget rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                  <a href="#" class="stats-link">Read more</a>
                 </div>
               </div>
               <div class="column grid-s-5 grid-m-3">
                 <div class="stats-item">
-                  <div class="data">
-                    <span class="quantity">14</span>
-                    <svg class="icon icon-financial"><use xlink:href="#icon-financial"></use></svg>
-                  </div>
-                  <div class="legend">
-                    <span class="legend-title">Financial Diaries</span>
-                    <span class="legend-description">Datasets</span>
-                  </div>
+                  <%= image_tag '/images/logos/fmt-mobile@2x.png', :width => '262', :alt => 'FMT FinScope' %>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique id justo eget rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                  <a href="#" class="stats-link">Read more</a>
                 </div>
               </div>
               <div class="column grid-s-5 grid-m-3">
                 <div class="stats-item">
-                  <div class="data">
-                    <span class="quantity">46</span>
-                    <svg class="icon icon-geospatial"><use xlink:href="#icon-geospatial"></use></svg>
-                  </div>
-                  <div class="legend">
-                    <span class="legend-title">Geospatial</span>
-                    <span class="legend-description">Datasets</span>
-                  </div>
+                  <%= image_tag '/images/logos/fmt-portal@2x.png', :width => '228', :alt => 'FMT FinScope' %>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique id justo eget rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                  <a href="#" class="stats-link">Read more</a>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="btn-container">
-            <%= link_to 'Discover data', data_portal_path, class: 'c-button -white -big' %>
           </div>
         </div>
       </div>
@@ -106,8 +82,7 @@
     <div class="l-twitter">
       <div class="wrapper">
         <header>
-          <h2 class="title -big -dark">i2i on Twitter</h2>
-          <p class="twitter-description">Read the latest tweets from i2i.</p>
+          <h2 class="title -big -center -blue -divider">FMT on Twitter</h2>
         </header>
         <%= render partial: 'homepage/twitter_slider' %>
       </div>

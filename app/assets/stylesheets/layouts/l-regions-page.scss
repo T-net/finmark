@@ -10,6 +10,10 @@
     &.-hidden {
       display: none;
     }
+
+    .hamburguer > .ingredient {
+      background-color: $color-white;
+    }
   }
 
   .content {

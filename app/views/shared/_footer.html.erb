@@ -2,13 +2,13 @@
   <div class="footer-header">
     <div class="wrapper">
       <div class="row">
-        <div class="grid-s-12 grid-m-6">
+        <div class="grid-s-12 grid-m-6 footer-header-col-1">
           <div class="header-item -newsletter js-subscribe">
             <h2 class="title -big">Newsletter</h2>
             <p class="text -leading">
-              <button type="button" class="text -highlight -button js-subscribe-link" data-id="alyukr">Sign up</button> here for our monthly Data Briefing on data and innovation in the financial services sector.
+              <button type="button" class="text -highlight -button js-subscribe-link" data-id="alyukr"><u>Sign up here</u></button> for our monthly FI Snapshot in data and innovation in the financial services sector.
             </p>
-            <p class="text">And, to receive insight2impact updates, <button type="button" class="text -highlight -button js-subscribe-link" data-id="dlhlud" data-institution="true">subscribe</button> to the i2i quarterly newsletter.</p>
+            <%-#<p class="text">And, to receive Finmark updates, <button type="button" class="text -highlight -button js-subscribe-link" data-id="dlhlud" data-institution="true">subscribe</button> to the FI Snapshot quarterly newsletter.</p>-%>
           </div>
         </div>
 
@@ -22,117 +22,104 @@
     </div>
   </div>
 
-    <div class="footer-content">
-      <div class="wrapper">
-        <div class="pre-footer">
-          <div class="row">
-            <div class="grid-s-12 grid-l-2">
+  <div class="footer-content">
+    <div class="wrapper">
 
-              <div class="social">
-                <h4 class="title -light">Follow us</h4>
-                <ul class="social-list">
-                  <li class="social-item">
-                    <a class="social-link" href="https://www.facebook.com/insight2impact/" target="_blank" rel="noopener noreferrer">
-                      <svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
-                    </a>
-                  </li>
-                  <li class="social-item">
-                    <a class="social-link" href="https://www.linkedin.com/company/insight2impact/" target="_blank" rel="noopener noreferrer">
-                      <svg class="icon"><use xlink:href="#icon-linkedln"></use></svg>
-                    </a>
-                  </li>
-                  <li class="social-item">
-                    <a class="social-link" href="https://twitter.com/i2ifacility" target="_blank" rel="noopener noreferrer">
-                      <svg class="icon"><use xlink:href="#icon-twitter"></use></svg>
-                    </a>
-                  </li>
-                  <li class="social-item">
-                    <a class="social-link" href="https://www.instagram.com/i2ifacility/" target="_blank" rel="noopener noreferrer">
-                      <svg class="icon"><use xlink:href="#icon-instagram"></use></svg>
-                    </a>
-                  </li>
-                  <li class="social-item">
-                    <a class="social-link" href="https://www.youtube.com/channel/UC2acZIcBw60Hy2DuZ7Yoh7g" target="_blank" rel="noopener noreferrer">
-                      <svg class="icon"><use xlink:href="#icon-youtube"></use></svg>
-                    </a>
-                  </li>
-                </ul>
+      <div class="pre-footer">
+        <div class="row">
+          <div class="grid-s-12 grid-l-4">
+
+            <div class="social">
+              <h4 class="title -light -medium -center">Follow us</h4>
+              <ul class="social-list">
+                <li class="social-item">
+                  <a class="social-link" href="https://www.linkedin.com/company/finmark-trust/" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon"><use xlink:href="#icon-linkedln"></use></svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a class="social-link" href="https://twitter.com/Finmarktrust" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon"><use xlink:href="#icon-twitter"></use></svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a class="social-link" href="https://www.youtube.com/channel/UCU_dkL66EAKob74u0vnAwrA" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon"><use xlink:href="#icon-youtube"></use></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="grid-s-12 grid-l-4">
+            <div class="programmes">
+              <h4 class="title -light -medium -center">Programmes</h4>
+              <div class="programmes-row">
+                <div class="programmes-col">
+                  <ul>
+                    <li>SADC Payments and Remittances</li>
+                    <li>SADC MSME MAP</li>
+                    <li>SADC FI Strategy</li>
+                    <li>SADC Consumer MAP</li>
+                    <li>SA FI</li>
+                    <li>SA FI Payments and Remittances</li>
+                    <li>Promoting Beneficial Usage</li>
+                    <li>Inclusion Policy Coordination</li>
+                    <li>Enabling SME Inclusion</li>
+                  </ul>
+                </div>
+                <div class="programmes-col">
+                  <ul>
+                    <li>SADC Payments and Remittances</li>
+                    <li>SADC MSME MAP</li>
+                    <li>SADC FI Strategy</li>
+                    <li>SADC Consumer MAP</li>
+                    <li>SA FI</li>
+                    <li>SA FI Payments and Remittances</li>
+                    <li>Promoting Beneficial Usage</li>
+                    <li>Inclusion Policy Coordination</li>
+                    <li>Enabling SME Inclusion</li>
+                  </ul>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div class="grid-s-12 grid-xl-8 offset-xl-2">
+          <div class="grid-s-12 grid-l-4">
+            <div class="partners">
+              <h4 class="title -light -medium -center">Partners</h4>
 
-                <div class="partners">
-                  <div class="row">
-                    <div class="grid-s-12 grid-m-6">
-                      <div class="partner-group">
-                        <h4 class="title -light">Established by</h4>
-
-                        <ul class="partner-list">
-                          <li class="partner-item">
-                            <%= link_to image_tag('logos/cenfri.png',
-                              :alt => 'Cenfri',
-                              :width => '115'),
-                              'https://cenfri.org/',
-                              :class => 'cenfri-logo',
-                              :target => '_blank',
-                              :rel => 'noopener'
-                            %>
-                          </li>
-                          <li class="partner-item">
-                            <%= link_to image_tag('logos/fmt.png',
-                              :alt => 'Finmark Trust',
-                              :width => '115'),
-                              'https://www.finmark.org.za/',
-                              :class => 'finmark-logo',
-                              :target => '_blank',
-                              :rel => 'noopener'
-                            %>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div class="grid-s-12 grid-m-6">
-                      <div class="partner-group">
-                        <h4 class="title -light">Sponsored by</h4>
-
-                        <ul class="partner-list">
-                          <li class="partner-item">
-                            <%= link_to image_tag('logos/mastercard.png', :alt => 'The Mastercard Foundation'), 'https://www.mastercardfdn.org/',
-                              :class => 'mastercard-logo',
-                              :target => '_blank',
-                              :rel => 'noopener'
-                            %>
-                          </li>
-                          <li class="partner-item">
-                            <%= link_to image_tag('logos/bill-and-melinda-gates.png',
-                              :alt => 'Bill & Mellinda Foundation'), 'https://www.gatesfoundation.org/',
-                              :class => 'bill-mellinda-logo',
-                              :target => '_blank',
-                              :rel => 'noopener'
-                            %>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <ul class="partners-list">
+                <li class="partners-item uk-aid-item">
+                  <%= link_to image_tag('/images/logos/uk-aid@2x.png', 
+                    :width => '116',
+                    :alt => 'UK Aid'), 'https://www.ukaiddirect.org/',
+                    :target => '_blank',
+                    :rel => 'noopener'
+                  %>
+                </li>
+                <li class="partners-item un-cdf-item">
+                  <%= link_to image_tag('/images/logos/un-cdf@2x.png',
+                    :width => '121',
+                    :alt => 'UN Capital Development Fund'), 'https://www.uncdf.org/',
+                    :target => '_blank',
+                    :rel => 'noopener'
+                  %>
+                </li>
+                <li class="partners-item mastercard-foundation-item">
+                  <%= link_to image_tag('/images/logos/mastercard-foundation@2x.png',
+                    :width => '96',
+                    :alt => 'Mastercard Foundation'), 'https://mastercardfdn.org/',
+                    :target => '_blank',
+                    :rel => 'noopener'
+                  %>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-
-        <ul class="nav" role="navigation">
-          <li class="nav-item"><%= link_to 'Homepage', root_path %></li>
-          <li class="nav-item"><%= link_to 'Data portal', data_portal_path %></li>
-          <li class="nav-item"><%= link_to 'Insights', insights_path %></li>
-          <li class="nav-item"><%= link_to 'Research themes', initiatives_path %></li>
-          <li class="nav-item"><%= link_to 'Tools', tools_path %></li>
-          <li class="nav-item"><%= link_to 'About', about_path %></li>
-          <li class="nav-item"><%= link_to 'Terms of use', terms_of_use_path %></li>
-          <li class="nav-item"><%= link_to 'Privacy policy', privacy_policy_path %></li>
-        </ul>
       </div>
+
     </div>
   </div>
 </footer>

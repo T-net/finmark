@@ -19,15 +19,17 @@ body {
 body {
   position: relative;
 
-  background: $color-3;
+  background: $color-white;
 
-  color: $color-5;
+  color: $color-black;
   font-family: $font-family-1;
   font-size: $font-size-xs;
   font-weight: $font-weight-light;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
 
   @media #{$mq-body-width} {
     margin: 0 auto;

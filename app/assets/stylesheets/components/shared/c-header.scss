@@ -1,11 +1,16 @@
+.nav {
+  background: $color-white;
+  box-shadow: 0px 3px 8px rgba($color-black, 0.16);
+  position: relative;
+  z-index: 4;
+}
+
 .c-header {
   position: relative;
   width: 100%;
   height: auto;
   // margin-top: 10px;
-  background: $color-1;
-
-
+  //background: $color-white;
 
   .container {
     display: flex;
@@ -15,12 +20,13 @@
     height: 100%;
 
     @media #{$mq-laptop} {
-      align-items: stretch;
+      //align-items: stretch;
     }
 
     > .header-buttons {
       display: flex;
       justify-content: flex-end;
+
       button:not(:last-child) {
         margin-right: 20px;
       }
@@ -28,27 +34,64 @@
 
     .hamburguer {
       position: relative;
-      min-width: 23px;
-      height: 16px;
+      width: 50px;
+      height: 30px;
       padding: 0;
-
       cursor: pointer;
+      margin-bottom: 4px;
+
+      @media #{$mq-tablet} {
+        width: 60px;
+        height: 37px;
+        margin-bottom: 8px;
+      }
 
       @media #{$mq-laptop} {
-        display: none;
+        //display: none;
+      }
+
+      @media #{$mq-desktop} {
+        width: 55px;
+        height: 41px;
+      }
+
+      @media #{$mq-desktop-large} {
+        width: 55px;
+        height: 41px;
       }
 
       > .ingredient {
+        border-radius: 4px;
         display: block;
         position: absolute;
         left: 0;
         width: 100%;
-        height: 2px;
+        height: 5px;
+        background-color: $color-2;
 
-        background-color: $color-4;
+        @media #{$mq-tablet} {
+          height: 6px;
+        }
+
+        @media #{$mq-desktop} {
+          height: 7px;
+        }
 
         &:first-child {
           top: 0;
+          width: 38px;
+
+          @media #{$mq-tablet} {
+            width: 46px;
+          }
+
+          @media #{$mq-desktop} {
+            width: 52px;
+          }
+
+          @media #{$mq-desktop-large} {
+            width: 60px;
+          }
         }
 
         &:nth-child(2) {
@@ -57,8 +100,108 @@
 
         &:last-child {
           top: 100%;
+          width: 25px;
+
+          @media #{$mq-tablet} {
+            width: 33px;
+          }
+
+          @media #{$mq-desktop} {
+            width: 36px;
+          }
+
+          @media #{$mq-desktop-large} {
+            width: 39px;
+          }
         }
       }
+    }
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-campaign {
+    margin-right: 50px;
+
+    @media #{$mq-desktop-medium} {
+      margin-right: 80px;
+    }
+
+    @media #{$mq-desktop-large} {
+      margin-right: 110px;
+    }
+
+    a, img {
+      display: block;
+    }
+
+    .fixed-nav & {
+      display: none !important;
+    }
+
+    /*color: $color-gray-medium;
+
+    a, span, img {
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      font-size: 18px;
+      line-height: 1.37;
+
+      em {
+        display: block;
+        font-style: italic;
+        font-size: 12px;
+      }
+
+      strong {
+        color: $color-2;
+      }
+    }
+
+    img {
+      margin-top: 8px;
+    }*/
+  }
+
+  .container-mobile-tag {
+    padding: 2px 0 18px;
+
+    img.finmark-tag {
+      display: block;
+      width: 500px;
+      height: auto;
+      max-width: 85%;
+    }
+  }
+
+  .container-mobile-campaign {
+    border-top: 1px solid #ddd;
+    text-align: right;
+    margin-top: 2px;
+
+    .nav-campaign {
+      display: inline-block;
+      margin-right: 0;
+
+      a {
+        padding: 16px 0 18px;
+      }
+
+      /*a {
+        display: flex;
+        align-items: center;
+        padding: 20px 0 30px;
+      }
+
+      img {
+        margin: 0 0 0 20px;
+      }*/
     }
   }
 
@@ -68,5 +211,24 @@
 
   &.-fixed {
     height: 50px;
+
+    .hamburguer {
+      width: 46px;
+      height: 26px;
+      margin-bottom: 4px;
+
+      > .ingredient {
+        height: 5px;
+
+        &:first-child {
+          width: 35px;
+        }
+
+        &:last-child {
+          width: 24px;
+        }
+      }
+    }
   }
+
 }

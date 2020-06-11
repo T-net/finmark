@@ -1,0 +1,54 @@
+
+<div class="c-home-intro-hero" style="background-image: url(<%= asset_path('homepage/image_home_intro@2x.png') %>)">
+  <div class="c-home-intro-search">
+    <div class="wrapper">
+      <div class="c-home-intro-search-field">
+        <input type="text" placeholder="Enter keyword here" />
+        <button type="button"><svg class="icon"><use xlink:href="#icon-search-finmark"></use></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="c-home-intro-hero-container">
+      <div class="c-home-intro-hero-row">
+        <div>
+          <div class="c-home-intro-hero-content">
+            <h1>Your partner in the real economy.</h1>
+            <p>We believe that market facilitation brings us closer to partnerships with our stakeholders and is the only way to have a real impact in the developing world.</p>
+          </div>
+          <div class="c-home-intro-hero-dropdowns">
+            <div class="c-home-intro-hero-dropdown">
+              <select>
+                <option value="">Select your audience type</option>
+              </select>
+              <div class="c-home-intro-hero-dropdown-icon"><svg class="icon"><use xlink:href="#icon-caret-down"></use></svg></div>
+            </div>
+            <div class="c-home-intro-hero-dropdown">
+              <select>
+                <option value="">Select your country</option>
+              </select>
+              <div class="c-home-intro-hero-dropdown-icon"><svg class="icon"><use xlink:href="#icon-caret-down"></use></svg></div>
+            </div>
+          </div>
+          <div class="c-home-intro-hero-caption">
+            <p>The website content will changed based on your selection</p>
+          </div>
+        </div>
+        <div class="c-home-intro-hero-links">
+          <h5 class="title -blue -regular">Quick links</h5>
+          <ul>
+            <li><%= link_to root_path do %><span>Remittances</span><% end %></li>
+            <li><%= link_to root_path do %><span>MSME</span><% end %></li>
+            <li><%= link_to root_path do %><span>Value chains</span><% end %></li>
+            <li><%= link_to root_path do %><span>Access to services</span><% end %></li>
+            <li><%= link_to root_path do %><span>Innovation</span><% end %></li>
+            <li><%= link_to root_path do %><span>Inclusive finance</span><% end %></li>
+            <li><%= link_to root_path do %><span>Policy &amp; regulation</span><% end %></li>
+            <li><%= link_to root_path do %><span>Real economy</span><% end %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

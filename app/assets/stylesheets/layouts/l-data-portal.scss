@@ -1,58 +1,5 @@
 .l-data-portal {
 
-  .l-library-content-selector .content-selector:not(:last-child) {
-    margin: 0 30px 0 0 !important;
-  }
-
-  .l-library-content-selector {
-    transform: translateY(8px) !important;
-
-    &::before {
-      background: none !important;
-      content: none !important;
-    }
-    .wrapper {
-      @media #{$mq-tablet} {
-        padding: 0 $wrapper-padding-tablet;
-      }
-
-      @media #{$mq-laptop} {
-        padding: 0 90px !important;
-      }
-
-      .content-selector {
-        flex-shrink: 0;
-      }
-    }
-  }
-
-  .content-selector {
-    padding: 12px 0px !important;
-
-    &.-current {
-      padding: 12px 20px !important;
-    }
-  }
-
-  svg.icon.tab-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 5px;
-
-    path {
-      fill: #f9d031;
-    }
-
-    &.-current {
-      path {
-        fill: #257B83;
-      }
-    }
-    @media print {
-      display:none;
-    }
-  }
-
   .c-hero {
     .c-button {
       position: relative;

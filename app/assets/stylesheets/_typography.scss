@@ -18,7 +18,6 @@ h2 {
 h1 {
   color: $color-1;
   font-size: $font-size-huge;
-  letter-spacing: -2px;
   line-height: 1.08;
 
   &.-alt {
@@ -28,7 +27,6 @@ h1 {
 
 h2 {
   font-size: $font-size-big;
-  letter-spacing: -1px;
   line-height: 1.35;
 
   &.-alt {
@@ -38,7 +36,7 @@ h2 {
 
 .title {
   font-family: $font-family-1;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-extra-bold;
 
   &.-light {
     color: $color-4;
@@ -48,7 +46,7 @@ h2 {
     color: $color-5;
   }
 
-  &.-sea {
+  &.-blue {
     color: $color-1;
   }
 
@@ -61,6 +59,14 @@ h2 {
     text-transform: uppercase;
   }
 
+  &.-xxm {
+    font-size: $font-size-xxm - 3;
+
+    @media #{$mq-tablet} {
+      font-size: $font-size-xxm + 1;
+    }
+  }
+
   &.-xs {
     font-size: $font-size-small;
   }
@@ -71,7 +77,10 @@ h2 {
 
   &.-medium {
     font-size: $font-size-medium;
-    letter-spacing: -1px;
+
+    @media #{$mq-tablet} {
+      font-size: $font-size-medium + 6;
+    }
   }
 
   &.-xbig {
@@ -81,22 +90,19 @@ h2 {
 
   &.-big {
     font-size: $font-size-big;
-    letter-spacing: -1px;
     line-height: 1.35;
 
     @media #{$mq-tablet} {
-      font-size: $font-size-big;
+      font-size: $font-size-big + 5;
     }
   }
 
   &.-huge {
     font-size: $font-size-big;
-    letter-spacing: -2px;
     line-height: 1;
 
     @media #{$mq-tablet} {
       font-size: $font-size-huge;
-      letter-spacing: -4px;
       line-height: .86;
     }
   }
@@ -104,16 +110,33 @@ h2 {
   &.-center {
     text-align: center;
   }
+
+  &.-divider {
+    position: relative;
+    padding-bottom: 25px;
+
+    &:after {
+      content: "";
+      background-color: $color-2;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 212px;
+      height: 7px;
+      max-width: 90%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 // paragraphs
 p {
   margin: 0;
 
-  color: $color-5;
+  color: $color-1;
   font-family: $font-family-1;
   font-size: $font-size-regular;
-  font-weight: $font-weight-light;
+  font-weight: $font-weight-medium;
   line-height: 1.75;
   word-wrap: break-word;
 

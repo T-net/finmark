@@ -19,13 +19,13 @@
     }
   }
 
-  ._no-desktop {
+  ._no-laptop {
     @media #{$mq-laptop} {
       display: none !important;
     }
   }
 
-  ._only-desktop {
+  ._only-laptop {
     display: none;
 
     @media #{$mq-laptop} {

@@ -21,7 +21,8 @@
 <div class="c-header <% if isCover.present? %>-cover<% end %> <% if isFixed %>-fixed<% end %>">
   <div class="container">
   	<div class="c-app-logo <% if isFixed %>-fixed<% end %>">
-  		<%= link_to image_tag('/i2i-logo.svg', :alt => 'insight2impact'), root_path, data: { turbolinks: false } %>
+  		<%= link_to image_tag(isFixed ? '/finmark-logo-white.svg' : '/finmark-logo.svg', :alt => 'FinMark Trust'), root_path, data: { turbolinks: false } %>
+      <%= image_tag '/finmark-tag.svg', :alt => 'Making financial markets work for the poor', :class => 'finmark-tag _only-laptop' %>
   	</div>
     <nav class="c-nav" role="navigation">
       <ul class="nav-list">
@@ -36,7 +37,7 @@
           <%= link_to 'Insights', insights_path, data: { turbolinks: false } %>
         </li>
         <li class="nav-item <% if current_page?(initiatives_path) || controller.controller_name == 'initiatives' %> -current <% end%>">
-          <%= link_to 'Research themes', initiatives_path, data: { turbolinks: false } %>
+          <%= link_to 'Programmes', initiatives_path, data: { turbolinks: false } %>
         </li>
         <li class="nav-item <% if current_page?(tools_path) %> -current <% end%>">
           <%= link_to 'Tools', tools_path, data: { turbolinks: false } %>
@@ -84,10 +85,23 @@
         <% end %>
       </ul>
     </nav>
-    <button class="hamburguer js-btn-mobile-menu">
-      <span class="ingredient"></span>
-      <span class="ingredient"></span>
-      <span class="ingredient"></span>
-    </button>
+    <div class="nav-right">
+      <div class="nav-campaign _only-desktop">
+        <%= render partial: 'shared/header_campaign' %>
+      </div>
+      <button class="hamburguer js-btn-mobile-menu">
+        <span class="ingredient"></span>
+        <span class="ingredient"></span>
+        <span class="ingredient"></span>
+      </button>
+    </div>
+  </div>
+  <div class="container-mobile-tag _no-laptop">
+    <%= image_tag '/finmark-tag.svg', :alt => 'Making financial markets work for the poor', :class => 'finmark-tag' %>
+  </div>
+  <div class="container-mobile-campaign _no-desktop">
+    <div class="nav-campaign">
+      <%= render partial: 'shared/header_campaign' %>
+    </div>
   </div>
 </div>
