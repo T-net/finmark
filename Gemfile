@@ -25,7 +25,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'activerecord-import', '~> 0.15.0'
 gem 'http'
 gem 'redis-rails'
-gem 'mini_racer', platforms: :ruby
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker'
 gem 'react-rails'
@@ -97,6 +96,10 @@ group :development do
   gem 'capistrano-passenger'
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
+end
+
+group :production do
+  gem 'mini_racer', platforms: :ruby
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

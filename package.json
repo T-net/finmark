@@ -11,17 +11,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vizzuality/i2i.git"
+    "url": "git+https://github.com/T-net/FinMark.git"
   },
   "keywords": [
     "financial"
   ],
-  "author": "Vizzuality <hello@vizzuality.com>",
+  "author": "FinMark Trust <info@finmark.org.za>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Vizzuality/i2i/issues"
+    "url": "https://github.com/T-net/FinMark/issues"
   },
-  "homepage": "https://github.com/Vizzuality/i2i#readme",
+  "homepage": "https://github.com/T-net/FinMark#readme",
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-react": "^7.6.3",

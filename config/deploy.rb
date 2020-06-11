@@ -2,7 +2,7 @@
 lock "3.7.1"
 
 set :application, 'i2i'
-set :repo_url, 'https://github.com/Vizzuality/i2i.git'
+set :repo_url, 'https://github.com/T-net/FinMark.git'
 set :deploy_to, '/var/www/i2i'
 set :use_sudo, true
 set :rvm_custom_path, '/usr/share/rvm'

@@ -1,5 +1,5 @@
 FROM ruby:2.5.3
-MAINTAINER David Inga <david.inga@vizzuality.com>
+MAINTAINER Michael Dos Santos <michaeld@finmark.org.za>
 
 ENV RAILS_ENV production
 ENV RACK_ENV production
