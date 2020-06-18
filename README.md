@@ -61,35 +61,19 @@ Just run next command:
 docker-compose -f docker-compose-dev.yml up --build
 ```
 
-It will fails because database has not been creted. So you have to run:
+It will fail because database has not been creted. So you have to run:
 
 ```
 docker-compose -f docker-compose-dev.yml run --rm web rake db:create db:migrate
 ```
 
-After that enter in the website container (finmark_web_1) and access to bash: 
+To enter in the website container (finmark_web_1) and access to bash, run: 
 
 ```
 docker exec -it [container-id] bash
 ```
 
-Once in run as many task as you need from `lib/tasks` folder:
-
-```
-rake db:[task-name]
-```
-
-To have countries available you will need to run the `sample` task at least. Run `rake db:sample`.
-
-It's recommended to run all tasks to avoid missing data.
-
-Once done with task running, just run the container:
-
-```
-docker exec -it [container-id] bash
-```
-
-Once in run as many task as you need from `lib/tasks` folder:
+Once in, run as many task as you need from `lib/tasks` folder:
 
 ```
 rake db:[task-name]
@@ -195,7 +179,7 @@ Deploying requires SSH access to the server. It's highly recommended that you us
 ssh-add -K /path-to-key/finmark-website.pem 
 ```
 
-Push changes to branch (finmark/develop for production).
+Push changes to branch (finmark/develop for production, check config/deploy/production).
 
 Deployment is handled by [Capistrano](https://capistranorb.com/), and requires you to have `ruby` configured on your local machine. 
 
@@ -204,5 +188,3 @@ To deploy to a server, use the following command from your local terminal:
 ```
 cap <production|staging> deploy
 ```
-
-SSH onto server and compile assets (see shareable components) in current release folder
