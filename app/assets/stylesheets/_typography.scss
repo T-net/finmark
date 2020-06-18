@@ -79,7 +79,11 @@ h2 {
     font-size: $font-size-medium;
 
     @media #{$mq-tablet} {
-      font-size: $font-size-medium + 6;
+      font-size: $font-size-medium + 4;
+    }
+
+    @media #{$mq-desktop-large} {
+      font-size: $font-size-medium + 8;
     }
   }
 
@@ -93,7 +97,11 @@ h2 {
     line-height: 1.35;
 
     @media #{$mq-tablet} {
-      font-size: $font-size-big + 5;
+      font-size: $font-size-big + 4;
+    }
+
+    @media #{$mq-desktop-large} {
+      font-size: $font-size-big + 8;
     }
   }
 
@@ -113,7 +121,7 @@ h2 {
 
   &.-divider {
     position: relative;
-    padding-bottom: 25px;
+    padding-bottom: 21px;
 
     &:after {
       content: "";
@@ -121,8 +129,8 @@ h2 {
       position: absolute;
       bottom: 0;
       left: 50%;
-      width: 212px;
-      height: 7px;
+      width: 170px;
+      height: 6px;
       max-width: 90%;
       transform: translateX(-50%);
     }

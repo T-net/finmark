@@ -35,31 +35,26 @@
     .hamburguer {
       position: relative;
       width: 45px;
-      height: 30px;
+      height: 27px;
       padding: 0;
       cursor: pointer;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
 
       @media #{$mq-tablet} {
         width: 49px;
         height: 33px;
-        margin-bottom: 6px;
-      }
-
-      @media #{$mq-laptop} {
-        width: 60px;
-        height: 37px;
-        margin-bottom: 8px;
       }
 
       @media #{$mq-desktop} {
-        width: 55px;
-        height: 41px;
+        width: 52px;
+        height: 37px;
+        margin-bottom: 6px;
       }
 
       @media #{$mq-desktop-large} {
-        width: 55px;
-        height: 41px;
+        width: 60px;
+        height: 40px;
+        margin-bottom: 7px;
       }
 
       > .ingredient {
@@ -71,11 +66,11 @@
         height: 5px;
         background-color: $color-2;
 
-        @media #{$mq-tablet} {
+        @media #{$mq-desktop} {
           height: 6px;
         }
 
-        @media #{$mq-desktop} {
+        @media #{$mq-desktop-large} {
           height: 7px;
         }
 
@@ -84,19 +79,15 @@
           width: 38px;
 
           @media #{$mq-tablet} {
-            width: 42px;
-          }
-
-          @media #{$mq-laptop} {
-            width: 46px;
+            width: 40px;
           }
 
           @media #{$mq-desktop} {
-            width: 52px;
+            width: 43px;
           }
 
           @media #{$mq-desktop-large} {
-            width: 60px;
+            width: 45px;
           }
         }
 
@@ -106,22 +97,18 @@
 
         &:last-child {
           top: 100%;
-          width: 25px;
+          width: 22px;
 
           @media #{$mq-tablet} {
-            width: 29px;
-          }
-
-          @media #{$mq-laptop} {
-            width: 33px;
+            width: 24px;
           }
 
           @media #{$mq-desktop} {
-            width: 36px;
+            width: 26px;
           }
 
           @media #{$mq-desktop-large} {
-            width: 39px;
+            width: 28px;
           }
         }
       }
@@ -145,7 +132,7 @@
     }
 
     @media #{$mq-desktop-large} {
-      margin-right: 110px;
+      margin-right: 94px;
     }
 
     a, img {
@@ -154,14 +141,14 @@
 
     img {
       height: auto;
-      width: 150px;
+      width: 140px;
 
       @media #{$mq-laptop} {
-        width: 180px;
+        width: 150px;
       }
 
       @media #{$mq-desktop} {
-        width: 200px;
+        width: 160px;
       }
     }
 
@@ -197,7 +184,7 @@
   }
 
   .container-mobile-tag {
-    padding: 2px 0 18px;
+    padding: 2px 0 10px;
 
     img.finmark-tag {
       display: block;
@@ -217,7 +204,7 @@
       margin-right: 0;
 
       a {
-        padding: 16px 0 18px;
+        padding: 7px 0 6px;
       }
 
       /*a {
@@ -240,19 +227,19 @@
     height: 50px;
 
     .hamburguer {
-      width: 46px;
-      height: 26px;
-      margin-bottom: 4px;
+      width: 45px;
+      height: 27px;
+      margin-bottom: 5px;
 
       > .ingredient {
         height: 5px;
 
         &:first-child {
-          width: 35px;
+          width: 38px;
         }
 
         &:last-child {
-          width: 24px;
+          width: 22px;
         }
       }
     }

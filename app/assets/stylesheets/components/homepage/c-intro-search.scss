@@ -1,16 +1,16 @@
 .c-home-intro-search {
 	position: absolute;
-	top: -30px;
+	top: -12px;
 	right: 0;
 	left: 0;
 
-	@media #{$mq-desktop} {
+	@media #{$mq-tablet} {
     	top: 50px;
   	}
 
   	&-field {
-  		border-radius: 8px;
-  		padding-top: 30px;
+  		border-radius: 6px;
+  		padding-top: 14px;
   		width: 100%;
   		max-width: 448px;
   		margin-left: auto;
@@ -20,26 +20,26 @@
   		overflow: hidden;
 
   		@media #{$mq-desktop-large} {
-	    	max-width: 648px;
+	    	max-width: 518px;
 	  	}
 
   		input {
   			flex: 2;
-  			height: 60px;
+  			height: 50px;
   			border: none;
   			background: none;
-  			padding: 25px 40px;
+  			padding: 20px 32px;
   			line-height: 1;
   			font-size: $font-size-regular;
 
   			@media #{$mq-tablet} {
-  				height: 70px;
-		    	font-size: $font-size-medium - 4;
+  				height: 59px;
+		    	font-size: $font-size-regular + 2;
 		  	}
 
   			@media #{$mq-desktop-large} {
-  				height: 80px;
-		    	font-size: $font-size-medium + 1;
+  				height: 67px;
+		    	font-size: $font-size-regular + 4;
 		  	}
 
 		  	&:focus {
@@ -49,20 +49,20 @@
 
   		button {
   			transition: background-color .4s ease;
-  			width: 60px;
-  			height: 60px;
+  			width: 50px;
+  			height: 50px;
   			padding: 0;
   			border: 0;
   			cursor: pointer;
 
   			@media #{$mq-tablet} {
-  				width: 70px;
-  				height: 70px;
+  				width: 59px;
+  				height: 59px;
 		  	}
 
   			@media #{$mq-desktop-large} {
-  				width: 80px;
-  				height: 80px;
+  				width: 67px;
+  				height: 67px;
 		  	}
 
 		  	&:hover {
@@ -74,13 +74,13 @@
 	  			height: 20px;
 
 		  		@media #{$mq-tablet} {
-	  				width: 26px;
-	  				height: 26px;
+	  				width: 23px;
+	  				height: 23px;
 			  	}
 
 	  			@media #{$mq-desktop-large} {
-	  				width: 33px;
-	  				height: 33px;
+	  				width: 26px;
+	  				height: 26px;
 			  	}
 		  	}
   		}

@@ -53,12 +53,8 @@
     height: 17px;
     margin-left: 15px;
 
-    @media #{$mq-tablet} {
-      margin-left: 15px;
-    }
-
     @media #{$mq-laptop} {
-      width: 427px;
+      width: 424px;
       height: 21px;
       margin-left: 30px;
     }

@@ -34,7 +34,7 @@
   <div class="l-content">
     <div class="l-featured-insights">
       <div class="wrapper">
-        <h2 class="title heading -big -center -blue -divider">News and insights</h2>
+        <h2 class="title heading -medium -center -blue -divider">News and insights</h2>
         <div class="row">
           <%= render partial: 'shared/cards', locals: { insights: @insights }%>
         </div>
@@ -43,33 +43,33 @@
     </div>
     <div class="l-dataportal-resume">
       <div class="wrapper">
+        <h2 class="title -big -center -light -divider">Data for the Financial Markets</h2>
         <div class="row">
-          <h2 class="title -big -center -light -divider">Data for the Financial Markets</h2>
           <div class="stats-list">
-              <div class="column grid-s-5 grid-m-3">
+              <div class="column grid-s-6 grid-m-3">
                 <div class="stats-item">
-                  <%= image_tag '/images/logos/fmt-finscope@2x.png', :width => '278', :alt => 'FMT FinScope' %>
+                  <%= image_tag '/images/logos/fmt-finscope.svg', :width => '222', :alt => 'FMT FinScope' %>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique id justo eget rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                   <a href="#" class="stats-link">Read more</a>
                 </div>
               </div>
-              <div class="column grid-s-5 grid-m-3">
+              <div class="column grid-s-6 grid-m-3">
                 <div class="stats-item">
-                  <%= image_tag '/images/logos/fmt-analytics@2x.png', :width => '271', :alt => 'FMT FinScope' %>
+                  <%= image_tag '/images/logos/fmt-analytics.svg', :width => '217', :alt => 'FMT Analytics' %>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique id justo eget rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                   <a href="#" class="stats-link">Read more</a>
                 </div>
               </div>
-              <div class="column grid-s-5 grid-m-3">
+              <div class="column grid-s-6 grid-m-3">
                 <div class="stats-item">
-                  <%= image_tag '/images/logos/fmt-mobile@2x.png', :width => '262', :alt => 'FMT FinScope' %>
+                  <%= image_tag '/images/logos/fmt-mobile.svg', :width => '210', :alt => 'FMT Mobile' %>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique id justo eget rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                   <a href="#" class="stats-link">Read more</a>
                 </div>
               </div>
-              <div class="column grid-s-5 grid-m-3">
+              <div class="column grid-s-6 grid-m-3">
                 <div class="stats-item">
-                  <%= image_tag '/images/logos/fmt-portal@2x.png', :width => '228', :alt => 'FMT FinScope' %>
+                  <%= image_tag '/images/logos/fmt-portal.svg', :width => '182', :alt => 'FMT Portal' %>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique id justo eget rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                   <a href="#" class="stats-link">Read more</a>
                 </div>
@@ -82,7 +82,7 @@
     <div class="l-twitter">
       <div class="wrapper">
         <header>
-          <h2 class="title -big -center -blue -divider">FMT on Twitter</h2>
+          <h2 class="title -medium -center -blue -divider">FMT on Twitter</h2>
         </header>
         <%= render partial: 'homepage/twitter_slider' %>
       </div>

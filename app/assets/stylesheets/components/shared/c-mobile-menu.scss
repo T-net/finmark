@@ -41,7 +41,7 @@
 
   .btn-close {
     position: absolute;
-    top: 13px;
+    top: 20px;
     right: 14px;
     width: 30px;
     height: 30px;
@@ -49,15 +49,15 @@
     cursor: pointer;
 
     @media #{$mq-tablet} {
-      top: 23px;
-      width: 45px;
-      height: 45px;
+      top: 28px;
+      width: 42px;
+      height: 42px;
     }
 
     @media #{$mq-desktop} {
-      top: 69px;
-      width: 60px;
-      height: 60px;
+      top: 47px;
+      width: 54px;
+      height: 54px;
     }
 
     &::before,
@@ -113,15 +113,15 @@
     > .nav-list > .nav-item > a {
       color: $color-4;
       font-family: $font-family-2;
-      font-size: $font-size-xxm;
+      font-size: $font-size-medium;
       font-weight: $font-weight-bold;
 
       @media #{$mq-tablet} {
-        font-size: $font-size-xm;
+        font-size: $font-size-medium + 4;
       }
 
-      @media #{$mq-desktop} {
-        font-size: 40px;
+      @media #{$mq-desktop-large} {
+        font-size: $font-size-medium + 6;
       }
     }
   }

@@ -11,18 +11,18 @@
       &:after {
         display: inline-block;
         position: absolute;
-        bottom: -3px;
+        bottom: -2px;
         left: 1%;
         width: 98%;
-        height: 5px;
+        height: 4px;
         background: $color-white;
         content: '';
 
         @media #{$mq-tablet} {
           bottom: 0;
           left: auto;
-          right: -3px;
-          width: 5px;
+          right: -2px;
+          width: 4px;
           height: 100%;
         }
       }
@@ -66,7 +66,7 @@
 
     .title.-big {
       @media #{$mq-tablet} {
-        font-size: 50px;
+        font-size: $font-size-big + 8;
       }
     }
 
@@ -76,7 +76,7 @@
       line-height: 1.375;
 
       @media #{$mq-tablet} {
-        font-size: 24px;
+        font-size: $font-size-regular + 3;
       }
 
       &.-leading {
@@ -105,12 +105,20 @@
     color: $color-white;
     text-align: center;
 
+    @media #{$mq-laptop} {
+      font-size: $font-size-regular - 2;
+    }
+
     .pre-footer {
       position: relative;
     }
 
     .title {
-      margin-bottom: 16px;
+      margin-bottom: 14px;
+
+      &.-medium {
+        font-size: $font-size-medium;
+      }
     }
 
     .social {
