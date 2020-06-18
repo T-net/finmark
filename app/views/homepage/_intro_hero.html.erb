@@ -2,10 +2,13 @@
 <div class="c-home-intro-hero" style="background-image: url(<%= asset_path('homepage/image_home_intro@2x.png') %>)">
   <div class="c-home-intro-search">
     <div class="wrapper">
-      <div class="c-home-intro-search-field">
-        <input type="text" placeholder="Enter keyword here" />
-        <button type="button"><svg class="icon"><use xlink:href="#icon-search-finmark"></use></svg></button>
-      </div>
+      <%= form_tag(search_path, :method => "get", :class => 'c-home-intro-search-field') do %>
+          <%= label_tag(:term, "Search for:", :class => '_is-visually-hidden') %>
+          <%= text_field_tag(:term, params[:term], :placeholder => 'Enter keyword here') %>
+          <%= button_tag(:type => 'submit', :name => nil) do %>
+            <svg class="icon"><use xlink:href="#icon-search-finmark"></use></svg>
+          <% end %>
+      <% end %>
     </div>
   </div>
 

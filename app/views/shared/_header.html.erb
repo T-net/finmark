@@ -22,7 +22,7 @@
   <div class="container">
   	<div class="c-app-logo <% if isFixed %>-fixed<% end %>">
   		<%= link_to image_tag(isFixed ? '/finmark-logo-white.svg' : '/finmark-logo.svg', :alt => 'FinMark Trust'), root_path, data: { turbolinks: false } %>
-      <%= image_tag '/finmark-tag.svg', :alt => 'Making financial markets work for the poor', :class => 'finmark-tag _only-laptop' %>
+      <%= image_tag '/finmark-tag.svg', :alt => 'Making financial markets work for the poor', :class => 'finmark-tag _only-mobile-large' %>
   	</div>
     <nav class="c-nav" role="navigation">
       <ul class="nav-list">
@@ -86,7 +86,7 @@
       </ul>
     </nav>
     <div class="nav-right">
-      <div class="nav-campaign _only-desktop">
+      <div class="nav-campaign _only-tablet">
         <%= render partial: 'shared/header_campaign' %>
       </div>
       <button class="hamburguer js-btn-mobile-menu">
@@ -96,10 +96,10 @@
       </button>
     </div>
   </div>
-  <div class="container-mobile-tag _no-laptop">
+  <div class="container-mobile-tag _no-mobile-large">
     <%= image_tag '/finmark-tag.svg', :alt => 'Making financial markets work for the poor', :class => 'finmark-tag' %>
   </div>
-  <div class="container-mobile-campaign _no-desktop">
+  <div class="container-mobile-campaign _no-tablet">
     <div class="nav-campaign">
       <%= render partial: 'shared/header_campaign' %>
     </div>

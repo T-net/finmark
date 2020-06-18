@@ -191,6 +191,12 @@ Follow the instructions on `app/javascript/components/fsp-maps/constants.js`, th
 
 Deploying requires SSH access to the server. It's highly recommended that you use RSA keys instead of username+password access.
 
+```
+ssh-add -K /path-to-key/finmark-website.pem 
+```
+
+Push changes to branch (finmark/develop for production).
+
 Deployment is handled by [Capistrano](https://capistranorb.com/), and requires you to have `ruby` configured on your local machine. 
 
 To deploy to a server, use the following command from your local terminal:
@@ -199,3 +205,4 @@ To deploy to a server, use the following command from your local terminal:
 cap <production|staging> deploy
 ```
 
+SSH onto server and compile assets (see shareable components) in current release folder

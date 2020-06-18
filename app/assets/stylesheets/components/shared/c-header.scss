@@ -34,20 +34,22 @@
 
     .hamburguer {
       position: relative;
-      width: 50px;
+      width: 45px;
       height: 30px;
       padding: 0;
       cursor: pointer;
       margin-bottom: 4px;
 
       @media #{$mq-tablet} {
-        width: 60px;
-        height: 37px;
-        margin-bottom: 8px;
+        width: 49px;
+        height: 33px;
+        margin-bottom: 6px;
       }
 
       @media #{$mq-laptop} {
-        //display: none;
+        width: 60px;
+        height: 37px;
+        margin-bottom: 8px;
       }
 
       @media #{$mq-desktop} {
@@ -82,6 +84,10 @@
           width: 38px;
 
           @media #{$mq-tablet} {
+            width: 42px;
+          }
+
+          @media #{$mq-laptop} {
             width: 46px;
           }
 
@@ -103,6 +109,10 @@
           width: 25px;
 
           @media #{$mq-tablet} {
+            width: 29px;
+          }
+
+          @media #{$mq-laptop} {
             width: 33px;
           }
 
@@ -124,7 +134,11 @@
   }
 
   .nav-campaign {
-    margin-right: 50px;
+    margin-right: 25px;
+
+    @media #{$mq-laptop} {
+      margin-right: 50px;
+    }
 
     @media #{$mq-desktop-medium} {
       margin-right: 80px;
@@ -136,6 +150,19 @@
 
     a, img {
       display: block;
+    }
+
+    img {
+      height: auto;
+      width: 150px;
+
+      @media #{$mq-laptop} {
+        width: 180px;
+      }
+
+      @media #{$mq-desktop} {
+        width: 200px;
+      }
     }
 
     .fixed-nav & {

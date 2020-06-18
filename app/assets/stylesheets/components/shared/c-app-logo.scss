@@ -27,8 +27,13 @@
       height: 47px;
       
       @media #{$mq-tablet} {
-        width: 136px;
-        height: 71px;
+        width: 109px;
+        height: 57px;
+      }
+
+      @media #{$mq-laptop} {
+        width: 164px;
+        height: 86px;
       }
 
       @media #{$mq-desktop} {
@@ -44,16 +49,28 @@
   }
 
   img.finmark-tag {
+    width: 350px;
+    height: 17px;
+    margin-left: 15px;
+
     @media #{$mq-tablet} {
-      width: 350px;
-      height: 17px;
+      margin-left: 15px;
+    }
+
+    @media #{$mq-laptop} {
+      width: 427px;
+      height: 21px;
       margin-left: 30px;
     }
 
     @media #{$mq-desktop} {
-      width: 425px;
-      height: 21px;
-      margin-left: 89px;
+      width: 448px;
+      height: 22px;
+      margin-left: 60px;
+    }
+
+    @media #{$mq-desktop-medium} {
+      margin-left: 80px;
     }
 
     @media #{$mq-desktop-large} {
