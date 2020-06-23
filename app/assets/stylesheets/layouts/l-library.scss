@@ -55,7 +55,7 @@
       white-space: nowrap;
 
       @media #{$mq-laptop} {
-        font-size: $font-size-medium + 6;
+        font-size: $font-size-medium ;
       }
 
       &:hover {

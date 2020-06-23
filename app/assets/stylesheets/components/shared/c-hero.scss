@@ -18,7 +18,7 @@
     line-height: 1;
 
     @media #{$mq-laptop} {
-      font-size: 80px;
+      font-size: 50px;
     }
   }
 
@@ -28,12 +28,12 @@
     line-height: 1.36;
 
     @media #{$mq-tablet} {
-      margin-top: 35px;
-      font-size: 22px;
+      margin-top: 20px;
+      font-size: 14px;
     }
 
     a {
-      color: $color-1;
+      color: #0097AE;
       font-weight: $font-weight-bold;
     }
 
