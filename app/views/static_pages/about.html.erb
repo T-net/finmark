@@ -50,7 +50,6 @@
 
 
 
-
           </div>
         </div>
         <div class="image-container" style="background-image: url(<%= asset_path('about/about-us.jpg') %>)"></div>
@@ -61,7 +60,7 @@
         <div class="grid-s-12">
           <div class="l-section-description">
             <div class="grid-m-8">
-              <h2 class="title -dark -big -center">Team</h2>
+              <h2 class="title -dark -big -center">Our Team</h2>
             </div>
             <div class="grid-m-6">
               <p class="section-description">
@@ -92,32 +91,29 @@
         </div>
       </div>
     </div>
-    <div id="focus-countries" class="l-section -countries" style="background-image: url(<%= asset_path('about/map-about.svg') %>)">
-      <div class="row">
-        <div class="grid-s-12 grid-m-6 grid-l-5">
-          <div class="c-card-highlight -countries-about" style="background-image: url(<%= asset_path('about/map-about.svg') %>)">
-            <h3 class="title -dark -big">Focus countries</h3>
-            <ul class="country-list">
-              <% @countries.each do |country| %>
-                <li class="country-item"><a href="#" class="js-country" data-iso="<%= country[:iso] %>"><%= country[:name] %></a></li>
-              <% end %>
-            </ul>
+    <div id="focus-countries" class="l-section -countries">
+    <div class="row">
+        <div class="grid-s-12">
+          <div class="l-section-description">
+            <div class="grid-m-8">
+              <h2 class="title -dark -big -center">Introductory video</h2>
+            </div>
+            <div class="grid-m-6">
+              <p class="section-description">
+An introduction to FinMark Trust and the impactful work it has done through Financial Inclusion in making financial markets work for the poor. <br>   <br>          </p>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/4IL_xqU9QaY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
     <div id="advisor" class="l-section -advisory">
       <div class="row">
         <div class="grid-s-12">
           <div class="l-section-description">
             <div class="grid-m-8">
-              <h2 class="title -dark -big -center">Advisory panel</h2>
+              <h2 class="title -dark -big -center">Our Trustees</h2>
             </div>
-            <div class="grid-m-6">
-              <p class="section-description">
-                Meet the experts helping us navigate and respond to the dynamic external financial inclusion environment.
-              </p>
-            </div>
+
           </div>
           <div class="l-staff-grid">
             <div class="row">
