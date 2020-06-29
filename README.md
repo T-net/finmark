@@ -176,7 +176,7 @@ Follow the instructions on `app/javascript/components/fsp-maps/constants.js`, th
 Deploying requires SSH access to the server. It's highly recommended that you use RSA keys instead of username+password access.
 
 ```
-ssh-add -K /path-to-key/finmark-website.pem 
+ssh-add -K ~/Keys/finmark-website.pem 
 ```
 
 Push changes to branch (finmark/develop for production, check config/deploy/production).
@@ -187,4 +187,5 @@ To deploy to a server, use the following command from your local terminal:
 
 ```
 cap <production|staging> deploy
+cap production deploy
 ```
