@@ -18,7 +18,7 @@
   }
 
   .l-library-content-selector {
-    background-color: #01164c;
+    background-color: $color-dark-blue;
     display: flex;
     position: relative;
     align-items: center;
@@ -49,13 +49,17 @@
       color: $color-white;
       font-weight: $font-weight-extra-bold;
       cursor: pointer;
-      font-size: $font-size-medium;
+      font-size: $font-size-regular;
       line-height: 1.36;
       padding: 12px 0px;
       white-space: nowrap;
 
-      @media #{$mq-laptop} {
-        font-size: $font-size-medium ;
+      @media #{$mq-desktop} {
+        font-size: $font-size-regular + 2;
+      }
+
+      @media #{$mq-desktop-large} {
+        font-size: $font-size-regular + 4;
       }
 
       &:hover {

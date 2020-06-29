@@ -24,7 +24,7 @@
 
   .subtitle {
     margin: 20px 0 0;
-    color: #ffffff;
+    color: $color-white;
     line-height: 1.36;
 
     @media #{$mq-tablet} {
@@ -33,7 +33,7 @@
     }
 
     a {
-      color: #0097AE;
+      color: $color-2;
       font-weight: $font-weight-bold;
     }
 

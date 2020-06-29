@@ -25,6 +25,7 @@ services:
       - "./:/usr/src/i2i"
     ports:
       - 3000:3000
+      - 5432:5432
     links:
       - db
     depends_on:
