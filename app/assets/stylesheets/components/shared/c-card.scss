@@ -41,9 +41,9 @@
 
     > p {
       line-height: 1.4;
-      
+
       @media #{$mq-tablet} {
-        font-size: 20px;
+        font-size: 14px;
       }
     }
 
@@ -116,7 +116,7 @@
           width: 100%;
 
           @media #{$mq-tablet} {
-            padding: 27px 25px;
+            padding: 15px 10px;
           }
 
           &:hover {
@@ -127,22 +127,22 @@
     }
 
     .date {
-      font-size: $font-size-regular;
+      font-size: $font-size-regular - 3;
       font-weight: $font-weight-medium;
       color: $color-gray-medium;
     }
 
-    .card-category {
+    4 {
       display: block;
       background: $color-gray-lighter;
-      padding: 12px 18px;
+      padding: 10px 10px;
       border-radius: 8px;
       font-size: $font-size-regular;
       font-weight: $font-weight-bold;
       color: $color-white;
 
       @media #{$mq-tablet} {
-        font-size: $font-size-regular + 2;
+        font-size: $font-size-regular - 2;
       }
     }
   }
