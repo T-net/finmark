@@ -69,6 +69,8 @@ Rails.application.routes.draw do
   get 'resources(/:category)', to: 'libraries#index', as: 'libraries'
 
   get 'about' => 'static_pages#about'
+  get 'contacts' => 'static_pages#contacts'
+  get 'dfm' => 'static_pages#dfm'
   get 'terms-of-use', to: 'static_pages#terms_of_use', as: 'terms_of_use'
   get 'privacy-policy', to: 'static_pages#privacy_policy', as: 'privacy_policy'
 

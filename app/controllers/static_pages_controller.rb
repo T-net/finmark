@@ -1,7 +1,6 @@
 class StaticPagesController < ApplicationController
 
   def about
-    @contact = Contact.new
     @teamMembers = sort_by_importance(Member.where(role: 1))
     @advisoryMembers = sort_by_importance(Member.where(role: 2))
     @countries = [
@@ -24,9 +23,17 @@ class StaticPagesController < ApplicationController
     gon.advisor = JSON.parse @advisoryMembers.to_json(:methods => [:image_url])
   end
 
+
+  def contacts
+    @contact = Contact.new
+  end
+
+
   def terms_of_use; end
 
   def privacy_policy; end
+
+  def dfm; end
 
   private
 
