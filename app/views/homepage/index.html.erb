@@ -1,14 +1,15 @@
 <% title 'Welcome to FinMark Trust' %>
-<% - description = content_for?(:description) ? yield(:description) : 'i2i is a facility established by FinMark Trust and Cenfri to respond to the growing divide between the data available for policy and product design and the ability of financial services providers, policy makers and financial intermediaries to collect, make sense of and embed this data in their decision making.' %>
+<% - description = content_for?(:description) ? yield(:description) : '
+FinMark Trust (FMT) is an independent trust established in 2002 with the objective of making markets work for the poor. Initial core funding was provided by UKaid from the Department for International Development (DFID) through its Southern Africa office.' %>
 
 <% content_for :media_metas do %>
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@i2ifacility" />
-  <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) : 'insight2impact' %>" />
+  <meta name="twitter:site" content="@Finmarktrust" />
+  <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) : 'FinMark Trust' %>" />
   <meta name="twitter:description" content="<%= description %>" />
   <meta name="twitter:image" content="<%= request.base_url %><%= asset_path('homepage/image_home_9.jpg') %>" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'insight2impact' %>" />
+  <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'FinMark Trust' %>" />
   <meta property="og:description" content="<%= description %>" />
   <meta property="og:image" content="<%= request.base_url %><%= asset_path('homepage/image_home_9.jpg') %>" />
   <meta property="og:url" content="<%= request.original_url %>" />
