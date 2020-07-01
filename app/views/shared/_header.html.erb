@@ -6,7 +6,7 @@
     <div class="wrapper">
       <div class="row">
         <div class="l-search">
-          <h1 class="title -highlight -huge">Search i2i</h1>
+          <h1 class="title -highlight -huge">Search FinMark Trust</h1>
           <div class="grid-s-12 grid-m-12 grid-l-10">
             <%= form_tag(search_path, method: 'get', class: 'c-form-search-inline') do %>
               <%= text_field_tag :term, nil, placeholder: 'Type your search here', id: 'search-input' %>
@@ -45,6 +45,10 @@
     		<li class="nav-item <% if current_page?(about_path) %> -current <% end%>">
           <%= link_to 'About', about_path, data: { turbolinks: false } %>
         </li>
+ <li class="nav-item <% if current_page?(contacts_path) %> -current <% end%>">
+            <%= link_to 'Contact FMT', contacts_path %>
+          </li>
+
         <% if current_user %>
           <li class="nav-item -with-dropdown <% if current_page?(account_path) || current_page?(datasets_path) %> -current <% end%>" aria-haspopup="true">
             <%= link_to current_user.name_or_email, account_path, data: { turbolinks: false } %>
