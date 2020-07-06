@@ -114,6 +114,7 @@
           white-space: nowrap;
           text-align: center;
           width: 100%;
+          font-size: 16px;
 
           @media #{$mq-tablet} {
             padding: 15px 10px;
@@ -135,9 +136,9 @@
     .card-category {
       display: block;
       background: $color-gray-lighter;
-      padding: 10px 10px;
+      padding: 5px 5px;
       border-radius: 8px;
-      font-size: $font-size-regular;
+      font-size: 12px;
       font-weight: $font-weight-bold;
       color: $color-white;
 
