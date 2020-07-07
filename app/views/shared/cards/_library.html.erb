@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="metadata">
-    <% if library.issuu_link.present? and library.category.name === 'Publications' %>
+    <% if library.issuu_link.present? and library.category.present? and library.category.name === 'Publications' %>
       <a href="<%= library.issuu_link %>" target="_blank" rel="noopener" data-name="<%= library.title %>">
         <h4 class="title -blue -medium"><%= library.title %></h4>
       </a>
@@ -60,7 +60,7 @@
           <a href="<%= library.url_resource %>" target="_blank" rel="noopener" class="title -xxm js-download" data-name="<%= library.title %>">Download</a>
         <% end %>
       <% end %>
-      <% if library.issuu_link.present? and library.category.name === 'Publications' %>
+      <% if library.issuu_link.present? and library.category.present? and library.category.name === 'Publications' %>
         <a href="<%= library.issuu_link %>" target="_blank" rel="noopener" class="title -xxm js-download" data-name="<%= library.title %>">View</a>
       <% end %>
       <% if library.video_url.present?%>

@@ -1,81 +1,79 @@
-
 <div class="c-home-intro-hero" style="background-image: url(<%= asset_path('homepage/image_home_intro@2x.png') %>)">
-<div class="c-home-intro-search">
-  <div class="wrapper">
-    <%= form_tag(search_path, :method => "get", :class => 'c-home-intro-search-field') do %>
-        <%= label_tag(:term, "Search for:", :class => '_is-visually-hidden') %>
-        <%= text_field_tag(:term, params[:term], :placeholder => 'Enter keyword here') %>
-        <%= button_tag(:type => 'submit', :name => nil) do %>
-          <svg class="icon"><use xlink:href="#icon-search-finmark"></use></svg>
-        <% end %>
-    <% end %>
-  </div>
-</div>
-
-<div class="wrapper">
-  <div class="c-home-intro-hero-container">
-    <div class="c-home-intro-hero-row">
-      <div>
-        <div class="c-home-intro-hero-content">
-        <h1><span style="color: #0097AE">COVID-19</span> <span style="color: #ffffff">Tracking survey status</span></h1>
-          <p style="color: #ffffff">The COVID-19 tracking survey themes include health and risk behaviours, food security, income, work and job security, personal safety concerns, and access to government and community support.</p>
+    <div class="c-home-intro-search">
+        <div class="wrapper">
+            <%= form_tag(search_path, :method => "get", :class => 'c-home-intro-search-field') do %>
+            <%= label_tag(:term, "Search for:", :class => '_is-visually-hidden') %>
+            <%= text_field_tag(:term, params[:term], :placeholder => 'Enter keyword here') %>
+            <%= button_tag(:type => 'submit', :name => nil) do %>
+            <svg class="icon">
+                <use xlink:href="#icon-search-finmark"></use>
+            </svg>
+            <% end %>
+            <% end %>
         </div>
-
-<br><br>
-        <a class="c-button" style="background-color: #0097AE"  href="https://covid19tracker.africa/" target="_blank">View Tracker </a>
-
-<br><br>
-<hr style="color: #ffffff">
-<h3 style="color: #ffffff">View content by:</h3>
-
-        <div class="c-home-intro-hero-dropdowns">
-          <div class="c-home-intro-hero-dropdown">
-
-            <select>
-              <option value="">Select your content topic</option>
-            </select>
-            <div class="c-home-intro-hero-dropdown-icon"><svg class="icon"><use xlink:href="#icon-caret-down"></use></svg></div>
-          </div>
-          <div class="c-home-intro-hero-dropdown">
-            <select>
-              <option value="">Select your country</option>
-            </select>
-            <div class="c-home-intro-hero-dropdown-icon"><svg class="icon"><use xlink:href="#icon-caret-down"></use></svg></div>
-          </div>
-        </div>
-
-
-
-
-
-
-
-
-        <div class="c-home-intro-hero-caption">
-          <p>The website content will changed based on your selection</p>
-        </div>
-      </div>
-
-
-
-
-      <div class="c-home-intro-hero-links">
-        <h5 class="title -blue -regular" style="color: #ffffff">Our work</h5>
-        <ul>
-          <li><%= link_to root_path do %><span>Innovation</span><% end %></li>
-          <li><%= link_to root_path do %><span>Women & Youth</span><% end %></li>
-          <li><%= link_to root_path do %><span>Policy & Regulation</span><% end %></li>
-          <li><%= link_to root_path do %><span>Rural & Agricultural </span><% end %></li>
-          <li><%= link_to root_path do %><span>MSME</span><% end %></li>
-          <li><%= link_to root_path do %><span>Digital Finance</span><% end %></li>
-
-        </ul>
-      </div>
-
-
-
-
     </div>
-  </div>
-</div>
+
+    <div class="wrapper">
+        <div class="c-home-intro-hero-container">
+            <div class="c-home-intro-hero-row">
+                <div>
+                    <div class="c-home-intro-hero-content">
+                        <h1 class="-white"><span style="color: #0097AE">COVID-19</span> <span>Tracking survey status</span></h1>
+                        <p style="color: #ffffff">The COVID-19 tracking survey themes include health and risk behaviours, food security, income, work and job security, personal safety concerns, and access to government and community support.</p>
+                    </div>
+
+                    <br><br>
+                    <a class="c-button" style="background-color: #0097AE" href="https://covid19tracker.africa/" target="_blank">View Tracker </a>
+
+                    <br><br>
+                    <hr>
+                    <h3 class="-white">View content by:</h3>
+
+                    <%= form_tag(insights_filter_index_path('all'), method: 'get', class: 'c-home-intro-hero-dropdowns') do %>
+                      <div class="c-home-intro-hero-dropdown c-home-intro-hero-dropdown-topic">
+                        <%= label_tag :topics, 'Topics', :class => '_is-visually-hidden' %>
+                        <%= select_tag(:topics, options_for_select(@topics.collect { |c| [c.name, c.slug] }, params[:topics]), { include_blank: 'Select your topic' }) %>
+                        <div class="c-home-intro-hero-dropdown-icon">
+                          <svg class="icon"><use xlink:href="#icon-caret-down"></use></svg>
+                        </div>
+                      </div>
+                      <div class="c-home-intro-hero-dropdown c-home-intro-hero-dropdown-location">
+                          <%= label_tag :locations, 'Locations', :class => '_is-visually-hidden' %>
+                          <%= select_tag(:locations, options_for_select(@countries.all.collect { |c| [c.name, c.iso] }, params[:locations]), { include_blank: 'Select your location' }) %>
+                          <div class="c-home-intro-hero-dropdown-icon">
+                            <svg class="icon"><use xlink:href="#icon-caret-down"></use></svg>
+                          </div>
+                      </div>
+                      <div class="c-home-intro-hero-submit-button">
+                        <%= button_tag('Apply', type: :submit, readonly: true, class: 'c-button') %>
+                      </div>
+                    <% end %>
+
+                    <div class="c-home-intro-hero-caption">
+                        <p>The website content will changed based on your selection</p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="c-home-intro-hero-links">
+                    <h5 class="title -blue -regular" style="color: #ffffff">Our work</h5>
+                    <ul>
+                        <li><%= link_to root_path do %><span>Innovation</span><% end %></li>
+                        <li><%= link_to root_path do %><span>Women & Youth</span><% end %></li>
+                        <li><%= link_to root_path do %><span>Policy & Regulation</span><% end %></li>
+                        <li><%= link_to root_path do %><span>Rural & Agricultural </span><% end %></li>
+                        <li><%= link_to root_path do %><span>MSME</span><% end %></li>
+                        <li><%= link_to root_path do %><span>Digital Finance</span><% end %></li>
+
+                    </ul>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
 </div>
