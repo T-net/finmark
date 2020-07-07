@@ -1,7 +1,7 @@
 {
   "name": "insight-to-impact",
   "version": "1.0.0",
-  "description": "FinMark Trust is an independent non-profit trust whose purpose is ‘Making financial markets work for the poor, by promoting financial inclusion and regional financial integration’. We pursue our core objective of making financial markets work for the poor through two principle programmes.",
+  "description": "Unleashing the power of data for financial inclusion",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -16,7 +16,7 @@
   "keywords": [
     "financial"
   ],
-  "author": "FinMark Trust <info@finmark.org.za>",
+  "author": "Info <info@FinMark.org.za>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/T-net/FinMark/issues"
