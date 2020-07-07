@@ -1,5 +1,5 @@
 <article class="c-card">
-  <% if library.issuu_link.present? and library.category.name === 'Publications' %>
+  <% if library.issuu_link.present? and library.category.present? and library.category.name === 'Publications' %>
     <a href="<%= library.issuu_link %>" target="_blank" rel="noopener" data-name="<%= library.title %>">
       <div class="picture" style="background-image: url(<%= library.image.url(:thumb) %>)"></div>
     </a>
@@ -47,8 +47,10 @@
   </div>
   <footer class="footer">
     <div class="card-options">
-       <h4 class="date"><%= DateHelper.beautify library.date %></h4>
-      <span class="card-category"><%= library.category.name %></span>
+      <h4 class="date"><%= DateHelper.beautify library.date %></h4>
+      <% if library.category.present? %>
+        <span class="card-category"><%= library.category.name %></span>
+      <% end %>
     </div>
     <div class="card-options -link">
       <% if (library.document.present? && library.document.file.present?) || library.url_resource.present? %>
