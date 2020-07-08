@@ -19,7 +19,7 @@
         content: '';
 
         @media #{$mq-tablet} {
-          bottom: 0;
+          bottom: -6px;
           left: auto;
           right: -2px;
           width: 4px;
@@ -36,7 +36,7 @@
       min-height: 150px;
 
       @media #{$mq-tablet} {
-        min-height: 250px;
+        min-height: 180px;
       }
 
       @media #{$mq-laptop} {
@@ -64,12 +64,6 @@
       color: inherit;
     }
 
-    .title.-big {
-      @media #{$mq-tablet} {
-        font-size: $font-size-big + 8;
-      }
-    }
-
     .text {
       display: inline-block;
       font-weight: 16px;
@@ -83,7 +77,7 @@
         margin-top: 20px;
 
         @media #{$mq-tablet} {
-          margin-top: 45px;
+          margin-top: 30px;
         }
       }
 
