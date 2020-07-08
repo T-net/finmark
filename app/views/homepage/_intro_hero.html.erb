@@ -60,13 +60,9 @@
                 <div class="c-home-intro-hero-links">
                     <h5 class="title -blue -regular" style="color: #ffffff">Our work</h5>
                     <ul>
-                        <li><%= link_to root_path do %><span>Innovation</span><% end %></li>
-                        <li><%= link_to root_path do %><span>Women & Youth</span><% end %></li>
-                        <li><%= link_to root_path do %><span>Policy & Regulation</span><% end %></li>
-                        <li><%= link_to root_path do %><span>Rural & Agricultural </span><% end %></li>
-                        <li><%= link_to root_path do %><span>MSME</span><% end %></li>
-                        <li><%= link_to root_path do %><span>Digital Finance</span><% end %></li>
-
+                      <% @featured_tags.each do |tag| %>
+                        <li><%= link_to initiatives_filter_index_path(tag.slug) do %><span><%=tag.title %></span><% end %></li>
+                      <% end %>
                     </ul>
                 </div>
 

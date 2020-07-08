@@ -5,7 +5,7 @@ var Router = Backbone.Router.extend({
 
   routes: {
     '': '_homePage',
-    'insights(/)(:category)': '_insightsPage',
+    'knowledge-hub(/)(:category)': '_insightsPage',
     'about(/)': '_aboutPage',
     'terms-of-use(/)': '_termsOfUsePage'
   },
