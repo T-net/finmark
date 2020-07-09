@@ -119,9 +119,6 @@
   }
 
   .l-form-contact {
-    display: flex;
-    justify-content: center;
-
     @media #{$mq-tablet} {
       margin: 40px 0 0;
     }
