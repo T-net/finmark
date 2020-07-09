@@ -9,14 +9,14 @@
           <li class="nav-item <% if controller.controller_name == 'data_portal' || controller.controller_name == 'report' %> -current <% end%>">
             <%= link_to 'Data portal', data_portal_path %>
           </li>
-          <li class="nav-item <% if current_page?(insights_path) %> -current <% end%>">
-            <%= link_to 'Knowledge hub', insights_path %>
+          <li class="nav-item <% if current_page?(hub_path) %> -current <% end%>">
+            <%= link_to 'Knowledge hub', hub_path %>
           </li>
-          <li class="nav-item <% if current_page?(initiatives_path) %> -current <% end%>">
-            <%= link_to 'Our work', initiatives_path %>
+          <li class="nav-item <% if current_page?(work_path) %> -current <% end%>">
+            <%= link_to 'Our work', work_path %>
           </li>
-          <li class="nav-item <% if current_page?(tools_path) %> -current <% end%>">
-            <%= link_to 'Terms of reference', tools_path %>
+          <li class="nav-item <% if current_page?(terms_of_reference_path) %> -current <% end%>">
+            <%= link_to 'Terms of reference', terms_of_reference_path %>
           </li>
           <li class="nav-item <% if current_page?(about_path) %> -current <% end%>">
             <%= link_to 'About FMT', about_path %>

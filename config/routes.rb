@@ -89,17 +89,17 @@ Rails.application.routes.draw do
   end
 
   # Insights
-  get 'insights/:category/:slug', to: 'insights#show', as: 'insights_show'
-  get 'insights/:category', to: 'insights#categories', as: 'insights_filter_index'
-  get 'insights', to: 'insights#index'
+  get 'hubn/:category/:slug', to: 'insights#show', as: 'insights_show'
+  get 'hub/:category', to: 'insights#categories', as: 'insights_filter_index'
+  get 'hub', to: 'insights#index'
 
   # Initiatives
-  get 'initiatives/:tag/:slug', to: 'initiatives#show', as: 'initiatives_show'
-  get 'initiatives/:tag', to: 'initiatives#filter_index', as: 'initiatives_filter_index'
-  get 'initiatives', to: 'initiatives#index'
+  get 'work/:tag/:slug', to: 'initiatives#show', as: 'initiatives_show'
+  get 'work/:tag', to: 'initiatives#filter_index', as: 'initiatives_filter_index'
+  get 'work', to: 'initiatives#index'
 
   # Tools
-  get 'tools' => 'tools#index'
+  get 'terms-of-reference' => 'tools#index'
 
   namespace :fdapi do
     resources :household_transactions, only: [:index, :show]

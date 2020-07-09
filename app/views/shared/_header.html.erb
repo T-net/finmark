@@ -33,14 +33,14 @@
         >
           <%= link_to 'Data portal', data_portal_path, data: { turbolinks: false } %>
         </li>
-    		<li class="nav-item <% if current_page?(insights_path) || controller.controller_name == 'insights' %> -current <% end%>">
-          <%= link_to 'Insights', insights_path, data: { turbolinks: false } %>
+    		<li class="nav-item <% if current_page?(hub_path) || controller.controller_name == 'insights' %> -current <% end%>">
+          <%= link_to 'Insights', hub_path, data: { turbolinks: false } %>
         </li>
-        <li class="nav-item <% if current_page?(initiatives_path) || controller.controller_name == 'initiatives' %> -current <% end%>">
-          <%= link_to 'Programmes', initiatives_path, data: { turbolinks: false } %>
+        <li class="nav-item <% if current_page?(work_path) || controller.controller_name == 'initiatives' %> -current <% end%>">
+          <%= link_to 'Programmes', work_path, data: { turbolinks: false } %>
         </li>
-        <li class="nav-item <% if current_page?(tools_path) %> -current <% end%>">
-          <%= link_to 'Tools', tools_path, data: { turbolinks: false } %>
+        <li class="nav-item <% if current_page?(terms_of_reference_path) %> -current <% end%>">
+          <%= link_to 'Tools', terms_of_reference_path, data: { turbolinks: false } %>
         </li>
     		<li class="nav-item <% if current_page?(about_path) %> -current <% end%>">
           <%= link_to 'About FMT', about_path, data: { turbolinks: false } %>
