@@ -89,7 +89,7 @@ Rails.application.routes.draw do
   end
 
   # Insights
-  get 'hubn/:category/:slug', to: 'insights#show', as: 'insights_show'
+  get 'hub/:category/:slug', to: 'insights#show', as: 'insights_show'
   get 'hub/:category', to: 'insights#categories', as: 'insights_filter_index'
   get 'hub', to: 'insights#index'
 
