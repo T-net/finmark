@@ -2,7 +2,7 @@
 <html lang="<%= I18n.locale %>">
   <head>
     <meta charset="utf-8">
-    <title><%= yield :title %> - insight2impact</title>
+    <title><%= yield :title %> - FinMark Trust</title>
     <%= Gon::Base.render_data %>
     <%= csrf_meta_tags %>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +11,12 @@
       <%= yield(:media_metas) %>
     <% else %>
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@i2ifacility" />
-      <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) : 'insight2impact' %>" />
+      <meta name="twitter:site" content="@Finmarktrust" />
+      <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) : 'FinMark Trust' %>" />
       <meta name="twitter:description" content="i2i is a facility established by FinMark Trust and Cenfri to respond to the growing divide between the data available for policy and product design and the ability of financial services providers, policy makers and financial intermediaries to collect, make sense of and embed this data in their decision making." />
       <meta name="twitter:image" content="<%= request.base_url %>/social-media-image.png" />
       <meta property="og:type" content="article" />
-      <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'insight2impact' %>" />
+      <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'FinMark Trust' %>" />
       <meta property="og:description" content="i2i is a facility established by FinMark Trust and Cenfri to respond to the growing divide between the data available for policy and product design and the ability of financial services providers, policy makers and financial intermediaries to collect, make sense of and embed this data in their decision making." />
       <meta property="og:image" content="<%= request.base_url %>/social-media-image.png" />
     <% end %>

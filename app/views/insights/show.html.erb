@@ -2,12 +2,12 @@
 
 <% content_for :media_metas do %>
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@i2ifacility" />
-  <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) : 'insight2impact' %>" />
+  <meta name="twitter:site" content="@Finmarktrust" />
+  <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) : 'FinMark Trust' %>" />
   <meta name="twitter:description" content="<%= @insight.summary %>" />
   <meta name="twitter:image" content="<%= request.base_url %><%= @insight.image.url(:medium) %>" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'insight2impact' %>" />
+  <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'FinMark Trust' %>" />
   <meta property="og:description" content="<%= @insight.summary %>" />
   <meta property="og:image" content="<%= request.base_url %><%= @insight.image.url(:medium) %>" />
   <meta property="og:url" content="<%= request.original_url %>" />
