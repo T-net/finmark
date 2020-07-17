@@ -99,7 +99,7 @@ Rails.application.routes.draw do
   get 'our-work', to: 'initiatives#index', as: 'initiatives'
 
   # Tools
-  get 'tools' => 'tools#index'
+  get 'terms-of-reference' => 'tools#index', as: 'tools'
 
   namespace :fdapi do
     resources :household_transactions, only: [:index, :show]

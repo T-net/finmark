@@ -62,6 +62,7 @@
 
     p, a, button {
       color: inherit;
+      font-weight: 400;
     }
 
     .text {
@@ -84,6 +85,7 @@
       &.-button {
         padding: 0;
         cursor: pointer;
+        text-decoration: underline;
       }
 
       &.-twitterlink {
