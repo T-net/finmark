@@ -146,7 +146,7 @@ class DatasetForm extends React.Component {
         <p className="description -small">
           Once submitted, we will be notified of your submission, we will go through your data,
           approve or return it to you for further changes.<br />
-          For further information on your data, please contact <a href="mailto:info@i2ifacility.org">info@i2ifacility.org</a>.
+          For further information on your data, please contact <a href="mailto:info@finmark.org.za">info@finmark.org.za</a>.
         </p>
 
         <form onSubmit={(e) => {

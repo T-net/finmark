@@ -73,7 +73,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :sparkpost
   # To work with Active Admin
   config.action_mailer.default_url_options = {
-    host: ENV.fetch('I2I_HOST') { 'i2ifacility.org' }
+    host: ENV.fetch('I2I_HOST') { 'finmark.org.za' }
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

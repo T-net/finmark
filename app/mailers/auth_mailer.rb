@@ -4,7 +4,7 @@ class AuthMailer < Devise::Mailer
   default template_path: 'devise/mailer' # to make sure that your mailer uses the devise views
 
   def confirmation_instructions(record, token, opts={})
-    opts[:from] = 'info@i2ifacility.org'
+    opts[:from] = 'info@finmark.org.za'
     super
   end
 end

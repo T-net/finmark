@@ -22,7 +22,7 @@ Download last database backup from server (from /home/ubuntu).
 
 Run:
 
-```scp -r ubuntu@staging.i2ifacility.org:/home/ubuntu/filename.dump .```
+```scp -r ubuntu@staging.finmark.org.za:/home/ubuntu/filename.dump .```
 
 ```pg_restore -C -d postgres filename.dump```
 
@@ -30,7 +30,7 @@ Run:
 
 Download assets:
 
-```scp -r ubuntu@staging.i2ifacility.org:/var/www/i2i/current/public/system ./public/```
+```scp -r ubuntu@staging.finmark.org.za:/var/www/i2i/current/public/system ./public/```
 
 
 ### Development
@@ -118,8 +118,8 @@ There are three types of dataset:
 - Fsp maps
     - Shows layers on a map using react and redux.
 
-Staging: staging.i2ifacility.org
-Production: i2ifacility.org
+Staging: staging.finmark.org.za
+Production: finmark.org.za
 
 `i2i` -> Rails app (Docker name: `i2i_web`)
 `i2i-api` -> Node api for the national surveys (Docker name: `i2i-api_prod`)

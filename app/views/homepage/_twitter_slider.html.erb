@@ -21,7 +21,7 @@
           </div>
           <% if tweet.media? %>
             <div class="grid-s-12 grid-m-6 tweet-image-container">
-              <div class="tweet-image" style="background-image: url(<%= tweet.media[0].media_url.to_s %>)"></div>
+              <div class="tweet-image" style="background-image: url('<%= tweet.media[0].media_url_https.to_s %>')"></div>
             </div>
           <% end %>
         </div>

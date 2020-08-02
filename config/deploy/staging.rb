@@ -1,4 +1,4 @@
-server 'staging.i2ifacility.org', user: 'ubuntu', roles: %w{web app db}, primary: true
+server 'staging.finmark.org.za', user: 'ubuntu', roles: %w{web app db}, primary: true
 set :ssh_options, {
   forward_agent: true
 }
