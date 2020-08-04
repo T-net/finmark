@@ -19,8 +19,8 @@
   </div>
   <div class="l-content">
     <div class="wrapper">
-      <%= render partial: 'countries_list', locals: { countries: @worldwide_countries, regions_hash: @regions_hash } %>
       <%= render partial: 'regions_list', locals: { regions: @regions } %>
+      <%= render partial: 'countries_list', locals: { countries: @worldwide_countries, regions_hash: @regions_hash } %>
       <%= render partial: 'additional_data' %>
     </div>
   </div>
