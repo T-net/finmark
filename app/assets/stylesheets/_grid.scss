@@ -75,6 +75,12 @@
   }
 }
 
+@media #{$mq-tablet} {
+  .grid-m-2-3 {
+    width: 20%;
+  }
+}
+
 // Large devices (desktops, 960px and up)
 @for $column from 1 through $grid-columns {
   @media #{$mq-laptop} {
@@ -85,6 +91,12 @@
     .offset-l-#{$column} {
       @include offset($column);
     }
+  }
+}
+
+@media #{$mq-laptop} {
+  .grid-l-2-3 {
+    width: 20%;
   }
 }
 

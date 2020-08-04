@@ -1,0 +1,37 @@
+.l-home-sadc {
+    padding-top: 50px;
+    color: $color-gray-blue;
+
+    .title, p {
+        color: inherit;
+    }
+
+    .title + p {
+        margin-top: 6px;
+    }
+
+    p {
+        line-height: 1.4;
+    }
+
+    &-row {
+        @include flexbox;
+        @include align-items(center);
+    }
+
+    &-logo {
+        margin-right: 30px;
+
+        img {
+            width: 154px;
+        }
+    }
+
+    .c-button {
+        background-color: $color-gray-blue;
+        border-color: transparent;
+        color: $color-gray-lightest;
+        margin-top: 16px;
+        padding: 11px 20px;
+    }
+}

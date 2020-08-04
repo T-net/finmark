@@ -3,90 +3,112 @@
 FinMark Trust (FMT) is an independent trust established in 2002 with the objective of making markets work for the poor. Initial core funding was provided by UKaid from the Department for International Development (DFID) through its Southern Africa office.' %>
 
 <% content_for :media_metas do %>
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@Finmarktrust" />
-  <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) : 'FinMark Trust' %>" />
-  <meta name="twitter:description" content="<%= description %>" />
-  <meta name="twitter:image" content="<%= request.base_url %><%= asset_path('homepage/image_home_9.jpg') %>" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'FinMark Trust' %>" />
-  <meta property="og:description" content="<%= description %>" />
-  <meta property="og:image" content="<%= request.base_url %><%= asset_path('homepage/image_home_9.jpg') %>" />
-  <meta property="og:url" content="<%= request.original_url %>" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@Finmarktrust" />
+<meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) : 'FinMark Trust' %>" />
+<meta name="twitter:description" content="<%= description %>" />
+<meta name="twitter:image" content="<%= request.base_url %><%= asset_path('homepage/image_home_9.jpg') %>" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'FinMark Trust' %>" />
+<meta property="og:description" content="<%= description %>" />
+<meta property="og:image" content="<%= request.base_url %><%= asset_path('homepage/image_home_9.jpg') %>" />
+<meta property="og:url" content="<%= request.original_url %>" />
 <% end %>
 
 <div class="l-homepage">
-  <div class="l-intro js-hero" style="background-image: url(<%= asset_path('headers/header-bg-home.jpg') %>)">
-    <div class="nav">
-      <div class="wrapper">
-        <%= render partial: 'shared/header', locals: { isCover: true } %>
-      </div>
-    </div>
-    <div class="fixed-nav js-fixed-nav">
-      <div class="wrapper">
-        <%= render partial: 'shared/header' , locals: { isFixed: true } %>
-      </div>
-    </div>
-    <div class="content">
-      <%= render partial: 'homepage/intro_hero' %>
-      <%-# render partial: 'homepage/cover_slider' -%>
-    </div>
-  </div>
-  <div class="l-content">
-    <div class="l-featured-insights">
-      <div class="wrapper">
-        <h2 class="title heading -medium -center -blue -divider">Latest</h2>
-        <div class="row">
-          <%= render partial: 'shared/cards', locals: { insights: @insights }%>
-        </div>
-        <%-#<div class="btn-container"><%= link_to 'See more', insights_path, class: 'c-button -sea -big' % ></div>-%>
-      </div>
-    </div>
-    <div class="l-dataportal-resume">
-      <div class="wrapper">
-        <h2 class="title -big -center -light -divider">Data for Financial Markets</h2>
-        <div class="row">
-          <div class="stats-list">
-              <div class="column grid-s-6 grid-m-3">
-                <div class="stats-item">
-                  <%= image_tag '/images/logos/fmt-finscope.svg', :width => '222', :alt => 'FMT FinScope' %>
-                  <p>FinScope remains the most comprehensive demand side instrument of its kind, and has to date been conducted in over 30 countries. </p>
-                  <%= link_to 'Read more', data_for_financial_markets_path, :class => 'stats-link' %>
-                </div>
-              </div>
-              <div class="column grid-s-6 grid-m-3">
-                <div class="stats-item">
-                  <%= image_tag '/images/logos/fmt-analytics.svg', :width => '217', :alt => 'FMT Analytics' %>
-                  <p>Gathering data is the easy part, knowing what to do with it is difficult. Our team of researchers, statisticians and data scientist can analyses FinScope or Big Data</p>
-                  <%= link_to 'Read more', data_for_financial_markets_path, :class => 'stats-link' %>
-                </div>
-              </div>
-              <div class="column grid-s-6 grid-m-3">
-                <div class="stats-item">
-                  <%= image_tag '/images/logos/fmt-mobile.svg', :width => '210', :alt => 'FMT Mobile' %>
-                  <p>The proliferation of mobile devices has presented researchers with a golden opportunity to rethink the way data is collected.</p>
-                  <%= link_to 'Read more', data_for_financial_markets_path, :class => 'stats-link' %>
-                </div>
-              </div>
-              <div class="column grid-s-6 grid-m-3">
-                <div class="stats-item">
-                  <%= image_tag '/images/logos/fmt-portal.svg', :width => '182', :alt => 'FMT Portal' %>
-                  <p>Our portal is continuously evolving as our data and analytics work is conducted in more countries as well as novel data sources for existing countries. </p>
-                  <%= link_to 'Read more', data_for_financial_markets_path, :class => 'stats-link' %>
-                </div>
-              </div>
+    <div class="l-intro js-hero" style="background-image: url(<%= asset_path('headers/header-bg-home.jpg') %>)">
+        <div class="nav">
+            <div class="wrapper">
+                <%= render partial: 'shared/header', locals: { isCover: true } %>
             </div>
-          </div>
         </div>
-      </div>
+        <div class="fixed-nav js-fixed-nav">
+            <div class="wrapper">
+                <%= render partial: 'shared/header' , locals: { isFixed: true } %>
+            </div>
+        </div>
+        <div class="content">
+            <%= render partial: 'homepage/intro_hero' %>
+            <%-# render partial: 'homepage/cover_slider' -%>
+        </div>
     </div>
+    <div class="l-content">
+        <div class="l-featured-insights">
+            <div class="wrapper">
+                <h2 class="title heading -medium -center -blue -divider">Latest</h2>
+                <div class="row">
+                    <%= render partial: 'shared/cards', locals: { insights: @insights }%>
+                </div>
+                <%-#<div class="btn-container"><%= link_to 'See more', insights_path, class: 'c-button -sea -big' % ></div>-%>
+            </div>
+        </div>
+        <div class="l-dataportal-resume">
+            <div class="wrapper">
+                <h2 class="title -big -center -light -divider">Data for Financial Markets</h2>
+                <div class="row">
+                    <div class="stats-list">
+                        <div class="column grid-s-6 grid-l-2-3">
+                            <div class="stats-item">
+                                <%= image_tag '/images/logos/fmt-finscope.svg', :width => '222', :alt => 'FMT FinScope' %>
+                                <p>FinScope remains the most comprehensive demand side instrument of its kind, and has to date been conducted in over 30 countries. </p>
+                                <%= link_to 'Read more', data_for_financial_markets_path, :class => 'stats-link' %>
+                            </div>
+                        </div>
+                        <div class="column grid-s-6 grid-l-2-3">
+                            <div class="stats-item">
+                                <%= image_tag '/images/logos/fmt-analytics.svg', :width => '217', :alt => 'FMT Analytics' %>
+                                <p>Gathering data is the easy part, knowing what to do with it is difficult. Our team of researchers, statisticians and data scientist can analyses FinScope or Big Data.</p>
+                                <%= link_to 'Read more', data_for_financial_markets_path, :class => 'stats-link' %>
+                            </div>
+                        </div>
+                        <div class="column grid-s-6 grid-l-2-3">
+                            <div class="stats-item">
+                                <%= image_tag '/images/logos/fmt-mobile.svg', :width => '210', :alt => 'FMT Mobile' %>
+                                <p>The proliferation of mobile devices has presented researchers with a golden opportunity to rethink the way data is collected.</p>
+                                <%= link_to 'Read more', data_for_financial_markets_path, :class => 'stats-link' %>
+                            </div>
+                        </div>
+                        <div class="column grid-s-6 grid-l-2-3">
+                            <div class="stats-item">
+                                <%= image_tag '/images/logos/fmt-portal.svg', :width => '182', :alt => 'FMT Portal' %>
+                                <p>Our portal is continuously evolving as our data and analytics work is conducted in more countries as well as novel data sources for existing countries.</p>
+                                <%= link_to 'Read more', data_for_financial_markets_path, :class => 'stats-link' %>
+                            </div>
+                        </div>
+                        <div class="column grid-s-6 grid-l-2-3">
+                            <div class="stats-item">
+                                <%= image_tag '/images/logos/fmt-geospatial.svg', :width => '236', :alt => 'FMT Geospatial' %>
+                                <p>This geospatial offering supports the centering of financial infrastructure around consumers, as well as using location intelligence to inform key decision areas.</p>
+                                <%= link_to 'Read more', data_for_financial_markets_path, :class => 'stats-link' %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="l-home-sadc">
+            <div class="wrapper">
+                <div class="l-home-sadc-row">
+                    <div class="l-home-sadc-logo">
+                        <%= image_tag '/images/logos/sadc.svg', :width => '154', :alt => 'SADC' %>
+                    </div>
+                    <div>
+                        <h2 class="title heading -medium">Southern African Development Community</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam diam enim, pretium eget aliquam vel, ullamcorper eu nisl. Donec efficitur, mauris sit amet molestie feugiat, mauris justo finibus orci, sed eleifend elit risus vel nisl.</p>
+                        <%= link_to 'Read more', regions_path('SADC'), :class => 'c-button' %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div class="l-twitter">
-      <div class="wrapper">
-        <header>
-          <h2 class="title -medium -center -blue -divider">FMT on Twitter</h2>
-        </header>
-        <%= render partial: 'homepage/twitter_slider' %>
-      </div>
+        <div class="wrapper">
+            <header>
+                <h2 class="title -medium -center -blue -divider">FMT on Twitter</h2>
+            </header>
+            <%= render partial: 'homepage/twitter_slider' %>
+        </div>
     </div>
-  </div>
+</div>
 </div>

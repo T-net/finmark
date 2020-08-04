@@ -21,8 +21,8 @@
     margin-right: -20px;
 
     @media #{$mq-desktop} {
-      margin-left: -50px;
-      margin-right: -50px;
+      margin-left: -42px;
+      margin-right: -42px;
     }
   }
 
@@ -36,13 +36,13 @@
       padding-right: 20px;
 
       @media #{$mq-desktop} {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 42px;
+        padding-right: 42px;
       }
     }
 
     .column:not(:first-child):before {
-      @media #{$mq-tablet} {
+      @media #{$mq-laptop} {
         position: absolute;
         top: 80px;
         bottom: 10px;
@@ -57,23 +57,23 @@
     .stats-item {
       display: flex;
       flex-direction: column;
-      margin: 0 0 35px;
+      margin: 0 0 45px;
       position: relative;
 
-      @media#{$mq-tablet} {
-        align-items: center;
-        margin: 0;
-      }
-
-      @media #{$mq-laptop} {
+      @media#{$mq-laptop} {
         align-items: flex-start;
+        margin: 0;
       }
 
       > img {
         display: block;
         max-width: 100%;
         height: auto;
-        margin-bottom: 35px;
+        margin-bottom: 16px;
+
+        @media #{$mq-laptop} {
+          margin-bottom: 35px;
+        }
       }
 
       p, a {
@@ -88,11 +88,12 @@
       > a {
         display: block;
         font-weight: $font-weight-extra-bold;
-        margin-top: 28px;
+        margin-top: 15px;
         text-align: left;
 
         @media #{$mq-tablet} {
-          font-size: $font-size-regular + 4;
+          font-size: $font-size-regular + 2;
+          margin-top: 28px;
         }
       }
 

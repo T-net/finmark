@@ -6,6 +6,9 @@
 
       <nav>
         <ul class="nav-list">
+          <li class="nav-item <% if current_page?(root_path) %> -current <% end%>">
+            <%= link_to 'Home', root_path %>
+          </li>
           <li class="nav-item <% if controller.controller_name == 'data_portal' || controller.controller_name == 'report' %> -current <% end%>">
             <%= link_to 'Data portal', data_portal_path %>
           </li>
