@@ -15,6 +15,9 @@
           <li class="nav-item <% if current_page?(initiatives_path) %> -current <% end%>">
             <%= link_to 'Our work', initiatives_path %>
           </li>
+          <li class="nav-item <% if current_page?(data_for_financial_markets_path) %> -current <% end%>">
+            <%= link_to 'Data for financial markets', data_for_financial_markets_path %>
+          </li>
           <li class="nav-item <% if current_page?(tools_path) %> -current <% end%>">
             <%= link_to 'Terms of reference', tools_path %>
           </li>

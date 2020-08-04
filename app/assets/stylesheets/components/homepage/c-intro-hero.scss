@@ -261,9 +261,17 @@
 				  			left: 0;
     						right: auto;
 				  		}
-    				}
+					}
+					
+					&.dfm-link {
+						color: $color-1;
+
+						&:before {
+							background-color: rgba($color-white, 0.8);
+						}
+					}
     			}
     		}
-    	}
+		}
     }
 }

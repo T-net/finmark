@@ -63,6 +63,7 @@
                       <% @featured_tags.each do |tag| %>
                         <li><%= link_to initiatives_filter_index_path(tag.slug) do %><span><%=tag.title %></span><% end %></li>
                       <% end %>
+                      <li><%= link_to data_for_financial_markets_path, :class => 'dfm-link' do %><span>Data for financial markets</span><% end %></li>
                     </ul>
                 </div>
 

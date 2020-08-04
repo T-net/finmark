@@ -70,7 +70,7 @@ Rails.application.routes.draw do
 
   get 'about' => 'static_pages#about'
   get 'contacts' => 'static_pages#contacts'
-  get 'dfm' => 'static_pages#dfm'
+  get 'data-for-financial-markets' => 'static_pages#data_for_financial_markets', as: 'data_for_financial_markets'
   get 'terms-of-use', to: 'static_pages#terms_of_use', as: 'terms_of_use'
   get 'privacy-policy', to: 'static_pages#privacy_policy', as: 'privacy_policy'
 

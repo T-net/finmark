@@ -33,7 +33,7 @@ class StaticPagesController < ApplicationController
 
   def privacy_policy; end
 
-  def dfm; end
+  def data_for_financial_markets; end
 
   private
 
