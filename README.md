@@ -1,4 +1,4 @@
-# Insight 2 Impact (i2i)
+# FinMark Trust
 
 ## Requirements
 * `ruby 2.5.3`
