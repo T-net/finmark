@@ -122,14 +122,18 @@
       }
 
       blockquote {
-        background: #f9f9f9;
-        border-left: 10px solid #ccc;
+        background: #203366;
+        border-left: 10px solid #0097ae;
         margin: 1.5em 10px;
-        padding: 0.5em 10px;
+        padding: 1.5em 10px;
+        font-size: larger;
+        font-weight: 600;
+        line-height: 25px;
+        font-family: "Open Sans", sans-serif;
         quotes: "\201C""\201D""\2018""\2019";
       }
       blockquote:before {
-        color: #ccc;
+        color: #ffffff;
         content: open-quote;
         font-size: 4em;
         line-height: 0.1em;
@@ -151,6 +155,7 @@
 
         li {
           display: list-item;
+          color: #203366;
 
          }
 
@@ -167,9 +172,7 @@
         }
 
 
-        li + li {
-          margin-top: 20px;
-        }
+
 
         &.link-list {
           padding: 0;
