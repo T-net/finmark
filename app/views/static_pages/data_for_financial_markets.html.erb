@@ -31,6 +31,8 @@
             </div>
         </div>
     </div>
+
+
     <div class="l-content">
         <div class="wrapper">
             <div class="l-section -insights">
@@ -59,9 +61,8 @@
                 <div class="row">
                     <div class="grid-s-12 grid-m-6 footer-header-col-1">
                         <div class="header-item -newsletter js-subscribe">
-                            <h2 class="title -big">FinScope Consumer</h2>
-
-                            <%= image_tag '/images/logos/fmt-finscope.svg', :width => '222', :alt => 'FMT FinScope' %>
+                          <h2 class="title -big">FinScope Consumer</h2>
+							<%= image_tag '/images/logos/fmt-finscope.svg', :width => '222', :alt => 'FMT FinScope' %>
                             <p class="text -leading">
 
                                 FinScope remains the most comprehensive demand side instrument of its kind, and has to date been conducted in over 30 countries. This places FinMark Trust in a unique position to support countries in SADC, West Africa, Asia and beyond, to understand their demand-side financial inclusion landscape.
@@ -79,16 +80,16 @@
                             <%= image_tag '/images/logos/fmt-MSME.svg', :width => '222', :alt => 'FMT FinScope' %>
                             <p class="text -leading">
                                 FinScope MSME is a probability survey of MSMEs. MSMEs are crucial entities for economic growth and employment creation across the developing world. To expand the role that the financial sector and its participants can play in SMMEs, FinScope MSME was developed. It has since been operationalised in 8 countries, and like its sister entity, FinScope Consumer, is used by a wide variety of stakeholders to support their strategies vis-à-vis the financial services market for MSMEs.
-                            </p>
+                          </p>
                             <br /> <br />
                             <%= link_to 'Read more', data_for_financial_markets_path, :class => 'stats-link' %>
 
-                        </div>
+                      </div>
                     </div>
                 </div>
             </div>
         </div>
-
+ </footer>
 
 
 
@@ -99,6 +100,7 @@
                     <div id="about-us" class="c-card-highlight -about -reverse">
                         <div class="content">
                             <h3 class="title -dark -big">Mobile</h3>
+							<%= image_tag '/images/logos/DFM Mobile_color.svg', :width => '222', :alt => 'FMT Mobile' %>
                             <p>
                                 The proliferation of mobile devices has presented researchers with a golden opportunity to rethink the way data is collected. Mobile surveys aren’t going to replace traditional Demand Side Surveys (DSS) any time soon, but they do provide us with options that allow us to track important market metrics regularly and understand emerging phenomena as and when they start developing. These mobile generated insights can then be explored further using tailored DSS surveys or experimental methods.
                             </p>
@@ -107,12 +109,15 @@
                 </div>
             </div>
         </div>
+
+
         <div class="l-content">
             <div class="wrapper">
                 <div class="l-section -insights">
                     <div id="about-us" class="c-card-highlight -about -reverse">
                         <div class="content">
                             <h3 class="title -dark -big">Analytics</h3>
+							<%= image_tag '/images/logos/DFM Analytics_colour.svg', :width => '222', :alt => 'FMT Analytics' %>
                             <p>
                                 Gathering data is the easy part, knowing what to do with it is difficult. Our team of researchers, statisticians and data scientist can analyses FinScope or Big Data to generate evidence and insights across core themes such as women, the informal sector, digital financial services, product usage, financial needs and livelihoods. Our team will maximise the investment made in your data by exploring it through new analytical lenses giving you fresh perspectives on how best to serve the poor.
                             </p>
@@ -121,5 +126,50 @@
                 </div>
             </div>
         </div>
-    </footer>
+
+
+
+
+ <footer class="c-footer">
+        <div class="footer-header">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="grid-s-12 grid-m-6 footer-header-col-1">
+                        <div class="header-item -newsletter js-subscribe">
+                          <h2 class="title -big">FMT Portal</h2>
+							<%= image_tag '/images/logos/DFM Portal_white.svg', :width => '222', :alt => 'FMT Portal' %>
+                            <p class="text -leading">
+
+                              The portal currently hosts multiple data types of data and analytical tools, including:
+
+Nationally representative survey datasets for over 30 countries, MSME data, GIS location data, which is combined contextual GIS data layers, Financial Diaries and Mobile survey data.
+Users can visualise data and do in browser analytics.
+                            </p>
+
+                            <br /> <br />
+                            <%= link_to 'Read more', data_for_financial_markets_path, :class => 'stats-link' %>
+
+                        </div>
+                    </div>
+
+                    <div class="grid-s-12 grid-m-6">
+                        <div class="header-item -contact-us">
+                            <h2 class="title -big">FMT Geospatial</h2>
+                            <%= image_tag '/images/logos/DFM Geospatial_white.svg', :width => '222', :alt => 'FMT Geospatial' %>
+                            <p class="text -leading">
+                         At its core, this geospatial offering supports the centering of financial infrastructure around consumers, as well as using location intelligence to inform key decision areas such as KPI measurement, product design and implementation, strategic investments, risk management and consumer protection.
+                          </p>
+                            <br /> <br />
+                            <%= link_to 'Read more', data_for_financial_markets_path, :class => 'stats-link' %>
+
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ </footer>
+
+
+
+
 </div>
