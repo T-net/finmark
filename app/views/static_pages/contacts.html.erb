@@ -72,7 +72,7 @@
     <div class="wrapper">
     <div class="l-section -insights">
 
-      <div id="about-us" class="c-card-highlight -about -reverse">
+      <div id="about-us" class="c-card-highlight -about -centered">
         <div class="content">
           <h3 class="title -dark -big">FMT contact form</h3>
 
@@ -90,7 +90,7 @@
                   <%= f.input :country, as: :string %>
                   <%= f.input :message, required: true %>
                   <div class="actions">
-                    <%= recaptcha_tags if Rails.env == 'production' %>
+                    <%= recaptcha_tags %>
                     <%= f.button :submit, 'Send', class: 'primary-btn' %>
                   </div>
                 <% end %>

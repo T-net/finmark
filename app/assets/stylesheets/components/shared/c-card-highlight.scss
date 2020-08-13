@@ -87,6 +87,10 @@
       }
     }
 
+    &.-centered {
+      flex-direction: column-reverse;
+    }
+
     .image-container {
       flex-basis: 170px;
       flex-shrink: 0;
