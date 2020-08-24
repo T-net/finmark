@@ -7,6 +7,7 @@ var Router = Backbone.Router.extend({
     '': '_homePage',
     'knowledge-hub(/)(:category)': '_insightsPage',
     'about(/)': '_aboutPage',
+    'data-for-financial-markets(/)': '_dataForFinancialMarketsPage',
     'terms-of-use(/)': '_termsOfUsePage'
   },
 
@@ -51,6 +52,15 @@ var Router = Backbone.Router.extend({
       },
       linkTo: params.linkTo
     });
+  },
+
+
+  _dataForFinancialMarketsPage: function () {
+    // Don't forget to stop the router on each route
+    // otherwise you'll break the browser's back button
+    Backbone.history.stop();
+
+    new App.Page.DataForFinancialMarketsPage();
   },
 
   _termsOfUsePage: function () {
