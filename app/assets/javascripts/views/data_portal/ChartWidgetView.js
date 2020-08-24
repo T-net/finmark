@@ -682,10 +682,14 @@
             this.chart = chart({ el: this.chartContainer, renderer: 'svg' }).update();
 
             if (chartConfig.name === 'radial') {
-              var radialWidth = 320;
+              //var radialWidth = 320;
               var radialDataLength = this.chart.data('final').values().length;
               if (radialDataLength > 1) {
-                this.chart.width(320 * radialDataLength).update();
+                var chartContainer = this.chartContainer.getBoundingClientRect();
+                var chartMinWidth = radialDataLength * 200;
+                var chartWidth = Math.max(parseInt(chartContainer.width), chartMinWidth);
+                this.chart.width(chartWidth).update();
+                //this.chart.width(radialWidth * radialDataLength).update();
               }
               window.vegaview = this.chart;
             }

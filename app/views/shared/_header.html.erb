@@ -104,12 +104,14 @@
       </button>
     </div>
   </div>
-  <div class="container-mobile-tag _no-mobile-large">
-    <%= image_tag '/finmark-tag.svg', :alt => 'Making financial markets work for the poor', :class => 'finmark-tag' %>
-  </div>
-  <div class="container-mobile-campaign _no-tablet">
-    <div class="nav-campaign">
-      <%= render partial: 'shared/header_campaign' %>
+  <% if !isFixed %>
+    <div class="container-mobile-tag _no-mobile-large">
+      <%= image_tag '/finmark-tag.svg', :alt => 'Making financial markets work for the poor', :class => 'finmark-tag' %>
     </div>
-  </div>
+    <div class="container-mobile-campaign _no-tablet">
+      <div class="nav-campaign">
+        <%= render partial: 'shared/header_campaign' %>
+      </div>
+    </div>
+  <% end %>
 </div>
