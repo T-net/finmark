@@ -47,7 +47,7 @@
       margin-bottom: 5px;
       font-size: 13px;
       line-height: 18px;
-      color: #257B83;
+      color: #808080;
       font-family: $font-family-1;
       font-weight: $font-weight-bold;
       text-transform: uppercase;
@@ -69,19 +69,19 @@
 
       .primary {
         color: #FFFFFF;
-        background-color: #2F939C;
+        background-color: #203366;
         font-size: 16px;
         text-align: center;
 
       }
       .secondary {
-        color: #257B83;
+        color: #203366;
         background-color: #fff;
         border: 1px solid rgba(37,123,131, 0.5);
 
       }
       .-link {
-        color: #257B83;
+        color: #203366;
         border: none;
         text-decoration: underline;
         box-shadow: none;
@@ -95,7 +95,7 @@
 
     .reset-btn {
       display: flex;
-      color: #2F939C;
+      color: #808080;
       text-decoration: underline;
       font-weight: 700;
       line-height: 30px;
