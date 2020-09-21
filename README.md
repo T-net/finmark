@@ -67,7 +67,7 @@ It will fail because database has not been creted. So you have to run:
 docker-compose -f docker-compose-dev.yml run --rm web rake db:create db:migrate
 ```
 
-To enter in the website container (finmark_web_1) and access to bash, run: 
+To enter in the website container (finmark_web_1) and access to bash, run:
 
 ```
 docker exec -it [container-id] bash
@@ -176,16 +176,19 @@ Follow the instructions on `app/javascript/components/fsp-maps/constants.js`, th
 Deploying requires SSH access to the server. It's highly recommended that you use RSA keys instead of username+password access.
 
 ```
-ssh-add -K ~/Keys/finmark-website.pem 
+ssh-add -K ~/Keys/finmark-website.pem
 ```
 
-Push changes to branch (finmark/develop for production, check config/deploy/production).
+Push changes to branch:
+- finmark/develop for staging (check config/deploy/staging)
+- finmark/production for production (check config/deploy/production)
 
-Deployment is handled by [Capistrano](https://capistranorb.com/), and requires you to have `ruby` configured on your local machine. 
+Deployment is handled by [Capistrano](https://capistranorb.com/), and requires you to have `ruby` configured on your local machine.
 
 To deploy to a server, use the following command from your local terminal:
 
 ```
 cap <production|staging> deploy
+cap staging deploy
 cap production deploy
 ```

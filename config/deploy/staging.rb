@@ -3,4 +3,4 @@ set :ssh_options, {
   forward_agent: true
 }
 
-set :branch, 'staging'
+set :branch, 'finmark/develop'
