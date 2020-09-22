@@ -22,7 +22,7 @@ Download last database backup from server (from /home/ubuntu).
 
 Run:
 
-```scp -r ubuntu@staging.finmark.org.za:/home/ubuntu/filename.dump .```
+```scp -r ubuntu@finmark.org.za:/home/ubuntu/filename.dump .```
 
 ```pg_restore -C -d postgres filename.dump```
 
@@ -30,7 +30,7 @@ Run:
 
 Download assets:
 
-```scp -r ubuntu@staging.finmark.org.za:/var/www/i2i/current/public/system ./public/```
+```scp -r ubuntu@finmark.org.za:/var/www/i2i/current/public/system ./public/```
 
 
 ### Development
