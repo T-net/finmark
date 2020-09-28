@@ -8,7 +8,15 @@ class HomepageController < ApplicationController
       records << klass.published.featured
     end
 
-    @featured_tags = Tag.featured.order(:position)
+    @featured_tags = Tag.featured.order(:name)
+    @featured_data = [
+      ["analytics", "Analytics"],
+      ["portal", "Data Portal"],
+      ["consumer", "FinScope Consumer"],
+      ["msme", "FinScope MSME"],
+      ["geospatial", "Geospatial"],
+      ["mobile", "Mobile"]
+    ]
     @topics = Tag.all.order(:slug)
     @countries = Country.ordered_by_name
 
