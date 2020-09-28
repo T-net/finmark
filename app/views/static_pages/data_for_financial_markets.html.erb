@@ -24,14 +24,12 @@
                 <h1 class="title -highlight -huge">Data for Financial Markets</h1>
                 <p class="subtitle">
                   Learn more about our Data for Financial Markets to address new data opportunities and challenges within Financial inclusion.
-                  <a href="#consumer" class="js-anchor">FinScope Consumer</a>,
-                  <a href="#msme" class="js-anchor">FinScope MSME</a>,
-                  <a href="#mobile" class="js-anchor">Mobile</a>,
-                  <a href="#analytics" class="js-anchor">Analytics</a>,
-                  <a href="#portal" class="js-anchor">Portal</a>,
-                  <a href="#geospatial" class="js-anchor">Geospatial</a>
-
-
+                  <%= link_to "FinScope Consumer", data_for_financial_markets_path(:anchor => "consumer"), class: "js-anchor", data: { turbolinks: false } %>,
+                  <%= link_to "FinScope MSME", data_for_financial_markets_path(:anchor => "msme"), class: "js-anchor", data: { turbolinks: false } %>,
+                  <%= link_to "Mobile", data_for_financial_markets_path(:anchor => "mobile"), class: "js-anchor", data: { turbolinks: false } %>,
+                  <%= link_to "Analytics", data_for_financial_markets_path(:anchor => "analytics"), class: "js-anchor", data: { turbolinks: false } %>,
+                  <%= link_to "Portal", data_for_financial_markets_path(:anchor => "portal"), class: "js-anchor", data: { turbolinks: false } %>,
+                  <%= link_to "Geospatial", data_for_financial_markets_path(:anchor => "geospatial"), class: "js-anchor", data: { turbolinks: false } %>
 
                 </p>
               </div>

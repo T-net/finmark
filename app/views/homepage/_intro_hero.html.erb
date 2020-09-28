@@ -67,7 +67,7 @@
                     <h5 class="title -regular"><%= link_to 'Data for financial markets', data_for_financial_markets_path, :class => '-white' %></h5>
                     <ul>
                       <% @featured_data.each_with_index do |(anchor, name), i| %>
-                        <li><%= link_to data_for_financial_markets_path(:anchor => anchor) do %><span><%=(i + 1).to_s.rjust(2, '0') %>. </span><%=name %><% end %></li>
+                        <li><%= link_to data_for_financial_markets_path(:anchor => anchor), data: { turbolinks: false } do %><span><%=(i + 1).to_s.rjust(2, '0') %>. </span><%=name %><% end %></li>
                       <% end %>
                     </ul>
                 </div>
