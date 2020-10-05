@@ -206,14 +206,14 @@
 					position: relative;
 					display: block;
 					color: $color-white;
-					font-size: $font-size-regular;
+					font-size: $font-size-regular + 2;
 					font-weight: $font-weight-medium;
 					line-height: 1.2;
 					text-align: left;
 
 					@media #{$mq-tablet} {
 						line-height: 1.1;
-						font-size: $font-size-regular - 1;
+            font-size: $font-size-regular + 2;
 					}
 
 					> span {
