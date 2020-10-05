@@ -27,6 +27,7 @@
 
                     <br><br>
                     <hr>
+                     <br><br>
                     <h3 class="-white">View content by:</h3>
 
                     <%= form_tag(insights_filter_index_path('all'), method: 'get', class: 'c-home-intro-hero-dropdowns') do %>
@@ -58,15 +59,22 @@
 
 
                 <div class="c-home-intro-hero-links">
-                 <h4 class="title" style="color: #ffffff; text-align:right; font-size: 22px; font-weight: 800; padding-bottom: 10px; padding-top: 10px " > Our Work</h4>
+                <div class="c-home-intro-hero-content">
+                 <h1 class="-white">Our work</h1>
+                   <p style="color: #ffffff; text-align:left; font-size: 12px; font-weight: 8100; padding-bottom: 0px; padding-top: 0px ">See how we’re working to promote financial inclusion through our programmes below.</p>
+                 </div>
 
-                    <h5 class="title -regular"><%= link_to 'Programmes', initiatives_path, :class => '-white' %></h5>
+
+
+
+
+                    <h5 class="title -regular"  style="font-size: 23px; font-weight: 700;"><%= link_to 'Programmes', initiatives_path, :class => '-white' %></h5>
                     <ul>
                       <% @featured_tags.each_with_index do |tag, i| %>
                         <li><%= link_to initiatives_filter_index_path(tag.slug) do %><span><%=(i + 1).to_s.rjust(2, '0') %>. </span><%=tag.title %><% end %></li>
                       <% end %>
                     </ul>
-                    <h5 class="title -regular"><%= link_to 'Data for financial markets', data_for_financial_markets_path, :class => '-white' %></h5>
+                    <h5 class="title -regular"  style="font-size: 23px; font-weight: 700;"><%= link_to 'Data for financial markets', data_for_financial_markets_path, :class => '-white' %></h5>
                     <ul>
                       <% @featured_data.each_with_index do |(anchor, name), i| %>
                         <li><%= link_to data_for_financial_markets_path(:anchor => anchor), data: { turbolinks: false } do %><span><%=(i + 1).to_s.rjust(2, '0') %>. </span><%=name %><% end %></li>
