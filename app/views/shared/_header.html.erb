@@ -42,6 +42,11 @@
         <li class="nav-item <% if current_page?(tools_path) %> -current <% end%>">
           <%= link_to 'Tools', tools_path, data: { turbolinks: false } %>
         </li>
+
+          <li class="nav-item <% if current_page?(fsd_network_path) %> -current <% end%>">
+          <%= link_to 'FSD Network', fsd_network_path, data: { turbolinks: false } %>
+        </li>
+
     		<li class="nav-item <% if current_page?(about_path) %> -current <% end%>">
           <%= link_to 'About FMT', about_path, data: { turbolinks: false } %>
         </li>

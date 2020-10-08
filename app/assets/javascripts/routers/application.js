@@ -8,6 +8,7 @@ var Router = Backbone.Router.extend({
     'knowledge-hub(/)(:category)': '_insightsPage',
     'about(/)': '_aboutPage',
     'data-for-financial-markets(/)': '_dataForFinancialMarketsPage',
+    'fsd-network(/)': '_FSDNetworkPage',
     'terms-of-use(/)': '_termsOfUsePage'
   },
 
@@ -61,6 +62,14 @@ var Router = Backbone.Router.extend({
     Backbone.history.stop();
 
     new App.Page.DataForFinancialMarketsPage();
+  },
+
+
+  _FSDNetworkPage: function () {
+    // Don't forget to stop the router on each route
+    // otherwise you'll break the browser's back button
+    Backbone.history.stop();
+
   },
 
   _termsOfUsePage: function () {

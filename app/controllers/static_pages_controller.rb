@@ -35,6 +35,8 @@ class StaticPagesController < ApplicationController
 
   def data_for_financial_markets; end
 
+  def fsd_network; end
+
   private
 
   def serialized(model)
