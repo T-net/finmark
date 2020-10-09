@@ -7,7 +7,7 @@
             <h2 class="title -big">Newsletter</h2>
             <p class="text -leading">
               <a href="https://confirmsubscription.com/h/t/68142426159675B0" target="_blank" class="text -highlight -button js-subscribe-link">Sign up here</a>
-              <!--<button type="button" class="text -highlight -button js-subscribe-link" data-id="alyukr"><u>Sign up here</u></button>--> for our monthly FI Snapshot in data and innovation in the financial services sector.
+              <!--<button type="button" class="text -highlight -button js-subscribe-link" data-id="alyukr"><u>Sign up here</u></button>--> for our monthly FI Snapshot, covering data and innovation in the financial services sector.
             </p>
             <%-#<p class="text">And, to receive Finmark updates, <button type="button" class="text -highlight -button js-subscribe-link" data-id="dlhlud" data-institution="true">subscribe</button> to the FI Snapshot quarterly newsletter.</p>-%>
           </div>
@@ -17,7 +17,7 @@
           <div class="header-item -contact-us">
             <h2 class="title -big">Contact us</h2>
 <p class="text -highlight -leading">
-             Get in touch with FMT to exchange ideas or if you would like to work with us.
+           Get in touch with FMT to exchange ideas or if you would like to work with us.
              </p>
             <a class="text -highlight -leading" href="mailto:<%= ENV['I2I_MAIL'] %>"><%= ENV['I2I_MAIL'] %> </a>
           </div>
@@ -118,6 +118,35 @@
                     :rel => 'noopener'
                   %>
                 </li>
+</ul>
+                  <ul class="partners-list">
+                <li class="partners-item uk-aid-item">
+                  <%= link_to image_tag('/images/logos/bmgf@2x.png',
+                    :width => '116',
+                    :alt => 'BMGF'), 'https://www.gatesfoundation.org/',
+                    :target => '_blank',
+                    :rel => 'noopener'
+                  %>
+                </li>
+
+  <li class="partners-item uk-aid-item">
+                  <%= link_to image_tag('/images/logos/world_bank@2x.png',
+                    :width => '116',
+                    :alt => 'World Bank'), 'https://www.worldbank.org/',
+                    :target => '_blank',
+                    :rel => 'noopener'
+                  %>
+                </li>
+
+<li class="partners-item uk-aid-item">
+                  <%= link_to image_tag('/images/logos/seco@2x.png',
+                    :width => '116',
+                    :alt => 'SECO'), 'https://www.seco-cooperation.admin.ch/secocoop/en/home.html',
+                    :target => '_blank',
+                    :rel => 'noopener'
+                  %>
+                </li>
+
 
 
               </ul>

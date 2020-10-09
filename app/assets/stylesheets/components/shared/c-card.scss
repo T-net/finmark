@@ -24,13 +24,18 @@
     width: 100%;
     padding: 25px;
     background-color: $color-4;
-    text-align: center;
+    text-align: left;
 
     > .title {
       line-height: 28px;
 
       > a {
         color: $color-5;
+      }
+
+
+      > p {
+        font-size: small;
       }
     }
 
