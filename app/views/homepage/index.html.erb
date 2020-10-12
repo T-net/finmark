@@ -35,7 +35,8 @@ FinMark Trust (FMT) is an independent trust established in 2002 with the obje
     <div class="l-content">
         <div class="l-featured-insights">
             <div class="wrapper">
-                <h2 class="title heading -medium -center -blue -divider">Latest</h2>
+                <h2 class="title heading -medium -center -blue -divider">Latest content</h2>
+
                 <div class="row">
                     <%= render partial: 'shared/cards', locals: { insights: @insights }%>
                 </div>
@@ -76,7 +77,7 @@ FinMark Trust (FMT) is an independent trust established in 2002 with the obje
                         </div>
                         <div class="column grid-s-6 grid-l-2-3">
                             <div class="stats-item">
-                                <%= image_tag '/images/logos/fmt-portal.svg', :width => '182', :alt => 'FMT Portal' %>
+                                <%= image_tag '/images/logos/fmt-portal.svg', :width => '160', :alt => 'FMT Portal' %>
                                 <p>Our portal is continuously evolving as our data and analytics work is conducted in more countries as well as novel data sources for existing countries.</p>
                                 <%= link_to 'Read more', data_for_financial_markets_path, :class => 'stats-link' %>
                             </div>
