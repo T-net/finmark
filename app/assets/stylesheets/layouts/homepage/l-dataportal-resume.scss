@@ -34,11 +34,11 @@
 
     .column {
       padding-left: 20px;
-      padding-right: 10px;
+      padding-right: 0px;
 
       @media #{$mq-desktop} {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 20px;
+        padding-right: 0px;
       }
     }
 
