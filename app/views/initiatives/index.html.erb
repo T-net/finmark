@@ -36,7 +36,7 @@
               <article class="c-card">
                 <%= link_to '', initiatives_filter_index_path(@featured_tags[0].slug), class: "picture", style: "background-image: url(#{asset_path(@featured_tags[0].image_url)}" %>
                 <div class="metadata">
-                  <h4 class="title -dark -xs">
+                  <h4 class="title -dark -xbig">
                     <%= link_to @featured_tags[0].title, initiatives_filter_index_path(@featured_tags[0].slug) %>
                   </h4>
                   <div><%= @featured_tags[0].description.html_safe %></div>
@@ -51,7 +51,7 @@
                   <article class="c-card">
                     <%= link_to '', initiatives_filter_index_path(tag.slug), class: "picture", style: "background-image: url(#{asset_path(tag.image_url)}" %>
                     <div class="metadata">
-                      <h4 class="title -dark -xs">
+                      <h4 class="title -dark -xbig">
                         <%= link_to tag.title, initiatives_filter_index_path(tag.slug) %>
                       </h4>
                       <p><%= tag.description.html_safe %></p>
