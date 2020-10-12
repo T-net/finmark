@@ -2,7 +2,8 @@
   @include translate_content;
 
   .l-content {
-    margin: 75px 0;
+    margin: 0px 0;
+    background-color: #ffffff;
 
     .terms {
       margin: 85px 0 0;
@@ -14,6 +15,8 @@
 
     text-align: center;
   }
+
+
 
   .row {
     display: flex;
@@ -27,7 +30,7 @@
     color: $color-5;
     font-family: $font-family-2;
     font-size: $font-size-s;
-    text-transform: uppercase;
+    text-transform: none;
   }
 
   .term-list {
