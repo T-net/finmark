@@ -15,7 +15,7 @@ class HomepageController < ApplicationController
       ["consumer", "FinScope Consumer"],
       ["msme", "FinScope MSME"],
       ["geospatial", "Geospatial"],
-      ["mobile", "Mobile"]
+      ["mobile", "Mobile Phone Surveys"]
     ]
     @topics = Tag.all.order(:slug)
     @countries = Country.ordered_by_name
