@@ -100,6 +100,12 @@
   }
 }
 
+@media #{$mq-laptop} {
+  .grid-l-2-3-4 {
+    width: 16%;
+  }
+}
+
 // Extra large devices (desktops, 1200px and up)
 @for $column from 1 through $grid-columns {
   @media #{$mq-desktop} {

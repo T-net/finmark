@@ -1,3 +1,4 @@
+
 .l-dataportal-resume {
   padding: 40px 0;
   background-color: $color-1;
@@ -21,8 +22,8 @@
     margin-right: -20px;
 
     @media #{$mq-desktop} {
-      margin-left: -42px;
-      margin-right: -42px;
+      margin-left: -10px;
+      margin-right: -10px;
     }
   }
 
@@ -33,11 +34,11 @@
 
     .column {
       padding-left: 20px;
-      padding-right: 20px;
+      padding-right: 10px;
 
       @media #{$mq-desktop} {
-        padding-left: 42px;
-        padding-right: 42px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
 
@@ -82,7 +83,7 @@
 
       p {
         line-height: 1.35;
-        font-size: $font-size-regular;
+        font-size: $font-size-small;
       }
 
       > a {
@@ -92,7 +93,7 @@
         text-align: left;
 
         @media #{$mq-tablet} {
-          font-size: $font-size-regular + 2;
+          font-size: $font-size-regular + 1;
           margin-top: 28px;
         }
       }
