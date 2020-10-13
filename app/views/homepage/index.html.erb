@@ -62,13 +62,9 @@ FinMark Trust (FMT) is an independent trust established in 2002 with the obje
                             <div class="stats-item">
                                 <b style="font-size: 18px; font-weight: 700;">Agricultural Value Chains</b><br>
                                 <p>By promoting greater access to financial services we focus on ensuring that small scale farmers are empowered to participate in the agricultural economy. </p>
-   <% @featured_tags.each_with_index do |tag, i| %>
- <%= link_to initiatives_filter_index_path(tag.slug) do %><span> </span><%=tag.title %><% end %>
- <% end %>
 
 
-
-
+ <%= link_to 'Read more', initiatives_path, :class => 'stats-link' %>
 
 
                             </div>
@@ -77,7 +73,7 @@ FinMark Trust (FMT) is an independent trust established in 2002 with the obje
                             <div class="stats-item">
                                <b style="font-size: 18px; font-weight: 700;">Digital Financial Services</b><br>
                                 <p>The positive impact of digital financial services on the poor is well documented globally. These services provide efficient, cost effective and more accessible solutions to accessing formal financial services.</p>
-                                 <%= link_to 'Read more', initiatives_path, :class => 'stats-link' %>
+                              <%= link_to 'Read more', initiatives_path, :class => 'stats-link' %>
                             </div>
                         </div>
                         <div class="column grid-s-4 grid-l-2-3-4">
