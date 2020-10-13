@@ -17,8 +17,12 @@ class HomepageController < ApplicationController
       ["geospatial", "Geospatial"],
       ["mobile", "Mobile Phone Surveys"]
     ]
+
     @topics = Tag.all.order(:slug)
     @countries = Country.ordered_by_name
+
+
+
 
     @tweets = TwitterApi.get_tweets
     @insights = records.flatten.sort do |a, b|
