@@ -202,13 +202,13 @@
 				display: block;
 				margin-bottom: 10px;
 
-				a {
+        a {
 					position: relative;
 					display: block;
 					color: $color-white;
-					font-size: $font-size-regular + 2;
+					font-size: $font-size-regular ;
 					font-weight: $font-weight-medium;
-					line-height: 1.2;
+					line-height: 1;
 					text-align: left;
 
 					@media #{$mq-tablet} {
