@@ -46,7 +46,7 @@
           </div>
           <div class="row js-masonry-cards">
             <% @featured_tags.each_with_index do |tag, index| %>
-              <% if index > 1 %>
+              <% if index > 0 %>
                 <div class="js-masonry-item grid-s-12 grid-m-6">
                   <article class="c-card">
                     <%= link_to '', initiatives_filter_index_path(tag.slug), class: "picture", style: "background-image: url(#{asset_path(tag.image_url)}" %>
