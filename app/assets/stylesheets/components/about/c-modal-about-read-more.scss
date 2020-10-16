@@ -45,7 +45,15 @@
     }
 
     li {
-      line-height: 1.6;
+      display: list-item;
+      margin-bottom: 10px;
+      list-style: disc;
+      margin-left: 20px;
+      color: #203366;
+      font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
     }
   }
 
