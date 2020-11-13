@@ -18,12 +18,14 @@
             <div class="c-home-intro-hero-row">
                 <div>
                     <div class="c-home-intro-hero-content">
-                        <h1 class="-white"><span style="color: #0097AE">COVID-19</span> <span>Tracking survey status</span></h1>
-                        <p style="color: #ffffff">The COVID-19 tracking survey themes include health and risk behaviours, food security, income, work and job security, personal safety concerns, and access to government and community support.</p>
+
+
+                        <h1 class="-white"> <span style="color: #0097AE">SADC</span> <span>Remittance dashboard</span></h1>
+                        <p style="color: #ffffff">The SADC remittances dashboard provides an interactive platform to track remittances flows across the SADC region. The information displayed covers the values, volumes and other aspects of remittance flows in SADC. It is updated monthly with official data from the reserve banks within the region.   </p>
                     </div>
 
                     <br><br>
-                    <a class="c-button" style="background-color: #0097AE" href="https://covid19tracker.africa/" target="_blank">View Tracker </a>
+                    <a class="c-button" style="background-color: #0097AE" href="http://remittances.finmark.org.za" target="_blank">View SADC Remittance dashboard </a>
 
                     <br><br>
                     <hr>
@@ -61,20 +63,20 @@
                 <div class="c-home-intro-hero-links">
                 <div class="c-home-intro-hero-content">
                  <h1 class="-white">Our work</h1>
-                   <p style="color: #ffffff; text-align:left; font-size: 12px; font-weight: 400;  padding-bottom: 0px; padding-top: 0px ">Our work seeks to further financial and economic inclusion for the poor of the SADC region. The work is implemented in individual countries as well as on a regional basis.  </p>
+                   <p style="color: #ffffff; text-align:left; font-size: 12px; font-weight: 400;  padding-bottom: 0px; padding-top: 0px ">Our work seeks to further financial and economic inclusion for the poor of the SADC region. The work is implemented in individual countries as well as on a regional basis. </p>
                  </div>
 
 
 
 
 
-                    <h5 class="title -regular"  style="font-size: 23px; font-weight: 700;"><%= link_to 'Programmes', initiatives_path, :class => '-white' %></h5>
+                    <h5 class="title -regular"  style="font-size: 20px; font-weight: 700;"><%= link_to 'Programmes', initiatives_path, :class => '-white' %></h5>
                     <ul>
                       <% @featured_tags.each_with_index do |tag, i| %>
                         <li><%= link_to initiatives_filter_index_path(tag.slug) do %><span><%=(i + 1).to_s.rjust(2, '0') %>. </span><%=tag.title %><% end %></li>
                       <% end %>
                     </ul>
-                    <h5 class="title -regular"  style="font-size: 23px; font-weight: 700;"><%= link_to 'Data for financial markets', data_for_financial_markets_path, :class => '-white' %></h5>
+                    <h5 class="title -regular"  style="font-size: 20px; font-weight: 700;"><%= link_to 'Data for financial markets', data_for_financial_markets_path, :class => '-white' %></h5>
                     <ul>
                       <% @featured_data.each_with_index do |(anchor, name), i| %>
                         <li><%= link_to data_for_financial_markets_path(:anchor => anchor), data: { turbolinks: false } do %><span><%=(i + 1).to_s.rjust(2, '0') %>. </span><%=name %><% end %></li>

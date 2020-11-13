@@ -6,6 +6,93 @@
 
 <div class="row additional-data-cards">
   <div class="js-masonry-cards">
+
+
+
+ <div class="grid-s-12 grid-m-6 grid-l-6 library js-masonry-item">
+      <article class="c-card">
+        <div class="thumb">
+        <%= image_tag('data-portal/covid.jpg',
+                      alt: 'Data portal dashboard',
+                      class: 'datasetimage') %>
+        </div>
+
+        <div class="card-content">
+          <h3 class="title -big -dark filter-finscope">COVID-19 Tracker</h3>
+
+          <ul class="c-stats-list">
+            <li class="item">
+              <h4 class="value">7</h4>
+              <span class="description">Countries</span>
+            </li>
+            <li class="item -last">
+              <h4 class="value">35</h4>
+              <span class="description">Waves of data</span>
+            </li>
+          </ul>
+
+          <p class="dataset-description">
+           The COVID-19 tracking survey themes include health and risk behaviours, food security, income, work and job security, personal safety concerns, and access to government and community support.
+          </p>
+
+          <div class="discover-button">
+            <a class="c-button -sea dataset-button" href="https://sarbremit.usabledata.co/" target="_blank">View SADC Remittance dashboard </a>
+          </div>  <span style="color:#525252; font-size:12px; font-style: italic">This will open in a new window</span>
+
+
+        </div>
+
+      </article>
+    </div>
+
+
+
+
+
+ <div class="grid-s-12 grid-m-6 grid-l-6 library js-masonry-item">
+      <article class="c-card">
+        <div class="thumb">
+        <%= image_tag('data-portal/Remittance_dashboard.jpg',
+                      alt: 'Data portal dashboard',
+                      class: 'datasetimage') %>
+        </div>
+
+        <div class="card-content">
+          <h3 class="title -big -dark filter-finscope">SADC Remittance dashboard</h3>
+
+          <ul class="c-stats-list">
+            <li class="item">
+              <h4 class="value">15</h4>
+              <span class="description">Countries</span>
+            </li>
+            <li class="item -last">
+              <h4 class="value">1</h4>
+              <span class="description">Outflow dataset</span>
+            </li>
+          </ul>
+
+          <p class="dataset-description">
+            The SADC remittances dashboard provides an interactive platform to track remittances flows across the SADC region. The information displayed covers the values, volumes and other aspects of remittance flows in SADC.
+          </p>
+
+          <div class="discover-button">
+          <a class="c-button -sea dataset-button" href="http://remittances.finmark.org.za" target="_blank">View SADC Remittance dashboard </a>
+          </div><span style="color:#525252; font-size:12px; font-style: italic">This will open in a new window</span>
+
+        </div>
+
+      </article>
+    </div>
+
+
+
+
+
+
+
+
+
+
     <div class="grid-s-12 grid-m-6 grid-l-6 library js-masonry-item">
       <article class="c-card">
         <div class="thumb">
@@ -33,7 +120,7 @@
           </p>
 
           <div class="discover-button">
-            <%= link_to "Check National Surveys",
+            <%= link_to "View National Surveys",
                         national_surveys_path,
                         class: "c-button -sea dataset-button",
                         data: { turbolinks: false } %>
@@ -69,7 +156,7 @@
           </p>
 
           <div class="discover-button">
-            <%= link_to "Check Micro, Small and Medium Enterprises",
+            <%= link_to "View Micro, Small and Medium Enterprises",
                         msm_enterprises_path,
                         class: "c-button -sea dataset-button",
                         data: { turbolinks: false } %>
@@ -105,7 +192,7 @@
           </p>
 
           <div class="discover-button">
-            <%= link_to "Check Financial Diaries",
+            <%= link_to "View Financial Diaries",
                         financial_diaries_path,
                         class: "c-button -sea dataset-button",
                         data: { turbolinks: false } %>
@@ -140,7 +227,7 @@
           </p>
 
           <div class="discover-button">
-            <%= link_to "Check Geospatial Data",
+            <%= link_to "View Geospatial Data",
                         geospatial_data_path,
                         class: "c-button -sea dataset-button",
                         data: { turbolinks: false } %>

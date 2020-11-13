@@ -96,7 +96,33 @@
         </div>
       </section>
 
+
+
+ <section class="dataset">
+          <div class="row">
+            <div class="grid-s-12 grid-m-8">
+              <h3 class="title -big -dark" id="finscope-dataset">SADC Remittance dashboard</h3>
+              <p class="dataset-description">
+               The SADC Remittance dashboard shows outgoing remittances from South Africa to SADC countries, you can analyse the data by a few metrics, filter by gender, category and payment type.
+              </p>
+            </div>
+
+            <iframe src="/data-portal/indicator/embed/<%= params[:iso] %>/<%= @country_finscope[:latest_year] %>?region=true" width="100%" height="560"></iframe>
+
+            <div class="grid-s-12 grid-m-8">
+             <a class="c-button -sea dataset-button" href="http://remittances.finmark.org.za" target="_blank">View SADC Remittance dashboard </a>
+            </div>
+          </div>
+  </section>
+
+
+
+
       <% if @finscope_countries.present? %>
+
+
+
+
         <section class="dataset">
           <div class="row">
             <div class="grid-s-12 grid-m-8">
@@ -114,6 +140,8 @@
             </div>
           </div>
         </section>
+
+
       <% end %>
     </div>
   </div>
