@@ -144,11 +144,11 @@
       width: 140px;
 
       @media #{$mq-laptop} {
-        width: 150px;
+        width: 200px;
       }
 
       @media #{$mq-desktop} {
-        width: 160px;
+        width: 250px;
       }
     }
 
