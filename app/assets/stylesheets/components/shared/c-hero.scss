@@ -1,5 +1,5 @@
 .c-hero {
-  padding: 70px 0;
+  padding: 55px 0;
   overflow: hidden;
 
   &.-slider {
@@ -7,7 +7,7 @@
   }
 
   @media #{$mq-tablet} {
-    padding: 60px 0 75px;
+    padding: 55px 0 55px;
   }
 
   &-max-width {
