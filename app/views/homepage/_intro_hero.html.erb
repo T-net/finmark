@@ -18,15 +18,12 @@
             <div class="c-home-intro-hero-row">
                 <div>
                     <div class="c-home-intro-hero-content">
-
-
-                        <h1 class="-white"> <span style="color: #0097AE">SADC</span> <span>Remittance dashboard</span></h1>
-                        <p style="color: #ffffff">The SADC remittances dashboard provides an interactive platform to track remittances flows across the SADC region. The information displayed covers the values, volumes and other aspects of remittance flows in SADC. It is updated monthly with official data from the reserve banks within the region.   </p>
+                        <h1 class="-white"><span style="color: #203366">#SADCInnovation </span> <span>and Investment Challenge</span></h1>
+                        <p style="color: #ffffff">Join us on the 25th of February 2021 for the #SADCInnovation and Investment Challenge Investor Demo Day. Our three winning ventures will be presenting their investor pitches and sharing their product demonstrations.</p>
                     </div>
 
                     <br><br>
-                    <a class="c-button" style="background-color: #0097AE" href="http://remittances.finmark.org.za" target="_blank">View SADC Remittance dashboard </a>
-
+                    <a class="c-button" style="background-color: #203366; color: #ffffff" href="https://sadcinnovation.org/" target="_blank">Register for Demo Day</a>
                     <br><br>
                     <hr>
                      <br><br>
@@ -47,8 +44,9 @@
                             <svg class="icon"><use xlink:href="#icon-caret-down"></use></svg>
                           </div>
                       </div>
-                      <div class="c-home-intro-hero-submit-button">
-                        <%= button_tag('Apply', type: :submit, readonly: true, class: 'c-button') %>
+                      <div class="c-home-intro-hero-submit-button" >
+
+                        <%= button_tag('Apply', type: :submit, readonly: true, class: 'c-button', style: 'background-color: #203366; color: #ffffff' )  %>
                       </div>
                     <% end %>
 
@@ -80,7 +78,10 @@
                     <ul>
                       <% @featured_data.each_with_index do |(anchor, name), i| %>
                         <li><%= link_to data_for_financial_markets_path(:anchor => anchor), data: { turbolinks: false } do %><span><%=(i + 1).to_s.rjust(2, '0') %>. </span><%=name %><% end %></li>
+
+
                       <% end %>
+                            <li> <a href="https://covid19tracker.africa/" target="_blank">  <span> 07. </span>COVID-19 Tracker</li>
                     </ul>
                 </div>
 
