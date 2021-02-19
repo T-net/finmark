@@ -202,7 +202,7 @@
 				display: block;
 				margin-bottom: 10px;
 
-				a {
+        a {
 					position: relative;
 					display: block;
 					color: $color-white;
@@ -216,7 +216,7 @@
             font-size: $font-size-regular + 2;
 					}
 
-          > span {
+					> span {
 						color: #203366;
 						font-weight: $font-weight-extra-bold;
 					}

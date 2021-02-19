@@ -1,0 +1,370 @@
+.l-data-portal-mobile-surveys {
+  .l-header {
+    width: 100%;
+    background-color: $color-1;
+  }
+
+  .l-mobile-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 15px 0;
+    background: $color-1;
+    box-shadow: 0 2px 3px 0 rgba($color-6, 0.15);
+    z-index: 1;
+
+    header {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: space-between;
+
+      .country-name {
+        display: block;
+        position: relative;
+        color: $color-4;
+        font-family: $font-family-2;
+        font-size: $font-size-xs;
+      }
+
+      button {
+        @include arrow(8px, 2px, $color-4, "down");
+        padding: 0;
+        transform: translate(-3px, -50%) rotate(45deg);
+        text-indent: -10000px;
+        cursor: pointer;
+      }
+    }
+
+    .content {
+      display: none;
+      margin-top: 25px;
+
+      .l-data-range p {
+        margin-top: 10px;
+      }
+
+      .c-button {
+        width: 100%;
+        margin-top: 70px;
+      }
+    }
+
+    &.-open {
+      header {
+        button {
+          transform: translate(-3px, calc(-50% + 5px)) rotate(-135deg);
+        }
+      }
+
+      .content {
+        display: block;
+      }
+    }
+  }
+
+  .l-data-range {
+    margin: 25px 0 20px;
+    color: $color-3;
+    font-family: $font-family-2;
+    font-size: $font-size-xs;
+    line-height: 1.8;
+
+    @media #{$mq-laptop} {
+      margin: 20px 0 0;
+    }
+
+    p {
+      color: $color-3;
+      font-family: $font-family-2;
+      line-height: 1.8;
+
+      &:not(:first-child) {
+        margin: 5px 0 0;
+      }
+    }
+  }
+
+  .l-intro {
+    .l-title {
+      .js-header {
+        z-index: 3;
+      }
+
+      .container {
+        @media #{$mq-tablet} {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          .header-buttons {
+            padding-top: 20px;
+          }
+        }
+
+        .c-button {
+          @media #{$mq-tablet} {
+            position: relative;
+          }
+        }
+      }
+
+      .title-placeholder {
+        max-width: 250px;
+        height: 50px;
+        background-color: rgba($color-3, 0.5);
+      }
+
+      .filters-placeholder > .c-tag {
+        display: inline-block;
+        height: 24px;
+        margin-top: 30px;
+        pointer-events: none;
+
+        &:first-of-type {
+          width: 135px;
+          margin-right: 22px;
+        }
+
+        &:last-of-type {
+          width: 55px;
+        }
+      }
+
+      .description-placeholder > div {
+        max-width: 610px;
+        height: 12px;
+        margin-bottom: 10px;
+        background-color: rgba($color-3, 0.5);
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      @media print {
+        display: none;
+      }
+    }
+
+    .l-population {
+      margin-top: 20px;
+
+      span {
+        display: block;
+        color: $color-4;
+        font-family: $font-family-2;
+      }
+
+      .title {
+        margin-bottom: 5px;
+        font-size: $font-size-s;
+        text-transform: uppercase;
+      }
+
+      .number {
+        font-size: $font-size-xm;
+        letter-spacing: -1px;
+      }
+    }
+
+    .l-data-definition {
+      margin: 25px 0;
+
+      .container {
+        @media #{$mq-tablet} {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+        }
+
+        .c-button {
+          width: 100%;
+
+          @media #{$mq-tablet} {
+            width: auto;
+            margin: 40px 0 25px;
+          }
+        }
+      }
+
+      .country-data-description {
+        color: $color-3;
+        font-family: $font-family-1;
+        font-weight: $font-weight-light;
+      }
+
+      .c-switcher {
+        max-width: 175px;
+        margin: 0 0 0 auto;
+      }
+    }
+
+    .l-switcher {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      background: rgba($color-5, 0.1);
+
+      .c-switcher {
+        max-width: 175px;
+        margin: 0 auto;
+
+        @media #{$mq-tablet} {
+          max-width: none;
+        }
+      }
+    }
+
+    .l-supplied-by {
+      text-align: right;
+
+      p {
+        margin-bottom: 15px;
+        color: $color-4;
+        font-style: italic;
+        font-size: $font-size-small;
+      }
+
+      img {
+        display: inline-block;
+        min-height: 71px;
+        max-height: 100px;
+        width: auto;
+        max-width: 100%;
+        min-width: 100px;
+
+        &.-width {
+          width: 300px;
+          height: auto;
+        }
+
+        &.-small-width {
+          width: 150px;
+          height: auto;
+        }
+
+        &.-left {
+          border-right: 1px solid rgba($color-4, .4);
+          padding-right: 15px;
+        }
+
+        &.-right {
+          padding-left: 15px;
+        }
+      }
+
+      .flex {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+  }
+
+  .l-content {
+    .l-switcher {
+      .container {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 0 20px;
+      }
+    }
+
+    .l-indicator-grid {
+      // We want the cards to have the same height and the wigdet's toolbar
+      // to be aligned at the bottom
+
+      .widget-category {
+        &:not(:first-child) {
+          .widget-category-title {
+            padding-top: 70px;
+          }
+        }
+        .widget-category-title {
+          font-size: 35px;
+          font-weight: bold;
+          color: #001D22;
+          padding: 0 0 20px 10px;
+        }
+      }
+
+      .widgets-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        min-height: 500px;
+
+        > div {
+          margin-bottom: 20px;
+
+          > .c-widget {
+            height: 100%;
+            margin: 0;
+
+            > .c-chart-widget {
+              display: flex;
+              flex-direction: column;
+              height: 100%;
+
+              > .chart {
+                flex-grow: 1;
+              }
+            }
+          }
+        }
+      }
+
+      .footer-indicator-grid {
+        display: flex;
+        flex-direction: column;
+
+        @media #{$mq-laptop} {
+          flex-direction: row;
+          justify-content: space-between;
+          margin: 10px 0 0;
+        }
+
+        > .indicator-options {
+          display: flex;
+          flex-direction: column;
+
+          @media #{$mq-laptop} {
+            flex-direction: row;
+          }
+        }
+
+        .indicator-options > .c-button {
+          width: 100%;
+
+          &:not(:first-child) {
+            margin: 10px 0 0;
+          }
+
+          @media #{$mq-laptop} {
+            width: auto;
+
+            &:not(:first-child) {
+              margin: 0 0 0 10px;
+            }
+          }
+        }
+
+        .container-custom-indicators > .c-button {
+          width: 100%;
+          margin: 10px 0;
+
+          &:not([disabled]) {
+            box-shadow: 0 2px 3px 0 rgba($color-6, 0.15);
+          }
+
+          @media #{$mq-laptop} {
+            width: auto;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -18,6 +18,8 @@
       this.options = _.extend({}, this.defaults, options);
       if (this.options.isMSME) {
         this.indicatorsCollection = new App.Collection.MSMEIndicatorsCollection();
+      } else if (this.options.isMobileSurvey) {
+        this.indicatorsCollection = new App.Collection.ExploratorySurveyIndicatorsCollection();
       } else {
         this.indicatorsCollection = new App.Collection.IndicatorsCollection();
       }
@@ -83,8 +85,9 @@
         showDetails: !(this.options.isRegion),
         isRegion: (this.options.isRegion),
         isMSME: this.options.isMSME,
+        isMobileSurvey: this.options.isMobileSurvey,
+        vegaVersion: this.options.isMobileSurvey ? 'V3' : 'V2'
       }, this.options._state);
-
       var widget = new App.View.ChartWidgetView(options);
       this.listenTo(widget, 'data:sync', this._onWidgetSync);
       this.listenTo(widget, 'chart:render', this._onChartRender);

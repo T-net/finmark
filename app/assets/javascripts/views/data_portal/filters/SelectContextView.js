@@ -9,6 +9,7 @@
     url: function () {
       if (this.options.isRegion) return API_URL + '/region/';
       if (this.options.isMSME) return MSME_API_URL + '/country/';
+      if (this.options.isMobileSurvey) return  MOBILE_SURVEYS_API_URL + '/country/';
       return API_URL + '/country/';
     },
 
@@ -35,6 +36,7 @@
       jurisdiction: null,
       isRegion: false,
       isMSME: false,
+      isMobileSurvey: false
     },
 
     events: {
@@ -45,7 +47,7 @@
     initialize: function (options) {
       this.options = _.extend({}, this.defaults, options);
 
-      this.yearsCollection = new YearsCollection({}, { iso: this.options.iso, isRegion: this.options.isRegion, isMSME: this.options.isMSME });
+      this.yearsCollection = new YearsCollection({}, { iso: this.options.iso, isRegion: this.options.isRegion, isMSME: this.options.isMSME, isMobileSurvey: this.options.isMobileSurvey });
       this.jurisdictionsModel = new App.Model.IndicatorModel({}, {
         id: 'jurisdiction',
         iso: this.options.iso,

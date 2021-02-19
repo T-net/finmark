@@ -1,0 +1,33 @@
+<% title 'i2i Micro, Small and Medium Enterprises' %>
+
+<div class="l-national-surveys l-library">
+  <div class="l-intro js-hero">
+    <div class="nav">
+      <div class="wrapper">
+        <%= render partial: 'shared/header', locals: { isCover: true } %>
+      </div>
+    </div>
+    <div class="fixed-nav js-fixed-nav">
+      <div class="wrapper">
+        <%= render partial: 'shared/header', locals: { isFixed: true } %>
+      </div>
+    </div>
+    <div class="content" style="background-image: url(<%= asset_path('headers/header-bg-gradient@2x.png') %>)">
+      <%= render partial: 'data_portal/header_title' %>
+      <%= render partial: 'data_portal/sections_tabs' %>
+    </div>
+  </div>
+
+  <div class="l-content">
+    <div class="wrapper">
+      <%= render partial: 'data_portal/description',
+                 locals: {
+                   section_title: 'Gender T20 Exploratory Indicator Survey',
+                   description: 'FMT is pioneering collection of key indicators through short, smart surveys. An entire concept is converted to a full question and answer set and limited to 160 characters. This means it fits into a single SMS text. We honed in on 20 gender-relevant indicators covering Economic Empowerment themes of Earnings, Asset ownership, Financial Inclusion, Financial Health, Influence, self-efficacy, decision-making and control, as well as key demographic descriptors. The indicators themselves were identified through a series of workshops with several experts on Financial Inclusion and Women Economic Empowerment. The 160 character questions were refined through a multistage cognitive interviewing exercise simultaneously conducted in multiple markets (Kenya, Pakistan, Tanzania and Uganda) and languages (Luganda, Swahili, Urdu, English). The reported data was collected through national survey coverage of 18+ adults interviewed face-to-face through Computer-assisted personnel interviewing (CAPI). The indicators shown are weighted to be representative of 18+ adults in these four markets: Kenya, Pakistan, Tanzania and Uganda.'
+                 } %>
+      <%= render partial: 'data_portal/filtered_countries_list', locals: { countries: @worldwide_countries, regions_hash: @regions_hash } %>
+      <%# render partial: 'data_portal/regions_list', locals: { regions: @regions } %>
+      <%= render partial: 'data_portal/additional_data' %>
+    </div>
+  </div>
+</div>

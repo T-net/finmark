@@ -22,28 +22,22 @@
             <%= inline_svg('logos/financial_diaries.svg', class: "icon tab-icon #{'-current' if current_page?(financial_diaries_path)}") %>
             Financial Diaries
           <% end %>
-
           <%= link_to geospatial_data_path,
                       class: "content-selector #{'-current' if current_page?(geospatial_data_path)}", data: { turbolinks: false } do %>
             <%= inline_svg('logos/geospatial_data.svg', class: "icon tab-icon #{'-current' if current_page?(geospatial_data_path)}") %>
-            Geospatial
+            Geospatial Data
           <% end %>
+          <%= link_to exploratory_survey_path,
+            class: "content-selector #{'-current' if current_page?(exploratory_survey_path)}", data: { turbolinks: false } do %>
 
-
-
+            Exploratory survey
+          <% end %>
 
 
 <a href="https://covid19tracker.africa/" target="_blank" class="content-selector" data-turbolinks="false" >
 
 COVID-19 Tracker
           </a>
-
-
-
-
-
-
-
         </div>
       </div>
     </div>

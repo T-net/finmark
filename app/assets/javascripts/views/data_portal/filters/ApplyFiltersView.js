@@ -33,6 +33,7 @@
           return {
             name: indicator.name,
             id: indicator.id,
+            preferedOrder: indicator.preferedOrder,
             options: indicator.options && Array.prototype.slice.call(indicator.options)
           };
         })
@@ -71,6 +72,7 @@
             year: this.options.year,
             isRegion: this.options.isRegion,
             isMSME: this.options.isMSME,
+            isMobileSurvey: this.options.isMobileSurvey
           }
         );
       }, this);
@@ -83,13 +85,31 @@
         // We copy the options in this.options.indicators
         indicatorsModels.forEach(function (indicatorsModel) {
           var indicator = _.findWhere(this.options.indicators, { id: indicatorsModel.options.id });
-          indicator.options = indicatorsModel.get('data')
-            .filter(function(i) {
-              return i.label && i.label !== ''
+
+          if (this.options.isMobileSurvey) {
+            var mobileSurveyCategories = [];
+            indicatorsModel.get('data').forEach(function (row) {
+              if (mobileSurveyCategories.indexOf(row.category) === -1) {
+                mobileSurveyCategories.push(row.category);
+              }
             })
+
+            if (indicator.preferedOrder) {
+              indicator.options = App.Helper.Indicators.groupByPrefered(indicator.preferedOrder, mobileSurveyCategories);
+            } else {
+              indicator.options = mobileSurveyCategories;
+            }
+
+          } else {
+            indicator.options = indicatorsModel.get('data')
+            .filter(function(i) {
+              return i.label && i.label !== '' 
+            }, this)
             .map(function (row) {
               return row.label;
-            });
+            }, this);
+
+          }
         }, this);
       }.bind(this))
       .then(function () {

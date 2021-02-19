@@ -1,0 +1,14 @@
+<div class="c-country-selector <%= @countries.count > 0 ? 'has_selector' : '' %>">
+  <% if current_page?(exploratory_survey_show_path) %>
+    <%= link_to 'Go to the data portal', exploratory_survey_path, :class => 'country-link' %>
+  <% end %>
+
+  <% if current_page?(data_portal_country_preview_path) || current_page?(data_portal_financial_diaries_path) || current_page?(exploratory_survey_show_path) %>
+    <%= select_tag "country",
+      options_for_select(@countries_for_select.collect{ |country| [country[:name], "#{country[:iso]}-#{country[:latest_year]}"] }.sort, "#{@country[:iso]}-#{@country_latest_year}"),
+      { class: 'country-selector js-country-selector' }
+    %>
+  <% end %>
+
+  <h1 class="title -highlight -huge country-placeholder js-country-placeholder"><%= @country[:name] %></h1>
+</div>

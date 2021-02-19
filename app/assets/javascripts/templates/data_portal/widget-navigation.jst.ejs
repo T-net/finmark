@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div class="c-show-tabs-selector">
+    <ul class="show-tabs--items">
+      <% tabs.forEach(function(tab) { %>
+        <li class="widget-nav-item" role="tab">
+          <button onClick="document.getElementById('<%= tab.id %>').scrollIntoView({ behavior: 'smooth' })"><%= tab.name %></button>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+</div>

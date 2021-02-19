@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="164px" height="87px" viewBox="0 0 164 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>chart-grouped</title>
+    <g id="Phase-7-Mobile/Gender" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Data-Modal-Change" transform="translate(-820.000000, -529.000000)">
+            <g id="chart-grouped" transform="translate(820.000000, 529.000000)">
+                <rect id="Rectangle" fill="#D8D8D8" x="0" y="0" width="1" height="87"></rect>
+                <rect id="Rectangle" fill="#D8D8D8" x="51" y="0" width="1" height="87"></rect>
+                <rect id="Rectangle" fill="#D8D8D8" x="102" y="0" width="1" height="87"></rect>
+                <rect id="Rectangle" fill="#D8D8D8" x="153" y="0" width="1" height="87"></rect>
+                <g id="Group-4" transform="translate(1.000000, 7.000000)">
+                    <rect id="Rectangle" fill="#2F939C" x="0" y="0" width="131" height="3"></rect>
+                    <rect id="Rectangle" fill="#97C9CE" x="0" y="5" width="97" height="3"></rect>
+                    <rect id="Rectangle" fill="#011D22" x="0" y="10" width="140" height="3"></rect>
+                    <rect id="Rectangle" fill="#F9D030" x="0" y="15" width="88" height="3"></rect>
+                </g>
+                <g id="Group-3" transform="translate(1.000000, 35.000000)">
+                    <rect id="Rectangle" fill="#2F939C" x="0" y="0" width="65" height="3"></rect>
+                    <rect id="Rectangle" fill="#97C9CE" x="0" y="5" width="48" height="3"></rect>
+                    <rect id="Rectangle" fill="#011D22" x="0" y="10" width="70" height="3"></rect>
+                    <rect id="Rectangle" fill="#F9D030" x="0" y="15" width="44" height="3"></rect>
+                </g>
+                <g id="Group-3" transform="translate(1.000000, 63.000000)">
+                    <rect id="Rectangle" fill="#2F939C" x="0" y="0" width="153" height="3"></rect>
+                    <rect id="Rectangle" fill="#97C9CE" x="0" y="5" width="113" height="3"></rect>
+                    <rect id="Rectangle" fill="#011D22" x="0" y="10" width="163" height="3"></rect>
+                    <rect id="Rectangle" fill="#F9D030" x="0" y="15" width="103" height="3"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

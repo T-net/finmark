@@ -41,7 +41,6 @@
       var categories = _.groupBy(this.options.indicators, function (indicator) {
         return indicator.category;
       });
-
       return Object.keys(categories)
         .map(function (category) {
           var categorySlug = _.pairs(App.Helper.Indicators.CATEGORIES)

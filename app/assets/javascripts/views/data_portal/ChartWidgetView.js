@@ -19,6 +19,8 @@
       id: null,
       // ISO of the country
       iso: null,
+      // Category 
+      category: null,
       // Selected year
       year: null,
       // Filters on the data
@@ -49,7 +51,9 @@
       autoResize: true,
       // Default mode for widget view
       // The mode is used to determine how the toolbar should be shown
-      mode: 'graphics'
+      mode: 'graphics',
+      // Vega version, defaults to V2
+      vegaVersion: 'V2'
     },
 
     events: {
@@ -64,6 +68,8 @@
       this.options = _.extend({}, this.defaults, settings);
       if (this.options.isMSME) {
         this.indicatorsCollection = new App.Collection.MSMEIndicatorsCollection();
+      } else if (this.options.isMobileSurvey) { 
+        this.indicatorsCollection = new App.Collection.ExploratorySurveyIndicatorsCollection();
       } else {
         this.indicatorsCollection = new App.Collection.IndicatorsCollection();
       }
@@ -84,6 +90,7 @@
      */
     _onFetch: function () {
       var data = this.model.get('data') || this.model.get('rows') || [];
+
       if (data.length) this.widgetToolbox = new App.Helper.WidgetToolbox(data);
 
       // If the indicator doesn't have any data, we also want to send an event
@@ -91,6 +98,7 @@
       this.trigger('data:sync', {
         id: this.options.id,
         name: this.model.get('title'),
+        category: this.options.category || null,
         data: data
       });
 
@@ -116,7 +124,14 @@
           || indicatorCategory === App.Helper.Indicators.CATEGORIES.MSME_STRANDS
           || indicatorCategory === App.Helper.Indicators.CATEGORIES.ASSET
           || indicatorCategory === App.Helper.Indicators.CATEGORIES.SDGS
-          || indicatorCategory === App.Helper.Indicators.CATEGORIES.POVERTY,
+          || indicatorCategory === App.Helper.Indicators.CATEGORIES.POVERTY
+          || indicatorCategory === App.Helper.Indicators.CATEGORIES.DEMOGRAPHICS
+          || indicatorCategory === App.Helper.Indicators.CATEGORIES.GENDER_NORMS
+          || indicatorCategory === App.Helper.Indicators.CATEGORIES.WORK
+          || indicatorCategory === App.Helper.Indicators.CATEGORIES.OWNERSHIP_AND_CONTROL
+          || indicatorCategory === App.Helper.Indicators.CATEGORIES.AGENCY_AND_DECISION_MAKING
+          || indicatorCategory === App.Helper.Indicators.CATEGORIES.FINANCIAL_INC
+          || indicatorCategory === App.Helper.Indicators.CATEGORIES.INCOME,
         canCompare: indicatorCategory === App.Helper.Indicators.CATEGORIES.ACCESS
           || indicatorCategory === App.Helper.Indicators.CATEGORIES.STRANDS
           || indicatorCategory === App.Helper.Indicators.CATEGORIES.MSME_STRANDS
@@ -367,6 +382,7 @@
         stopCompareCallback: this._onStopCompare.bind(this),
         isRegion: this.options.isRegion,
         isMSME: this.options.isMSME,
+        isMobileSurvey: this.options.isMobileSurvey
       });
     },
 
@@ -381,6 +397,7 @@
       });
 
       new App.Component.ModalChartAnalysis({
+        id: this.options.id,
         indicators: nonComplexIndicators,
         selectedIndicatorId: this.options.analysisIndicator,
         continueCallback: function (indicatorId) {
@@ -389,8 +406,13 @@
             this.options.chart = null;
             this.options.compareIndicators = null;
           }
+          
+          if (this.options.isMobileSurvey) {
+            this.options.chart = 'heatmap';
+          } else {
+            this.options.chart = 'analysis';
+          }
 
-          this.options.chart = 'analysis';
           this.options.analysisIndicator = indicatorId;
           this._fetchData();
         }.bind(this),
@@ -416,11 +438,18 @@
         }, this);
 
       // We update the object to tell which ones are available with the current
-      // dataset
+      // dataset      
       this._getAvailableCharts().forEach(function (availableChart) {
         var chart = _.findWhere(charts, { name: availableChart });
         if (chart) chart.available = true;
       });
+
+      // For mobile surveys, we will control what chats are available
+      if (this.options.isMobileSurvey) {
+        charts = charts.filter(function (c) {
+          return ['grouped bar', 'table', 'radial'].indexOf(c.name) > -1;
+        })
+      }
 
       // We instantiate the modal
       new App.Component.ModalChartSelector({
@@ -463,6 +492,7 @@
               expanded: this.options.chart === 'table',
               isRegion: this.options.isRegion,
               isMSME: this.options.isMSME,
+              isMobileSurvey: this.options.isMobileSurvey
             })
           );
 
@@ -524,6 +554,8 @@
       var chartTemplate = JSON.parse(this._getChartTemplate()({
         data: JSON.stringify([]),
         label: JSON.stringify(''),
+        legendTitle: this.model.get('legendTitle'),
+        preferedOrder: this.model.get('preferedOrder'),
         width: JSON.stringify(0),
         height: JSON.stringify(0)
       }));
@@ -577,7 +609,7 @@
       var chartContainer = this.chartContainer.getBoundingClientRect();
       var chartConfig = this._getChartConfig();
 
-      if (!chartConfig.responsive || chartConfig.responsive.mode !== 'adaptative') return false;
+      if (!!chartConfig.responsive || chartConfig.responsive.mode !== 'adaptative') return false;
 
       return chartContainer.width < chartConfig.responsive.breakpoint;
     },
@@ -589,8 +621,16 @@
     _getChartTemplate: function () {
       var chartName = this.options.chart.replace(/ /g, '-');
       var responsive = this._shouldLoadMobileTemplate();
+      
       if (chartName === 'table') return JST['templates/data_portal/table'];
-      return JST['templates/data_portal/widgets/' + chartName + (responsive ? '-mobile' : '')];
+
+      if (this.options.vegaVersion === 'V2') {
+        return JST['templates/data_portal/widgets/' + chartName + (responsive ? '-mobile' : '')];
+      }
+
+      if (this.options.vegaVersion === 'V3') {
+        return JST['templates/data_portal/widgets/v3/' + chartName + (responsive ? '-mobile' : '')];
+      }
     },
 
     /**
@@ -638,8 +678,11 @@
       }
 
       var chartDimensions = this._computeChartDimensions();
+
       return this._getChartTemplate()({
         data: JSON.stringify(this.model.get('data')),
+        legendTitle: this.model.get('legendTitle'),
+        preferedOrder: this.model.get('preferedOrder'),
         width: chartDimensions.width,
         height: chartDimensions.height + 30
       });
@@ -676,38 +719,46 @@
           resultsPerPageOptions: null
         });
       } else {
-        vg.parse
-          .spec(JSON.parse(this._generateVegaSpec()), function (error, chart) {
-            var chartConfig = this._getChartConfig();
-            this.chart = chart({ el: this.chartContainer, renderer: 'svg' }).update();
+        if (this.options.vegaVersion === 'V2') {
+          vg.parse
+            .spec(JSON.parse(this._generateVegaSpec()), function (error, chart) {
+              var chartConfig = this._getChartConfig();
+              this.chart = chart({ el: this.chartContainer, renderer: 'svg' }).update();
 
-            if (chartConfig.name === 'radial') {
-              //var radialWidth = 320;
-              var radialDataLength = this.chart.data('final').values().length;
-              if (radialDataLength > 1) {
-                var chartContainer = this.chartContainer.getBoundingClientRect();
-                var chartMinWidth = radialDataLength * 200;
-                var chartWidth = Math.max(parseInt(chartContainer.width), chartMinWidth);
-                this.chart.width(chartWidth).update();
-                //this.chart.width(radialWidth * radialDataLength).update();
+              if (chartConfig.name === 'radial') {
+                var radialWidth = 320;
+                var radialDataLength = this.chart.data('final').values().length;
+                if (radialDataLength > 1) {
+                  this.chart.width(320 * radialDataLength).update();
+                }
+                window.vegaview = this.chart;
               }
-              window.vegaview = this.chart;
-            }
 
-            // If the chart is not auto resized, then we make it "responsive"
-            if (!this.options.autoResize) {
-              var svg = this.chartContainer.querySelector('svg');
-              svg.setAttribute('viewBox', '0,0,' + svg.getAttribute('width') + ',' + svg.getAttribute('height'));
-              svg.setAttribute('preserveAspectRatio', 'xMinYMin meet');
-            }
+              // If the chart is not auto resized, then we make it "responsive"
+              if (!this.options.autoResize) {
+                var svg = this.chartContainer.querySelector('svg');
+                svg.setAttribute('viewBox', '0,0,' + svg.getAttribute('width') + ',' + svg.getAttribute('height'));
+                svg.setAttribute('preserveAspectRatio', 'xMinYMin meet');
+              }
 
-            // We trigger an event to let the parent view know the graph has been rendered
-            this.trigger('chart:render');
+              // We trigger an event to let the parent view know the graph has been rendered
+              this.trigger('chart:render');
 
-            this.chart.on('mouseover', this._onMouseoverChart.bind(this));
-            this.chart.on('mouseout', this._onMouseoutChart.bind(this));
-            this.chart.on('touchmove', this._onTouchmoveChart.bind(this));
-          }.bind(this));
+              this.chart.on('mouseover', this._onMouseoverChart.bind(this));
+              this.chart.on('mouseout', this._onMouseoutChart.bind(this));
+              this.chart.on('touchmove', this._onTouchmoveChart.bind(this));
+            }.bind(this));
+        }
+
+        if (this.options.vegaVersion === 'V3') {
+          var tooltipOptions = {
+            theme: 'vega-v5-tooltip'
+          };
+          var handler = new vegaTooltip.Handler(tooltipOptions);
+          this.chart = new vega.View(
+            vega.parse(JSON.parse(this._generateVegaSpec()))
+          ).renderer('svg').tooltip(handler.call).initialize(this.chartContainer).hover().run()
+        }
       }
     },
 

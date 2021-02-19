@@ -1,0 +1,236 @@
+{
+  "width": <%= width %>,
+  "height": <%= height %>,
+  "padding": 0,
+  "data": [
+     {
+        "name": "table",
+        "values": <%= data %>
+     }
+  ], 
+  "scales": [
+    {
+      "name": "xscale",
+      "type": "band",
+      "domain": { "data": "table", "field": "category" },
+      "range": "width"
+    },
+    {
+      "name": "yscale",
+      "type": "band",
+      "domain": { "data": "table", "field": "position" },
+      "range": "height"
+    },
+    {
+      "name": "color",
+      "type": "linear",
+      "range": ["#F4FBFC", "#97C9CE", "#2F939C", "#073D42"],
+      "domain": [0, 25],
+      "constant": 1.5,
+      "nice": true,
+      "zero": true,
+      "reverse": false
+    }
+  ],
+  "legends": [
+    {
+      "fill": "color",
+      "type": "gradient",
+      "title": "Perc. of total",
+      "titleOrient": "left",
+      "titleFontWeight": 300,
+      "titlePadding": 4,
+      "labelOffset": 10,
+      "orient": "right",
+      "gradientLength": <%= height %>,
+      "encode": {
+        "title": {
+          "update": {
+            "fontSize": { "value": 13 }
+          }
+        },
+        "labels": {
+          "update": {
+            "text": {
+              "signal": "datum.value + '%'"
+            },
+            "fontSize": { "value": 13 }
+          }
+        }
+      }
+    }
+  ],
+  "axes": [
+    {
+      "title": "<%= legendTitle %>",
+      "orient": "right",
+      "scale": "yscale",          
+      "tickSize": 0, 
+      "zindex": 1, 
+      "titleColor": "#012026",
+      "labelColor": "#012026",
+      "labelPadding": 40,
+      "titleAnchor": "end",
+      "titleAlign": "center",
+      "titleBaseline": "middle",
+      "titleFontSize": 13,
+      "labelFontSize": 13,
+      "titleAngle": 0,
+      "titleY": <%= parseInt(height) + 20 %>,
+      "titleX": 40,
+      "domain": false,
+      "encode": {
+        "labels": {
+          "update": {
+            "align": { "value": "center" },
+            "baseline": { "value": "middle" }
+          }
+        }
+      }
+    }  
+  ],
+  "marks": [
+    {
+      "type": "group",
+      "from": {
+        "facet": {
+          "data": "table",
+          "name": "facet",
+          "groupby": "category"
+        }
+      },
+      "encode": {
+        "enter": {
+          "y": {"scale": "yscale", "field": "category"},
+          "x": { "scale": "xscale", "field": "category"},
+          "height": { "signal": "height" }
+        },
+        "update": {
+          "x": { "scale": "xscale", "field": "category"}
+        }
+      },
+      "signals": [
+        {"name": "width", "update": "bandwidth('xscale')"}
+      ],
+      "axes": [
+        {
+          "title": "",
+          "orient": "bottom", 
+          "scale": "category", 
+          "tickSize": 0, 
+          "labelPadding": 15, 
+          "titlePadding": 25,
+          "labelColor": "#012026",
+          "labelFontWeight": 300,
+          "titleFontSize": 13,
+          "labelFontSize": 13,
+          "domain": false,
+          "zindex": 1,
+          "encode": {
+            "labels": {
+              "update": {
+                "text": { "signal": "split(datum.value, ' ')" }
+              }
+            },
+            "title": {
+              "update": {
+                "text": { 
+                  "signal": "data('facet')[0].category"
+                 }
+              }
+            }
+          }
+        }
+      ],
+      "scales": [
+        {
+          "name": "pos",
+          "type": "band",
+          "range": "width",
+          "domain": {"data": "facet", "field": "category"}
+        },
+        {
+          "name": "category",
+          "type": "band",
+          "range": "width",
+          "domain": {"data": "facet", "field": "gender"}
+        }
+      ],
+      "marks": [
+        {
+          "type": "rule",
+          "name": "band-label-seperator",
+          "encode": {
+            "update": {
+              "y": { "value": <%= parseInt(height) + 40 %> },
+              "y2": { "value": <%= parseInt(height) + 40 %> },
+              "x": {"scale": "pos", "band": 0, "offset": 10 },
+              "x2": {"scale": "pos", "band": 1, "offset": -10 },
+              "width": {"scale": "pos", "band": 1 },
+              "strokeWidth": { "value": 1 }
+            },
+            "hover": {
+              "opacity": {"value": 0.5 }
+            }
+          }
+        },
+        {
+          "type": "group",
+          "from": {
+            "facet": {
+              "data": "facet",
+              "name": "category_data",
+              "groupby": "gender"
+            }
+          },
+          "encode": {
+            "enter": {
+              "y": {"scale": "yscale", "field": "gender"}
+            }
+          },
+          "signals": [
+            {"name": "width", "update": "bandwidth('pos')" }
+          ],
+          "scales": [
+            {
+              "name": "posInner",
+              "type": "band",
+              "range": "width",
+              "domain": {"data": "facet", "field": "gender"}
+            }
+          ],
+          "marks": [
+            {
+              "type": "rect",
+              "from": {"data": "category_data"},
+              "encode": {
+                "hover": {
+                  "opacity": { "value": 0.8 }
+                },
+                "enter": {
+                  "tooltip": {
+                    "signal": "{'Percentage': format(datum.percentage, '.1f') + '%', 'Gender': datum.gender, 'Category': datum.category, '<%= legendTitle %>': datum.position }"
+                  }, 
+                  "x": {"scale": "posInner", "field": "gender"},
+                  "y": {"scale": "yscale", "field": "position"},
+                  "height": {"scale": "yscale", "band": 1},
+                  "width": {"scale": "posInner", "band": 1},
+                  "stroke": {
+                    "value": "#FFF"
+                  }
+                },
+                "update": {
+                  "opacity": { "value": 1 },
+                  "strokeWidth": {
+                    "value": 2
+                  },
+                  "fill": {"scale": "color", "field": "percentage"}
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

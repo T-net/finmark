@@ -84,6 +84,12 @@
     _getAnalysisColumns: function () {
       var data = this.analysisIndicatorModel.get('data');
       if (!data) return [];
+
+      // Mobile surveys does not need any serialization
+      if (this.options.isMobileSurvey) {
+        return data;
+      }
+
       return data.map(function (row) { return row.label; });
     },
 
@@ -139,6 +145,12 @@
       var partialIndicators = Array.prototype.slice.call(arguments);
 
       var res = _.extend({}, partialIndicators[0], { data: [] });
+
+      // Mobile surveys does not need any serialization
+      if (this.options.isMobileSurvey) {
+        res.data = analysisColumns;
+        return res;
+      }
 
       res.data = analysisColumns.map(function (columnName, index) {
         // The method below mutates the original dataset

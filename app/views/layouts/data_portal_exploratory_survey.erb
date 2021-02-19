@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+  <head>
+    <meta charset="utf-8">
+    <title><%= yield :title %> - insight2impact</title>
+    <%= csrf_meta_tags %>
+    <%= Gon::Base.render_data %>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% if content_for?(:media_metas) %>
+      <%= yield(:media_metas) %>
+    <% else %>
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@i2ifacility" />
+      <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) : 'insight2impact' %>" />
+      <meta name="twitter:description" content="i2i is a facility established by FinMark Trust and Cenfri to respond to the growing divide between the data available for policy and product design and the ability of financial services providers, policy makers and financial intermediaries to collect, make sense of and embed this data in their decision making." />
+      <meta name="twitter:image" content="<%= request.base_url %><%= asset_path('headers/header-bg-data.jpg') %>" />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'insight2impact' %>" />
+      <meta property="og:description" content="i2i is a facility established by FinMark Trust and Cenfri to respond to the growing divide between the data available for policy and product design and the ability of financial services providers, policy makers and financial intermediaries to collect, make sense of and embed this data in their decision making." />
+      <meta property="og:image" content="<%= request.base_url %><%= asset_path('headers/header-bg-data.jpg') %>" />
+    <% end %>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Open+Sans:300,600,700' %>
+    <script src="https://cdn.jsdelivr.net/npm/d3@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@v0.23.0"></script>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'data_portal_exploratory_survey', 'data-turbolinks-track': 'reload' %>
+    <%= yield :head %>
+    <%= render partial: 'shared/user_feedback' %>
+  </head>
+  <body>
+    <%= render partial: 'shared/icons' %>
+    <%= render partial: 'shared/mobile-menu' %>
+    <%= render partial: 'shared/covid-notification' %>
+    <%= yield %>
+    <%= render partial: 'shared/footer' %>
+    <%= render partial: 'shared/analytics' if Rails.env.production? %>
+  </body>
+</html>

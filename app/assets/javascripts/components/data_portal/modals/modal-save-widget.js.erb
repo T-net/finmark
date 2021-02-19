@@ -159,6 +159,14 @@
      * Event handler executed when the user clicks the "Print" button
      */
     _onPrint: function () {
+      if (this.options.widgetConfig.isMobileSurvey) {
+        var indicatorPath = '<%= data_portal_indicator_exploratory_survey_path %>';
+        var printURL = location.origin + indicatorPath +
+          '?p=' + this._getEncodedWidget() + '&print=true';
+        window.open(printURL, '_blank');
+        return;
+      }
+
       var indicatorPath = this.options.widgetConfig.isRegion ? '<%= data_portal_indicator_region_path %>' : '<%= data_portal_indicator_path %>';
       var printURL = location.origin + indicatorPath +
         '?p=' + this._getEncodedWidget() + '&print=true';
@@ -178,8 +186,8 @@
      * @return {string}
      */
     _generateDownloadLink: function () {
-      console.log('hehhe')
-      var res = API_URL
+      var ENDPOINT = this.options.widgetConfig.isMobileSurvey ? MOBILE_SURVEYS_API_URL : API_URL;
+      var res = ENDPOINT
         + '/indicator/'
         + this.options.widgetConfig.id
         + '/expanded/download?'

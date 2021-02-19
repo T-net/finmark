@@ -13,7 +13,15 @@
       ASSET: 'Asset',
       SDGS: 'SDGs',
       POVERTY: 'Poverty',
-      MSME_STRANDS: 'MSME Indicators'
+      MSME_STRANDS: 'MSME Indicators',
+      // Mobile surveys
+      INCOME: 'Income',
+      GENDER_NORMS: 'Gender Norms',
+      DEMOGRAPHICS: 'Demographics',
+      WORK: 'Work',
+      OWNERSHIP_AND_CONTROL: 'Ownership & Control',
+      AGENCY_AND_DECISION_MAKING: 'Agency & Decision Making',
+      FINANCIAL_INC: 'Financial inclusion'
     },
 
     // Description for the categories
@@ -24,7 +32,14 @@
       MSME_STRANDS: null,
       ASSET: null,
       SDGS: null,
-      POVERTY: null
+      POVERTY: null,
+      // Mobile surveys
+      GENDER_NORMS: null,
+      OWNERSHIP_AND_CONTROL: null,
+      AGENCY_AND_DECISION_MAKING: null,
+      DEMOGRAPHICS: null,
+      WORK: null,
+      FINANCIAL_INC: null
     },
 
     // Map for the ISO and country names
@@ -177,6 +192,19 @@
       return !!savedIndicators.find(function (ind) {
         return _.isEqual(ind, serializedIndicator);
       });
+    },
+
+    groupByPrefered: function (prefered, categories) {   
+      // Generate prefered order with available categories
+      var parseOrder = prefered.map(function (prefCat) {
+        if (categories.indexOf(prefCat) === -1) {
+          return null;
+        }
+        return prefCat;
+      }).filter(Boolean);
+      
+      return parseOrder;
     }
+
   };
 })(this.App));

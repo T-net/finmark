@@ -104,11 +104,17 @@
           <% } %>
         <% if (isMSME) { %>
           <p>Data supplied by</p>
-          <a href="https://finmark.org.za/_programme/data-for-financial-markets/finscope/finscope-msme/" target="_blank" rel="noopener noreferrer">
+          <a href="https://finmark.org.za/data-for-financial-markets#consumer" target="_blank" rel="noopener noreferrer">
             <img src="/images/logos/fmt-MSME.svg" alt="FMT Finscope MSME" height="71px" />
           </a>
+          <% } else if (isMobileSurvey) { %>
+            <p>Data supplied by</p>
+            <a href="https://finmark.org.za/data-for-financial-markets#mobile" target="_blank" rel="noopener noreferrer">
+              <img src="/images/logos/fmt-mobile.svg" alt="Data provided by FMT" height="71px" />
+            </a>
+
         <% } else if (country === 'Tanzania' && year === 2017) { %>
-          <a href="https://finmark.org.za/_programme/data-for-financial-markets/finscope/finscope-consumer" target="_blank" rel="noopener noreferrer">
+          <a href="https://finmark.org.za/data-for-financial-markets#consumer" target="_blank" rel="noopener noreferrer">
             <img src="/images/logos/finscope.png" alt="Finscope" />
           </a>
 
@@ -125,7 +131,7 @@
         <% } else if (isUNCDF) { %>
             <p>Data developed in partnership by</p>
             <div class="flex">
-              <a href="https://finmark.org.za/_programme/data-for-financial-markets/finscope/finscope-consumer" target="_blank" rel="noopener noreferrer">
+              <a href="https://finmark.org.za/data-for-financial-markets#consumer" target="_blank" rel="noopener noreferrer">
                 <img src="/images/logos/fmt_white.svg" alt="Finscope" class="-left -small-width" />
               </a>
               <a href="https://www.uncdf.org/" target="_blank" rel="noopener noreferrer">
@@ -150,7 +156,7 @@
             </a>
         <% } else if (country !== 'Nigeria') { %>
             <p>Data supplied by</p>
-            <a href="https://finmark.org.za/_programme/data-for-financial-markets/finscope/finscope-consumer" target="_blank" rel="noopener noreferrer">
+            <a href="https://finmark.org.za/data-for-financial-markets#consumer" target="_blank" rel="noopener noreferrer">
               <img src="/images/logos/fmt-white.svg" alt="Finscope" class="-width" />
             </a>
         <% } %>

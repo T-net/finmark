@@ -1,7 +1,7 @@
 (function (App) {
   'use strict';
 
-  var INDICATORS = [
+  var INDICATORS = [    
     { id: 'geographic_area', name: 'Geographic area', category: 'Common indicators', visible: false },
     { id: 'gender', name: 'Gender', category: 'Common indicators', visible: false },
     { id: 'age',name: 'Age', category: 'Common indicators', visible: false },

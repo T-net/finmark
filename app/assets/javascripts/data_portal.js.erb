@@ -43,13 +43,17 @@
 //= require routers/data_portal
 //= require ./regional_filter
 
+
 window.API_URL = 'https://finmark.org.za/api/v1';
 window.MSME_API_URL = 'https://finmark.org.za/msme-api/v1';
+window.MOBILE_SURVEYS_API_URL = '<%= ENV.fetch('MOBILE_SURVEYS_API_URL') %>';
 window.FSP_CARTO_API = '<%= ENV.fetch('FSP_CARTO_API') %>';
 window.FSP_CARTO_API_KEY = '<%= ENV.fetch('FSP_CARTO_API_KEY') %>';
 window.FSP_CARTO_ACCOUNT = '<%= ENV.fetch('FSP_CARTO_ACCOUNT') %>';
 window.OPEN_ROUTE_API = '<%= ENV.fetch('OPEN_ROUTE_API') %>';
 window.OPEN_ROUTE_API_KEY = '<%= ENV.fetch('OPEN_ROUTE_API_KEY') %>';
+
+
 
 (function () {
   this.App = {

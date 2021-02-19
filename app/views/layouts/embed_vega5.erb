@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+  <head>
+    <meta charset="utf-8">
+    <title>insight2impact</title>
+    <%= Gon::Base.render_data %>
+    <%= csrf_meta_tags %>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/d3@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@v0.23.0"></script>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'data_portal_exploratory_survey', 'data-turbolinks-track': 'reload' %>
+    <%= yield :head %>
+  </head>
+  <body>
+    <%= render partial: 'shared/icons' %>
+    <%= yield %>
+    <%= render partial: 'shared/analytics' if Rails.env.production? %>
+  </body>
+</html>

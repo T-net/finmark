@@ -47,6 +47,8 @@ Rails.application.routes.draw do
   as: 'data_portal_indicator_region'
   get 'data-portal/indicator-msme', to: 'data_portal/indicator#show',
   as: 'data_portal_indicator_msme'
+  get 'data-portal/indicator_exploratory_survey', to: 'data_portal/indicator_exploratory_survey#show',
+  as: 'data_portal_indicator_exploratory_survey'
   get 'data-portal/indicator/embed/:iso/:year', to: 'data_portal/indicator#embed', as: 'data_portal_indicator_embed'
   get 'data-portal/report', to: 'data_portal/report#show',
                             as: 'data_portal_report'
@@ -57,6 +59,10 @@ Rails.application.routes.draw do
   # Data Portal - MSM Enterprises
   get 'data-portal/msm-enterprises', to: 'data_portal/msm_enterprises#index', as: 'msm_enterprises'
   get 'data-portal/msm-enterprises/:iso/:year', to: 'data_portal/msm_enterprises#show', as: 'msm_enterprises_show'
+
+  # Data Portal - Exploratory survey
+  get 'data-portal/exploratory-survey', to: 'data_portal/exploratory_survey#index', as: 'exploratory_survey'
+  get 'data-portal/exploratory-survey/:iso/:year', to: 'data_portal/exploratory_survey#show', as: 'exploratory_survey_show'
 
   # Data Portal - Financial Diaries
   get 'data-portal/:iso' => 'data_portal_financial_diaries#country_preview', to: 'data_portal_financial_diaries#country_preview',

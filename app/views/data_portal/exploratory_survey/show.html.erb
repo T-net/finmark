@@ -1,0 +1,100 @@
+<% content_for :head do %>
+  <link rel="preload" href="<%= asset_path('spinning-loader.svg') %>" as="image">
+<% end %>
+
+<% title "Exploratory survey for #{@country.name} in #{@country_latest_year}" %>
+
+<% content_for :media_metas do %>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@i2ifacility" />
+  <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) : 'FinMark Trust' %>" />
+  <meta name="twitter:description" content="FinMark Trust is an independent non-profit trust whose purpose is to make financial markets work for the poor, by promoting financial inclusion and regional financial integration." />
+  <meta name="twitter:image" content="<%= request.base_url %><%= @country.background_url(:header) || asset_path('headers/header-bg-data.jpg') %>" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'FinMark Trust' %>" />
+  <meta property="og:description" content="FinMark Trust is an independent non-profit trust whose purpose is to make financial markets work for the poor, by promoting financial inclusion and regional financial integration." />
+  <meta property="og:image" content="<%= request.base_url %><%= @country.background_url(:header) || asset_path('headers/header-bg-data.jpg') %>" />
+<% end %>
+
+<div class="l-data-portal-mobile-surveys">
+  <div class="l-mobile-header _no-desktop js-mobile-header">
+    <div class="wrapper">
+      <header>
+        <span class="country-name js-country">–</span>
+        <button type="button" class="js-mobile-header-toggle">Toggle menu</button>
+      </header>
+    </div>
+  </div>
+
+  <div class="l-intro js-hero">
+    <div class="nav">
+      <div class="wrapper">
+        <%= render partial: 'shared/header', locals: { isCover: true } %>
+      </div>
+    </div>
+    <div class="fixed-nav js-fixed-nav">
+      <div class="wrapper">
+        <%= render partial: 'shared/header', locals: { isFixed: true } %>
+      </div>
+    </div>
+    <div class="content">
+      <div class="l-title">
+        <div class="wrapper">
+          <div class="row">
+            <div class="grid-s-12">
+              <div class="c-hero">
+                <div class="row">
+                  <div class="grid-s-12 grid-m-6">
+                    <%= render partial: 'country_selector' %>
+                  </div>
+                  <div class="grid-s-12 grid-m-6 _align-right-only-desktop">
+                    <h2 class="title -medium -light">Gender T20 Exploratory Indicator Survey</h2>
+                  </div>
+                </div>
+                <div class="row js-header"></div>
+                <div class="row _only-desktop">
+                  <div class="grid-l-3 offset-l-9">
+                    <div class="c-switcher js-tabs" role="tablist">
+                      <button id="graphics-tab" class="switcher-option -current" name="graphics" role="tab" aria-controls="widgets-list" aria-selected="true">Graphics</button>
+                      <button id="table-tab" class="switcher-option" name="table" role="tab" aria-controls="widgets-list" aria-selected="false" tabindex="-1">Table</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="js-widget-menu"></div>
+      </div>
+      <div class="l-switcher _no-desktop">
+        <div class="wrapper">
+          <div class="row">
+          <div class="grid-s-12 grid-m-6">
+            <div class="c-switcher js-tabs" role="tablist">
+              <button id="graphics-tab" class="switcher-option -current" name="graphics" role="tab" aria-controls="widgets-list" aria-selected="true">Graphics</button>
+              <button id="table-tab" class="switcher-option" name="table" role="tab" aria-controls="widgets-list" aria-selected="false" tabindex="-1">Table</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="l-content">
+    <div class="l-indicator-grid">
+      <div class="wrapper">
+        <div class="row">
+          <div class="grid-s-12">
+            <div class="js-widgets" role="tabpanel" aria-labelledby="graphics-tab"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="grid-s-12">
+            <div class="footer-indicator-grid js-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

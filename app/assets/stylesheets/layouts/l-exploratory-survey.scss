@@ -1,0 +1,12 @@
+#vg-tooltip-element {
+  &.vega-v5-tooltip-theme {
+    & table tr td.key {
+      text-align: left;
+      font-size: 13px;
+    }
+    & table tr td.value {
+      text-align: left;
+      font-size: 13px;
+    }
+  }
+}

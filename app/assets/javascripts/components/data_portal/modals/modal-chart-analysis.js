@@ -5,6 +5,8 @@
     contentTemplate: JST['templates/data_portal/modals/modal-chart-analysis'],
 
     defaults: {
+      // Id of indicator being analysed
+      id: null,
       // See App.Component.Modal for details about this option
       title: 'Analyse indicator',
       // See App.Component.Modal for details about this option
@@ -33,6 +35,13 @@
 
     initialize: function (options) {
       this.constructor.__super__.initialize.call(this, options);
+
+      // You cant analyse the current indicator being analysed
+      if (this.options.id) {
+        this.options.indicators = _.filter(this.options.indicators, 
+          function(o) { return o.id !== this.options.id }, this);
+      }
+
       this.render();
     },
 

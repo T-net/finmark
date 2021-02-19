@@ -37,6 +37,7 @@
       _selectedJurisdiction: null,
       isRegion: false,
       isMSME: false,
+      isMobileSurvey: false
     },
 
     events: function () {
@@ -133,6 +134,7 @@
         jurisdiction: jurisdiction,
         isRegion: this.options.isRegion,
         isMSME: this.options.isMSME,
+        isMobileSurvey: this.options.isMobileSurvey
       });
     },
 

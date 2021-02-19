@@ -1,0 +1,16 @@
+<% content_for :head do %>
+  <link rel="preload" href="<%= asset_path('spinning-loader.svg') %>" as="image">
+<% end %>
+
+<% title 'Data Portal' %>
+
+
+<div class="l-embed js-layout">
+  <div class="row">
+    <div class="grid-s-12 grid-m-6 grid js-grid">
+      <div class="c-widget">
+        <div class="js-widget"></div>
+      </div>
+    </div>
+  </div>
+</div>

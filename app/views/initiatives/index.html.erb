@@ -22,7 +22,6 @@
                 <p class="subtitle">Our work seeks to further financial and economic inclusion for the poor of the SADC region. The work is implemented in individual countries as well as on a regional basis to support finance and economic integration on the region. Selected thematic areas support our mission. </p>
                 </div>
               </div>
-
           </div>
         </div>
       </div>
@@ -47,7 +46,7 @@
           </div>
           <div class="row js-masonry-cards">
             <% @featured_tags.each_with_index do |tag, index| %>
-              <% if index > 1 %>
+              <% if index > 0 %>
                 <div class="js-masonry-item grid-s-12 grid-m-6">
                   <article class="c-card">
                     <%= link_to '', initiatives_filter_index_path(tag.slug), class: "picture", style: "background-image: url(#{asset_path(tag.image_url)}" %>
@@ -82,7 +81,7 @@
 
             <h3 class="title -blue -medium" >Nikki Kettles</h3>
             <p>
-              <i>Executive Head of Programmes</i>
+              <i> Executive Head of Programmes</i>
               <br><br>
               <b>Tel:</b> +27 (0) 11 315 9197<br>
               <b>Email:</b> <a href="mailto:nikkik@finmark.org.za">nikkik@finmark.org.za</a>

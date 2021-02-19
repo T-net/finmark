@@ -392,6 +392,7 @@
         isHaiti: App.Helper.Indicators.COUNTRIES[this.options.iso] === 'Haiti',
         isRegion: false,
         isMSME: false,
+        isMobileSurvey: false
       });
 
       // We instantiate the tab views

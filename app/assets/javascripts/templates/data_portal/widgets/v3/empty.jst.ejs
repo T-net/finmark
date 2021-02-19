@@ -1,0 +1,102 @@
+{
+  "width": <%= width %>,
+  "height": <%= height %>,
+  "padding": "strict",
+  "data": [
+    {
+      "name": "table",
+      "values": [{"value": 0, "gender":"Female"}, {"value": 0, "gender": "Male"}]
+    }
+  ],
+
+  "config": {
+    "legend": {
+      "layout": {
+        "bottom": {
+          "anchor": "middle"
+        }
+      }
+    }
+  },
+
+  "scales": [
+    {
+      "name": "yscale",
+      "type": "linear",
+      "domain": [0, 100],
+      "range": "height",
+      "round": true,
+      "zero": true,
+      "nice": true
+    },
+    {
+      "name": "xscale",
+      "type": "band",
+      "domain": ["No data available"],
+      "range": "width",
+      "padding": 0.2
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "table", "field": "gender"},
+      "range": ["#2F939C", "#97C9CE"]
+    }
+  ],
+
+  "legends": [
+    {
+      "stroke": "color",
+      "title": "",
+      "padding": 0,
+      "orient": "bottom",
+      "direction": "horizontal",
+      "fill": "color",
+      "labelColor": "#012026",
+      "labelFontSize": 13,
+      "columnPadding": 40,
+      "encode": {
+        "symbols": {
+          "enter": {
+            "size": { "value": 140 }
+          }
+        }
+      }
+    }
+  ],
+
+  "axes": [
+    {
+      "orient": "left", 
+      "scale": "yscale",
+      "titleFontSize": 13,
+      "labelFontSize": 13,
+      "labelColor": "#012026",
+      "labelFontWeight": 500,
+      "domain": false,
+      "ticks": false,
+      "grid": true,
+      "gridDash": 8,
+      "encode": {
+        "labels": {
+          "update": {
+            "text": { "signal": "format(datum.value, '.0f') + '%'" }
+          }
+        }
+      },
+      "labelPadding": 10
+    },
+    {
+      "orient": "bottom", 
+      "scale": "xscale",  
+      "tickSize": 0, 
+      "zindex": 1,
+      "titleFontSize": 13,
+      "labelFontSize": 13,
+      "labelColor": "#012026",
+      "labelFontWeight": 500,
+      "domain": false,
+      "labelPadding": 10
+    }
+  ]
+}

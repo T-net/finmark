@@ -13,6 +13,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 Rails.application.config.assets.precompile += %w( data_portal.js )
+Rails.application.config.assets.precompile += %w( data_portal_exploratory_survey.js )
 Rails.application.config.assets.precompile += %w( data_portal_financial_diaries.js )
 Rails.application.config.assets.precompile += %w( data_portal_financial_diaries_embed.js )
 Rails.application.config.assets.precompile += %w( exported_components.js )

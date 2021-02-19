@@ -1,0 +1,21 @@
+<% content_for :head do %>
+  <link rel="preload" href="<%= asset_path('spinning-loader.svg') %>" as="image">
+<% end %>
+
+<% title 'Data Portal' %>
+
+
+<div class="l-embed js-layout">
+  <div class="row">
+    <div class="grid-s-12 grid-m-6 grid js-grid">
+      <div class="c-widget">
+        <div class="js-widget"></div>
+      </div>
+    </div>
+    <% unless (@source == 'fsp_maps' || params[:no_logo] == 'true') %>
+      <div class="grid-s-12 logo">
+        <%= link_to image_tag('/i2i-logo-grey.svg', :alt => 'insight2impact'), root_path, :target => '_parent' %>
+      </div>
+    <% end %>
+  </div>
+</div>

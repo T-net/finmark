@@ -1,0 +1,25 @@
+.c-show-tabs-selector {
+  width: 100%;
+  .show-tabs--items {
+    li {
+      margin: 0 5px 0 0;
+    }
+
+    button {
+      cursor: pointer;
+      padding: 14px 14px;
+      color: #0097AE;
+      font-weight: 900;
+      font-size: 18px;
+      border-radius: 59px;
+
+      &:hover {
+        background: #FFF;
+        color: #2f939c;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+      }
+
+    }
+
+  }
+}
