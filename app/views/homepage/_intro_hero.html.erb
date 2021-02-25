@@ -17,13 +17,13 @@
         <div class="c-home-intro-hero-container">
             <div class="c-home-intro-hero-row">
                 <div>
-                    <div class="c-home-intro-hero-content">
-                        <h1 class="-white"><span style="color: #203366">#SADCInnovation </span> <span>and Investment Challenge</span></h1>
-                        <p style="color: #ffffff">Join us on the 25th of February 2021 for the #SADCInnovation and Investment Challenge Investor Demo Day. Our three winning ventures will be presenting their investor pitches and sharing their product demonstrations.</p>
+                     <div class="c-home-intro-hero-content">
+                        <h1 class="-white"><span style="color: #0098ae">2020 </span> <span>Annual Report</span></h1>
+                        <p style="color: #ffffff">While we continue to focus on inclusive development of financial markets, we expanded our strategies to include a more direct focus on real economy impacts with Financial Inclusion 2.0</p>
                     </div>
 
                     <br><br>
-                    <a class="c-button" style="background-color: #203366; color: #ffffff" href="https://sadcinnovation.org/" target="_blank">Register for Demo Day</a>
+                    <a class="c-button" style="background-color: #0098ae; color: #ffffff" href="https://finmark.org.za/system/documents/files/000/000/296/original/FMT_2020_Annual_Report.pdf?1614067524" target="_blank">View Annual Report</a>
                     <br><br>
                     <hr>
                      <br><br>
@@ -71,17 +71,15 @@
                     <h5 class="title -regular"  style="font-size: 20px; font-weight: 700;"><%= link_to 'Programmes', initiatives_path, :class => '-white' %></h5>
                     <ul>
                       <% @featured_tags.each_with_index do |tag, i| %>
-                        <li><%= link_to initiatives_filter_index_path(tag.slug) do %><span><%=(i + 1).to_s.rjust(2, '0') %>. </span><%=tag.title %><% end %></li>
+                        <li><%= link_to initiatives_filter_index_path(tag.slug) do %><span>• </span><%=tag.title %><% end %></li>
                       <% end %>
                     </ul>
                     <h5 class="title -regular"  style="font-size: 20px; font-weight: 700;"><%= link_to 'Data for financial markets', data_for_financial_markets_path, :class => '-white' %></h5>
                     <ul>
                       <% @featured_data.each_with_index do |(anchor, name), i| %>
-                        <li><%= link_to data_for_financial_markets_path(:anchor => anchor), data: { turbolinks: false } do %><span><%=(i + 1).to_s.rjust(2, '0') %>. </span><%=name %><% end %></li>
-
-
+                        <li><%= link_to data_for_financial_markets_path(:anchor => anchor), data: { turbolinks: false } do %><span>• </span><%=name %><% end %></li>
                       <% end %>
-                            <li> <a href="https://covid19tracker.africa/" target="_blank">  <span> 07. </span>COVID-19 Tracker</li>
+
                     </ul>
                 </div>
 
