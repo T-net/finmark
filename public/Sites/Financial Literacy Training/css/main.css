@@ -1261,9 +1261,9 @@ header .header-logo a {
   outline: 0;
   border: none;
   width: 175px;
-  height:110px;
+  height:88px;
   background: url("../images/logo.png") no-repeat center;
-  background-size: 175px 110px;
+  background-size: 175px 88px;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
@@ -1489,9 +1489,9 @@ header .header-logo a {
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 768px) {
   header .header-logo a {
-    width: 87.5px;
-    height:55px;
-    background-size: 87.5px 55px;
+    width: 87px;
+    height:44px;
+    background-size: 87px 44px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -1911,11 +1911,9 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: .4;
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='#00000000',GradientType=0 );
+
+	 background-color: #203366;
+ 
 }
 #services .section-intro h3 {
   color: rgba(242, 242, 242, 0.5);
@@ -1947,7 +1945,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 #services .services-list .icon i {
   font-size: 5.4rem;
-  color: #f9a828;
+  color: #07617d;
 }
 #services .services-list .h05 {
   font-size: 1.7rem;
