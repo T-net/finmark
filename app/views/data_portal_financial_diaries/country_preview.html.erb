@@ -182,20 +182,7 @@
         </section>
       <% end %>
 
-      <% if @country.geospatial %> <%# Change this for a real check if country has fsp maps %>
-        <section class="dataset">
-          <div class="row">
-            <div class="grid-s-12 grid-m-8">
-              <h3 class="title -big -dark" id="fsp-maps-dataset">Geospatial data</h3>
-              <p class="dataset-description">
-                For <%= @country.name %>, we have financial location data points, with other additional data layers that you can overlay onto a map, you can also analyze the data based on the selections you have made, bring in national survey widgets onto the map and view demand side data with supply-side data.
-              </p>
-              <%= link_to "Discover Geospatial data", fsp_maps_path,
-                class: "c-button -sea dataset-button", data: { turbolinks: false } %>
-            </div>
-          </div>
-        </section>
-      <% end %>
+
     </div>
   </div>
 </div>

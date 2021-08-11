@@ -9,55 +9,6 @@
 
 
 
- <div class="grid-s-12 grid-m-6 grid-l-6 library js-masonry-item">
-      <article class="c-card">
-        <div class="thumb">
-        <%= image_tag('data-portal/covid.jpg',
-                      alt: 'Data portal dashboard',
-                      class: 'datasetimage') %>
-        </div>
-
-        <div class="card-content">
-          <h3 class="title -big -dark filter-finscope">COVID-19 Tracker</h3>
-
-          <ul class="c-stats-list">
-            <li class="item">
-              <h4 class="value">7</h4>
-              <span class="description">Countries</span>
-            </li>
-            <li class="item -last">
-              <h4 class="value">35</h4>
-              <span class="description">Waves of data</span>
-            </li>
-          </ul>
-
-          <p class="dataset-description">
-           The COVID-19 tracking survey themes include health and risk behaviours, food security, income, work and job security, personal safety concerns, and access to government and community support.
-          </p>
-
-          <div class="discover-button">
-            <a class="c-button -sea dataset-button" href="https://covid19tracker.africa/" target="_blank">View COVID-19 Tracker </a>
-          </div>  <span style="color:#525252; font-size:12px; font-style: italic">This will open in a new window</span>
-
-
-        </div>
-
-      </article>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <div class="grid-s-12 grid-m-6 grid-l-6 library js-masonry-item">
       <article class="c-card">
@@ -167,38 +118,7 @@
       </article>
     </div>
 
-    <div class="grid-s-12 grid-m-6 grid-l-6 library js-masonry-item">
-      <article class="c-card">
-        <div class="thumb">
-        <%= image_tag('data-portal/data-portal-geospatial.jpg',
-                      alt: 'Data portal dashboard',
-                      class: 'datasetimage') %>
-        </div>
-        <div class="card-content">
-          <h3 class="title -big -dark filter-finscope">Geospatial Data</h3>
 
-          <ul class="c-stats-list">
-            <li class="item">
-              <h4 class="value">9</h4>
-              <span class="description">Countries</span>
-            </li>
-            <li class="item -last">
-              <h4 class="value">46</h4>
-              <span class="description">Datasets</span>
-            </li>
-          </ul>
-
-          <p class="dataset-description">
-            "Geospatial" indicates that the data has a geographic component to it. This means that the records in a dataset have locational information tied to them, such as geographic data in the form of coordinates, address, city or ZIP code. GIS data is a powerful tool that gives a user the ability to view data at a country/jurisdiction level. We’ve partnered with global data providers (such as <a href="https://resourcewatch.org/" target="_blank">Resource watch</a>, AIDData and Humanitarian Data Exchange) to give you useful contextual layers, overlaid with financial access points and agricultural points.
-          </p>
-
-          <div class="discover-button">
-            <%= link_to "View Geospatial Data",
-                        geospatial_data_path,
-                        class: "c-button -sea dataset-button",
-                        data: { turbolinks: false } %>
-          </div>
-        </div>
       </article>
     </div>
   </div>
