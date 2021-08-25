@@ -61,7 +61,7 @@ class Library < ApplicationRecord
   validates :url_resource, url: true, if: -> { url_resource.present? }
   validates :video_url, url: true, if: -> { video_url.present? }
   validates_length_of :title, maximum: 70
-  validates_length_of :summary, maximum: 172, allow_blank: true
+  validates_length_of :summary, maximum: 250, allow_blank: true
 
   scope :published, -> {where(published: true)}
   scope :featured, -> {where(is_featured: true)}

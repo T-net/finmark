@@ -56,7 +56,7 @@ class Event < ApplicationRecord
 
   validates_presence_of :title, maximum: 75
   validates :title, uniqueness: { case_sensitive: false }
-  validates_length_of :summary, maximum: 172, allow_blank: true
+  validates_length_of :summary, maximum: 250, allow_blank: true
   validates :url, url: true, if: -> { url.present? }
 
 

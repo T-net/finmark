@@ -53,7 +53,7 @@ class News < ApplicationRecord
   validates_presence_of :title
   validates :title, uniqueness: { case_sensitive: false }
   validates_length_of :title, maximum: 75
-  validates_length_of :summary, maximum: 172, allow_blank: true
+  validates_length_of :summary, maximum: 250, allow_blank: true
 
   scope :published, -> {where(published: true)}
   scope :featured, -> {where(is_featured: true)}
