@@ -1,8 +1,5 @@
 class DataPortalController < ApplicationController
   def index
-    user_countries = GetCountriesFromCarto.new.perform
-    user_countries_iso = user_countries ? JSON.parse(user_countries.body)['rows'].collect { |c| c['iso'] } : []
-
     msme_countries_response = GetMsmeCountriesFromApi.new.perform
     msme_countries = msme_countries_response ? JSON.parse(msme_countries_response.body).collect { |c| c['iso'] } : []
 
@@ -25,7 +22,7 @@ class DataPortalController < ApplicationController
           has_finscope: @finscope_countries.include?(country.iso),
           has_msme: has_msme,
           has_national_diaries: country.financial_diaries.present?,
-          has_fsp_maps: country.has_fsp_maps || user_countries_iso.include?(country.iso)
+          has_fsp_maps: country.has_fsp_maps
         )
       end
     end
