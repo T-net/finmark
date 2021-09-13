@@ -1,0 +1,27 @@
+/*
+-----------------------------------------------------------------------
+	Service CSS
+-----------------------------------------------------------------------
+*/
+.service-area {
+  &.service-default-area {
+  	padding: 135px 0 0;
+    position: relative;
+    z-index: 1;
+    @media (max-width:1799px) {
+      padding: 90px 0;
+    }
+    @media #{$xl-device} {
+      padding: 80px 0;
+    }
+    @media #{$lg-device} {
+      padding: 55px 0;
+    }
+    @media #{$md-device} {
+      padding: 65px 0;
+    }
+    @media #{$sm-device} {
+      padding: 55px 0;
+    }
+  }
+}
